@@ -1,0 +1,88 @@
+===================================
+zeePersonal Changelog
+===================================
+
+Version 1.5
+-----------------------------------
+[moved] all theme options to Customizer
+[added] responsive design based on underscores
+
+Version 1.4.1
+-----------------------------------
+- changed theme URL in style.css
+
+Version 1.4
+-----------------------------------
+- added theme hooks for better child theme support
+	* wrapper before/after
+	* header before/after
+	* widgets before/after
+	* footer before/after
+- added filters for query arguments in widgets (popular/recent posts and comment widgets)
+- added two hooks to allow adding own icons to the social media icons widget
+- added "open in new window" feature to social media icons widget
+- changed all links to the new theme page URL
+- changed postmeta and postinfo implementation from hook based to pluggable functions 
+- updated social icons, removed Gowalla, added Instagram
+
+Version 1.3
+-----------------------------------
+- made custom javascript functions pluggable
+- added "open in new window" feature to banner ads widget
+- made sidebars and navigation menus also translate-able
+- moved comment-reply script from header.php to functions.php
+- changed theme options to escape all $_GET variables
+- changed wp_title implementation to work with filter (recommended way)
+
+Version 1.2.3
+-----------------------------------
+- made link title "Return to Gallery" in image.php translateable
+- changed the template tag to include stylesheet to get_stylesheet_uri()
+- changed name of stylesheets handles in wp_register_style functions to be unique
+
+Version 1.2.2
+-----------------------------------
+- fixed debug errors at widget backend
+- fixed enqueue style.css to make the theme child-theme compatible
+- add image.php to display gallery images with navigation links
+
+Version 1.2.1
+-----------------------------------
+- fixed debug error; undefined variable
+- changed credit link anchor text
+
+Version 1.2
+-----------------------------------
+- added loop.php, loop-single.php and loop-slide.php to display the loop content
+- added postmeta and postinfo action hooks plus functions
+- restructured functions.php for reasons of clarity
+- added childtheme compatible functions to functions.php (e.g. themezee_setup)
+- added author.php template
+- improved theme options panel (new css style, welcome screen, new validation types)
+- changed the implementation of custom header and custom background to the new WP 3.4 functions (add_theme_support)
+
+Version 1.1
+-----------------------------------
+- add new Theme Options panel with tabs, sidebar and image upload (better usability)
+- add more Social Media Buttons (e.g Pinterest Button)
+- improved jQuery Navigation Menus (now with CSS Fallback if javascript deactivated)
+- replace wp_print_styles() with wp_enqueue_scripts() because of incompatibility with WordPress 3.3
+
+Version 1.0.3
+-----------------------------------
+- added Google+ to SocialMedia Buttons
+- increased timeout for Slideshow
+- renamed custom page templates
+
+Version 1.0.2
+-----------------------------------
+- added 'Page with Slider' page template
+- replace the constant ZEE_LANG with 'themezee_lang' string for translation
+- fixed displaying text elements in comments (lists, blockquotes)
+- added new css styles for theme option panel
+- added settings updated info at theme option panel
+- fixed 404 page template
+
+Version 1.0.1
+-----------------------------------
+Final Version
