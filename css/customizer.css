@@ -3,15 +3,15 @@
  *
  * Adjusts styling for theme option controls in the Customizer
  *
- * @package zeePersonal
+ * @package Tortuga
  */
 
-#customize-control-zeepersonal_control_post_images_headline,
-#customize-control-zeepersonal_control_post_meta_headline {
+#customize-control-tortuga_control_post_images_headline,
+#customize-control-tortuga_control_post_meta_headline {
 	margin-top: 12px;
 }
 
-#customize-control-zeepersonal_control_post_images_headline,
-#customize-control-zeepersonal_control_post_meta_headline {
+#customize-control-tortuga_control_post_images_headline,
+#customize-control-tortuga_control_post_meta_headline {
 	margin-bottom: 0;
 }

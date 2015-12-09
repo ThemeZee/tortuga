@@ -5,7 +5,7 @@
  * Used to determine whether an option setting is displayed or not. 
  * Called via the active_callback parameter of the add_control() function
  *
- * @package zeePersonal
+ * @package Tortuga
  */
 
  
@@ -15,10 +15,10 @@
  * @param object $control / Instance of the Customizer Control 
  * @return bool
  */
-function zeepersonal_control_post_content_callback( $control ) {
+function tortuga_control_post_content_callback( $control ) {
 	
 	// Check if excerpt mode is selected
-	if ( $control->manager->get_setting('zeepersonal_theme_options[post_content]')->value() == 'excerpt' ) :
+	if ( $control->manager->get_setting('tortuga_theme_options[post_content]')->value() == 'excerpt' ) :
 		return true;
 	else :
 		return false;

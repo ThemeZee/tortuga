@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package zeePersonal
+ * @package Tortuga
  */
  
 get_header(); 
 
 // Get Theme Options from Database
-$theme_options = zeepersonal_theme_options();
+$theme_options = tortuga_theme_options();
 ?>
 	
 	<section id="primary" class="content-area">
@@ -33,7 +33,7 @@ $theme_options = zeepersonal_theme_options();
 			endwhile;
 			
 			// Display Pagination	
-			zeepersonal_pagination();
+			tortuga_pagination();
 
 		endif; ?>
 			

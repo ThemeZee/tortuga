@@ -2,7 +2,7 @@
 /**
  * Implement theme options in the Customizer
  *
- * @package zeePersonal
+ * @package Tortuga
  */
 
  
@@ -20,14 +20,14 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-post.ph
  * Registers Theme Options panel and sets up some WordPress core settings
  *
  */
-function zeepersonal_customize_register_options( $wp_customize ) {
+function tortuga_customize_register_options( $wp_customize ) {
 
 	// Add Theme Options Panel
-	$wp_customize->add_panel( 'zeepersonal_options_panel', array(
+	$wp_customize->add_panel( 'tortuga_options_panel', array(
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => esc_html__( 'Theme Options', 'zeepersonal' ),
+		'title'          => esc_html__( 'Theme Options', 'tortuga' ),
 		'description'    => '',
 	) );
 	
@@ -35,25 +35,25 @@ function zeepersonal_customize_register_options( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	
-} // zeepersonal_customize_register_options()
-add_action( 'customize_register', 'zeepersonal_customize_register_options' );
+} // tortuga_customize_register_options()
+add_action( 'customize_register', 'tortuga_customize_register_options' );
 
 
 /**
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  *
  */
-function zeepersonal_customize_preview_js() {
-	wp_enqueue_script( 'zeepersonal-customizer-js', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150723', true );
+function tortuga_customize_preview_js() {
+	wp_enqueue_script( 'tortuga-customizer-js', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20150723', true );
 }
-add_action( 'customize_preview_init', 'zeepersonal_customize_preview_js' );
+add_action( 'customize_preview_init', 'tortuga_customize_preview_js' );
 
 
 /**
  * Embed CSS styles for the theme options in the Customizer
  *
  */
-function zeepersonal_customize_preview_css() {
-	wp_enqueue_style( 'zeepersonal-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20150723' );
+function tortuga_customize_preview_css() {
+	wp_enqueue_style( 'tortuga-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20150723' );
 }
-add_action( 'customize_controls_print_styles', 'zeepersonal_customize_preview_css' );
+add_action( 'customize_controls_print_styles', 'tortuga_customize_preview_css' );

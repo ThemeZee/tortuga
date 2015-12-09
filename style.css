@@ -1,19 +1,19 @@
 /*
-Theme Name: zeePersonal
-Theme URI: http://themezee.com/themes/zeepersonal/
+Theme Name: Tortuga
+Theme URI: http://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: http://themezee.com
-Description: zeePersonal is a nice theme for a personal blog with great features.
-Version: 1.5
+Description: Tortuga is a great magazine WordPress theme
+Version: 0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: zeepersonal
+Text Domain: tortuga
 Tags: two-columns, light, orange, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-zeePersonal is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Tortuga is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -430,13 +430,13 @@ table {
 }
 
 a {
-	color: #ee5500;
+	color: #dd5533;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #ee5500;
+	color: #dd5533;
 }
 
 a:hover,
@@ -465,7 +465,7 @@ input[type="submit"] {
 	font-size: 16px;
 	font-size: 1rem;
 	color: #fff;
-	background: #ee5500;
+	background: #dd5533;
 	border: none;
 	text-decoration: none;
 }
@@ -595,17 +595,17 @@ textarea {
 	max-width: 1290px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 3em;
+	padding: 0 2em;
 }
 
 .site-content {
-	padding-top: 3em;
+	padding-top: 2em;
 }
 
 .content-area {
 	float: left;
 	width: 72%;
-	padding-right: 3em;
+	padding-right: 2em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -652,7 +652,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	font-family: 'Merriweather', Tahoma, Arial;
+	font-family: 'Titillium Web', Tahoma, Arial;
 	font-size: 38px;
 	font-size: 2.375rem;
 	text-decoration: none;
@@ -687,9 +687,10 @@ textarea {
 /*--------------------------------------------------------------
 ## 10.2 - Main Navigation
 --------------------------------------------------------------*/
-.primary-navigation {
-	float: right;
-	margin-top: 1.8em;
+.primary-navigation-wrap {
+	background: rgba(0,0,0,0.1);
+	border-top: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 3px solid #dd5533;
 }
 
 .main-navigation-toggle,
@@ -709,16 +710,15 @@ textarea {
 .main-navigation-menu li {
 	float: left;
 	position: relative;
-	margin: 0 1em;
+	margin: 0;
 }
 
 .main-navigation-menu a {
 	display: block;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: bold;
-	margin: 0 0 0.8em;
-	padding: 0.8em 0 0.1em;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	margin: 0;
+	padding: 0.9em 1.3em 0.8em;
 	text-decoration: none;
 }
 
@@ -729,7 +729,7 @@ textarea {
 }
 
 .main-navigation-menu a:hover {
-	color: #bbb;
+	background: #dd5533;
 }
 
 .main-navigation-menu ul {
@@ -740,7 +740,7 @@ textarea {
 	padding: 0 1em;
 	list-style-type: none;
 	list-style-position: outside;
-	background: #fff;
+	background: #dd5533;
 }
 
 .main-navigation-menu ul li{
@@ -755,22 +755,10 @@ textarea {
 	float: left;
 	font-size: 14px;
 	font-size: 0.875rem;
-	color: #303030;
-	border-bottom: 1px solid #ddd;
 }
 
 .main-navigation-menu ul li:last-child a {
 	border-bottom: none;
-}
-
-.main-navigation-menu ul a:link, 
-.main-navigation-menu ul a:visited {
-	color: #303030;
-	text-decoration: none;
-}
-
-.main-navigation-menu ul a:hover {
-	color: #ee5500;
 }
 
 .main-navigation-menu li ul ul {
@@ -792,7 +780,7 @@ textarea {
 }
 
 .main-navigation-menu li.current-menu-item a {
-	border-bottom: 3px solid #fff;
+	background: #dd5533;
 }
 
 .main-navigation-menu li.current-menu-item ul li a,
@@ -897,12 +885,13 @@ textarea {
 # 11.0 - Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 3em 0;
+	margin: 0 0 2em 0;
 	padding: 1em 1.5em;
 	background: #fff;
 	color: #303030;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	border-top: 3px solid #dd5533;
 }
 
 .widget-header {
@@ -910,13 +899,14 @@ textarea {
 }
 
 .widget-title {
-	display: inline-block;
+	display: block;
 	margin: 0;
-	padding: 0 0 0.1em;
-	font-size: 16px;
-	font-size: 1rem;
-	font-weight: bold;
-	border-bottom: 3px solid #ee5500;
+	padding: 0;
+	font-family: 'Titillium Web', Tahoma, Arial;
+	font-size: 20px;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	color: #dd5533;
 }
 
 .widget ul {
@@ -931,14 +921,14 @@ textarea {
 	margin: 0.5em 0 0.5em 1em;
 }
 
-.widget-title a:link, 
-.widget-title a:visited  {
-	color: #fff;
+.widget a:link, 
+.widget a:visited  {
+	color: #333;
 }
 
-.widget-title a:hover, 
-.widget-title a:active  {
-	text-decoration: underline;
+.widget a:hover, 
+.widget a:active  {
+	color: #dd5533;
 }
 
 /* Make sure select elements fit in widgets. */
@@ -1062,7 +1052,7 @@ textarea {
 
 .widget_tag_cloud .tagcloud a:hover, 
 .widget_tag_cloud .tagcloud a:active {
-	color: #ee5500;
+	color: #dd5533;
 }
 
 /* Theme Search Widget */
@@ -1095,7 +1085,7 @@ textarea {
 	top: 0;
 	right: 0;
 	border: none;
-	background: #ee5500;
+	background: #dd5533;
 	padding: 0.6em 0.6em 0 0;
 	cursor: pointer;
 }
@@ -1127,20 +1117,22 @@ textarea {
 .type-post, 
 .type-page, 
 .type-attachment  {
-	margin: 0 0 3em 0;
-	padding: 3em;
+	margin: 0 0 2em 0;
+	padding: 2em;
 	background: #fff;
 	max-width: 100%;
+	border-bottom: 3px solid #dd5533;
 }
 
 .page-title, 
 .entry-title {
-	font-family: 'Merriweather', Tahoma, Arial;
-	font-size: 36px;
-	font-size: 2.25rem;
+	font-family: 'Titillium Web', Tahoma, Arial;
+	font-size: 28px;
+	font-size: 1.75rem;
+	text-transform: uppercase;
 	padding: 0;
 	margin: 0;
-	color: #ee5500;
+	color: #dd5533;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1151,7 +1143,7 @@ textarea {
 
 .entry-title a:link, 
 .entry-title a:visited {
-	color: #ee5500;
+	color: #dd5533;
 	text-decoration: none;
 }
 
@@ -1161,7 +1153,7 @@ textarea {
 }
 
 .entry-thumbnail {
-	margin: -3em -3em 2em;
+	margin: -2em -2em 1.5em;
 }
 
 .sticky {
@@ -1177,10 +1169,9 @@ textarea {
 
 /* Entry Meta */
 .entry-meta {
-	margin: 2em -3em -3em;
-	padding: 1.5em 2em;
+	margin: 0;
+	padding: 0;
 	color: #303030;
-	border-top: 1px solid #ddd;
 }
 
 .entry-meta .meta-date, 
@@ -1188,16 +1179,17 @@ textarea {
 .entry-meta .meta-category, 
 .entry-meta .meta-comments {
 	margin-right: 1.5em;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .entry-meta span:before {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
-	font: normal 24px 'Genericons';
+	font: normal 16px 'Genericons';
 	vertical-align: middle;
-	color: #777;
+	color: #333;
+	margin-right: 0.2em;
 }
 
 .entry-meta .meta-date:before{
@@ -1246,7 +1238,7 @@ textarea {
 
 .entry-tags .meta-tags a:hover, 
 .entry-tags .meta-tags a:active {
-	color: #ee5500;
+	color: #dd5533;
 }
 
 /* Post Navigation */
@@ -1280,7 +1272,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	color: #fff;
-	background: #ee5500;
+	background: #dd5533;
 	text-decoration: none;
 }
 
@@ -1309,7 +1301,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	font-weight: bold;
-	border-bottom: 3px solid #ee5500;
+	border-bottom: 3px solid #dd5533;
 }
 
 /* Theme Pagination */
@@ -1335,7 +1327,7 @@ textarea {
 
 .post-pagination a:hover,
 .post-pagination .current {
-	background: #ee5500;
+	background: #dd5533;
 }
 
 /*--------------------------------------------------------------
@@ -1363,7 +1355,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	font-weight: bold;
-	border-bottom: 3px solid #ee5500;
+	border-bottom: 3px solid #dd5533;
 }
 
 /* Comment List */

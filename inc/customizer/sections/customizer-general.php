@@ -4,7 +4,7 @@
  *
  * Register General section, settings and controls for Theme Customizer
  *
- * @package zeePersonal
+ * @package Tortuga
  */
 
 
@@ -13,36 +13,36 @@
  *
  * @param object $wp_customize / Customizer Object
  */
-function zeepersonal_customize_register_general_settings( $wp_customize ) {
+function tortuga_customize_register_general_settings( $wp_customize ) {
 
 	// Add Section for Theme Options
-	$wp_customize->add_section( 'zeepersonal_section_general', array(
-        'title'    => esc_html__( 'General Settings', 'zeepersonal' ),
+	$wp_customize->add_section( 'tortuga_section_general', array(
+        'title'    => esc_html__( 'General Settings', 'tortuga' ),
         'priority' => 10,
-		'panel' => 'zeepersonal_options_panel' 
+		'panel' => 'tortuga_options_panel' 
 		)
 	);
 	
 	// Add Settings and Controls for Layout
-	$wp_customize->add_setting( 'zeepersonal_theme_options[layout]', array(
+	$wp_customize->add_setting( 'tortuga_theme_options[layout]', array(
         'default'           => 'right-sidebar',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'zeepersonal_sanitize_layout'
+        'sanitize_callback' => 'tortuga_sanitize_layout'
 		)
 	);
-    $wp_customize->add_control( 'zeepersonal_control_layout', array(
-        'label'    => esc_html__( 'Theme Layout', 'zeepersonal' ),
-        'section'  => 'zeepersonal_section_general',
-        'settings' => 'zeepersonal_theme_options[layout]',
+    $wp_customize->add_control( 'tortuga_control_layout', array(
+        'label'    => esc_html__( 'Theme Layout', 'tortuga' ),
+        'section'  => 'tortuga_section_general',
+        'settings' => 'tortuga_theme_options[layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'left-sidebar' => esc_html__( 'Left Sidebar', 'zeepersonal' ),
-            'right-sidebar' => esc_html__( 'Right Sidebar', 'zeepersonal' )
+            'left-sidebar' => esc_html__( 'Left Sidebar', 'tortuga' ),
+            'right-sidebar' => esc_html__( 'Right Sidebar', 'tortuga' )
 			)
 		)
 	);
 	
 }
-add_action( 'customize_register', 'zeepersonal_customize_register_general_settings' );
+add_action( 'customize_register', 'tortuga_customize_register_general_settings' );

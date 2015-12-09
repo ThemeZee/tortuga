@@ -2,7 +2,7 @@
 /**
  * Custom Controls for the Customizer
  *
- * @package zeePersonal
+ * @package Tortuga
  */
 
 
@@ -16,7 +16,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays a bold label text. Used to create headlines for radio buttons and description sections.
 	 *
 	 */
-	class zeePersonal_Customize_Header_Control extends WP_Customize_Control {
+	class Tortuga_Customize_Header_Control extends WP_Customize_Control {
 
 		public function render_content() {  ?>
 			

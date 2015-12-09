@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package zeePersonal
+ * @package Tortuga
  */
 
 
@@ -13,16 +13,16 @@
  *
  * @return array
  */
-function zeepersonal_theme_options() {
+function tortuga_theme_options() {
     
 	// Merge Theme Options Array from Database with Default Options Array
 	$theme_options = wp_parse_args( 
 		
 		// Get saved theme options from WP database
-		get_option( 'zeepersonal_theme_options', array() ), 
+		get_option( 'tortuga_theme_options', array() ), 
 		
 		// Merge with Default Options if setting was not saved yet
-		zeepersonal_default_options() 
+		tortuga_default_options() 
 		
 	);
 
@@ -37,7 +37,7 @@ function zeepersonal_theme_options() {
  *
  * @return array
  */
-function zeepersonal_default_options() {
+function tortuga_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',

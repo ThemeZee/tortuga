@@ -2,7 +2,7 @@
 /**
  * The template for displaying single posts
  *
- * @package zeePersonal
+ * @package Tortuga
  */
 ?>
 
@@ -10,10 +10,12 @@
 		
 		<header class="entry-header">
 			
-			<?php zeepersonal_post_image_single(); ?>
+			<?php tortuga_post_image_single(); ?>
 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+			
+			<?php tortuga_entry_meta(); ?>
+			
 		</header><!-- .entry-header -->
 
 		<div class="entry-content clearfix">
@@ -23,14 +25,8 @@
 			
 			<div class="page-links"><?php wp_link_pages(); ?></div>
 			
-			<?php zeepersonal_entry_tags(); ?>
+			<?php tortuga_entry_tags(); ?>
 			
 		</div><!-- .entry-content -->
-		
-		<footer class="entry-footer">
-			
-			<?php zeepersonal_entry_meta(); ?>
-			
-		</footer><!-- .entry-footer -->
 
 	</article>

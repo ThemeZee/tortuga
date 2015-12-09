@@ -1,8 +1,8 @@
-zeePersonal WordPress Theme, Copyright 2015 ThemeZee.com
-zeePersonal is distributed under the terms of the GNU GPL
+Tortuga WordPress Theme, Copyright 2015 ThemeZee.com
+Tortuga is distributed under the terms of the GNU GPL
 
 ===================================
-Thanks for Downloading zeePersonal
+Thanks for Downloading Tortuga
 ===================================
 
 Thank you for downloading my theme. 
@@ -52,7 +52,7 @@ To find out more about installing WordPress themes please also see http://themez
 C) Theme Options
 ===================================
 
-zeePersonal supports the awesome Theme Customizer for all theme settings. 
+Tortuga supports the awesome Theme Customizer for all theme settings. 
 Go to WP-Admin > Appearance > Customize to open the Customizer.
 
 ===================================
@@ -60,7 +60,7 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-http://themezee.com/docs/zeePersonal-documentation/
+http://themezee.com/docs/Tortuga-documentation/
 
 ===================================
 E) Page Templates
@@ -78,7 +78,7 @@ I have included a few, nice page templates for advanced content presentation.
 F) Theme License
 ===================================
 
-zeePersonal is released under the GNU general public license. 
+Tortuga is released under the GNU general public license. 
 That means you can use this theme on all of your websites - for personal or commercial purposes!
 
 ===================================

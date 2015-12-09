@@ -4,11 +4,11 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package zeePersonal
+ * @package Tortuga
  */
  
 // Get Theme Options from Database
-$theme_options = zeepersonal_theme_options();
+$theme_options = tortuga_theme_options();
 	
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,7 +26,7 @@ $theme_options = zeepersonal_theme_options();
 
 	<div id="page" class="hfeed site">
 		
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'zeepersonal' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tortuga' ); ?></a>
 		
 		<header id="masthead" class="site-header clearfix" role="banner">
 			
@@ -34,11 +34,26 @@ $theme_options = zeepersonal_theme_options();
 						
 				<div id="logo" class="site-branding clearfix">
 				
-					<?php do_action('zeepersonal_site_title'); ?>
+					<?php do_action('tortuga_site_title'); ?>
 				
 				</div><!-- .site-branding -->
 				
-				<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
+				<div class="header-widgets clearfix">
+					
+					<?php // Display Header Widgets
+					if( is_active_sidebar('header') ) : 
+			
+						dynamic_sidebar('header');
+						
+					endif; ?>
+					
+				</div><!-- .header-widgets -->
+			
+			</div><!-- .header-main -->
+			
+			<div id="main-navigation-wrap" class="primary-navigation-wrap">
+				
+				<nav id="main-navigation" class="primary-navigation navigation container clearfix" role="navigation">
 					<?php 
 						// Display Main Navigation
 						wp_nav_menu( array(
@@ -46,17 +61,16 @@ $theme_options = zeepersonal_theme_options();
 							'container' => false, 
 							'menu_class' => 'main-navigation-menu', 
 							'echo' => true, 
-							'fallback_cb' => 'zeepersonal_default_menu')
+							'fallback_cb' => 'tortuga_default_menu')
 						);
 					?>
 				</nav><!-- #main-navigation -->
-			
-			</div><!-- .header-main -->
+				
+			</div>
 		
 		</header><!-- #masthead -->
 		
 		<?php // Display Custom Header Image
-		zeepersonal_header_image(); ?>
+		tortuga_header_image(); ?>
 		
 		<div id="content" class="site-content container clearfix">
-		
