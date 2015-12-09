@@ -102,10 +102,8 @@ G) Licenses of bundled resources
 	Copyright: 2015 Pixabay users werner22brigitte, sciencefreak, geralt
 	
 	Images used in screenshot.jpg:
-	Image 1: https://pixabay.com/en/butterfly-yellow-insect-nature-196745/
-	Image 2: https://pixabay.com/en/star-projector-planetarium-projector-91866/
-	Image 3: https://pixabay.com/en/leaf-green-leaf-veins-filigree-141494/
-	Image 4: https://pixabay.com/en/almond-blossom-cherry-blossom-5378/
+	Image 1: https://pixabay.com/en/martinique-sunset-boat-twilight-844982/
+	Image 2: https://pixabay.com/en/pinwheel-energy-wind-power-123571/
 
 ===================================
 Enjoy!
