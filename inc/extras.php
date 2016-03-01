@@ -35,14 +35,11 @@ function tortuga_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 	
-	// Add Sticky Header class
-	if ( true == $theme_options['sticky_header'] ) {
-		$classes[] = 'sticky-header';
-	}
-	
-	// Add Small Post Layout class
-	if ( ( is_archive() or is_home() ) and 'left' == $theme_options['post_layout_archives'] ) {
-		$classes[] = 'post-layout-small';
+	// Add Post Columns classes
+	if ( 'two-columns' == $theme_options['post_layout'] ) {
+		$classes[] = 'post-layout-two-columns post-layout-columns';
+	} elseif ( 'three-columns' == $theme_options['post_layout'] ) {
+		$classes[] = 'post-layout-three-columns post-layout-columns';
 	}
 
 	return $classes;
@@ -78,8 +75,22 @@ add_filter('excerpt_length', 'tortuga_excerpt_length');
  * @return int
  */
 function tortuga_magazine_posts_excerpt_length($length) {
-    return 15;
+    return 12;
 }
+
+
+/**
+ * Change excerpt more text for posts
+ *
+ * @param string $more_text Excerpt More Text
+ * @return string
+ */
+function tortuga_excerpt_more( $more_text ) {
+	
+	return '';
+
+}
+add_filter('excerpt_more', 'tortuga_excerpt_more');
 
 
 /**

@@ -171,8 +171,8 @@ function tortuga_add_image_sizes() {
 	
 	// Add different thumbnail sizes for widgets and post layouts
 	add_image_size( 'tortuga-thumbnail-small', 120, 80, true );
-	add_image_size( 'tortuga-thumbnail-medium', 360, 240, true );
-	add_image_size( 'tortuga-thumbnail-large', 600, 400, true );
+	add_image_size( 'tortuga-thumbnail-medium', 360, 200, true );
+	add_image_size( 'tortuga-thumbnail-large', 600, 330, true );
 	
 }
 add_action( 'after_setup_theme', 'tortuga_add_image_sizes' );

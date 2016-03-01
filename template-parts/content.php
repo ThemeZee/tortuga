@@ -1,25 +1,32 @@
 <?php
 /**
- * The template for displaying articles in the loop with full content
+ * The template for displaying articles in the loop with post excerpts
  *
  * @package Tortuga
  */
 ?>
-
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
-		<?php tortuga_post_image_archives(); ?>
-		
-		<header class="entry-header">
-		
-			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+	
+	<div class="post-column clearfix">
+	
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
-			<?php tortuga_entry_meta(); ?>
+			<?php tortuga_post_image_archives(); ?>
+			
+			<header class="entry-header">
 
-		</header><!-- .entry-header -->
+				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+				
+				<?php tortuga_entry_meta(); ?>
+			
+			</header><!-- .entry-header -->
 
-		<div class="entry-content clearfix">
-			<?php the_content( esc_html__( 'Continue reading &raquo;', 'tortuga' ) ); ?>
-		</div><!-- .entry-content -->
-
-	</article>
+			<div class="entry-content entry-excerpt clearfix">
+				<?php the_excerpt(); ?>
+				
+			</div><!-- .entry-content -->
+			
+			<div class="test"><?php tortuga_more_link(); ?></div>
+		
+		</article>
+		
+	</div>

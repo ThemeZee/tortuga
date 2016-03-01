@@ -16,33 +16,40 @@ $theme_options = tortuga_theme_options();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 					
-			<?php
-			// Display Latest Posts Title
-			if ( isset( $theme_options['latest_posts_title'] ) and $theme_options['latest_posts_title'] <> '' ) : ?>
-						
-				<header class="page-header">
+			<?php // Display Homepage Title
+			if ( $theme_options['homepage_title'] <> '' ) : ?>
 					
-					<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['latest_posts_title'] ); ?></h1>
+				<header class="page-header clearfix">
+					
+					<h1 class="page-title"><?php echo wp_kses_post( $theme_options['homepage_title'] ); ?></h1>
+					<p class="homepage-description"><?php echo wp_kses_post( $theme_options['homepage_description'] ); ?></p>
+					
+				</header>
 
-				</header><!-- .page-header -->
-		
 			<?php endif; ?>
 			
-		 
-			<?php if (have_posts()) : while (have_posts()) : the_post();
-		
-				get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
-		
-				endwhile;
+			<div id="homepage-posts" class="post-wrapper clearfix">
+					
+				<?php if (have_posts()) : while (have_posts()) : the_post();
+			
+					get_template_part( 'template-parts/content' );
+			
+					endwhile;
 
-				// Display Pagination	
-				tortuga_pagination();
-
-			endif; ?>
+				endif; ?>
+			
+			</div>
+			
+			<?php tortuga_pagination(); ?>
 			
 		</main><!-- #main -->
 	</section><!-- #primary -->
 	
-	<?php get_sidebar(); ?>
+	<?php // Do not display Sidebar on Three Column Post Layout
+	if ( $theme_options['post_layout'] <> 'three-columns' ) :
+		
+		get_sidebar(); 
+		
+	endif; ?>
 
 <?php get_footer(); ?>

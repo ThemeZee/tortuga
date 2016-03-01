@@ -20,7 +20,7 @@ class Tortuga_Magazine_Posts_Grid_Widget extends WP_Widget {
 			'tortuga-magazine-posts-grid', // ID
 			sprintf( esc_html__( 'Magazine Posts: Grid (%s)', 'tortuga' ), wp_get_theme()->Name ), // Name
 			array( 
-				'classname' => 'tortuga_magazine_posts_grid', 
+				'classname' => 'tortuga-magazine-posts-grid', 
 				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'tortuga' ) 
 			) // Args
 		);

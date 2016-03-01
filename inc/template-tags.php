@@ -74,20 +74,13 @@ if ( ! function_exists( 'tortuga_post_image_archives' ) ):
 /**
  * Displays the featured image on archive pages
  */
-function tortuga_post_image_archives() {
-	
-	// Get Theme Options from Database
-	$theme_options = tortuga_theme_options();
-	
-	// Display Featured Image beside post content
-	if ( true == $theme_options['post_layout_archives'] ) : ?>
+function tortuga_post_image_archives() { ?>
 
-		<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
-			<?php the_post_thumbnail(); ?>
-		</a>
+	<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
+		<?php the_post_thumbnail(); ?>
+	</a>
 
-		<?php
-	endif;
+	<?php
 
 } // tortuga_post_image_archives()
 endif;
@@ -103,7 +96,7 @@ function tortuga_post_image_single() {
 	$theme_options = tortuga_theme_options();
 	
 	// Display Post Thumbnail if activated
-	if ( 'top' == $theme_options['post_layout_single'] ) :
+	if ( true == $theme_options['post_image_single'] ) :
 
 		the_post_thumbnail();
 
@@ -142,6 +135,13 @@ function tortuga_entry_meta() {
 	if ( true == $theme_options['meta_category'] ) {
 	
 		$postmeta .= tortuga_meta_category();
+	
+	}
+	
+	// Display categories unless user has deactivated it via settings
+	if ( true == $theme_options['meta_comments'] ) {
+	
+		$postmeta .= tortuga_meta_comments();
 	
 	}
 		
@@ -201,6 +201,28 @@ function tortuga_meta_category() {
 	return '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
 	
 } // tortuga_meta_category()
+endif;
+
+
+if ( ! function_exists( 'tortuga_meta_comments' ) ):
+/**
+ * Displays the post comments
+ */	
+function tortuga_meta_comments() { 
+
+	// Start Output Buffering
+	ob_start();
+	
+	// Display Comments
+	comments_popup_link( esc_html__( 'Leave a comment', 'tortuga' ), esc_html__( 'One comment', 'tortuga' ), esc_html__( '% comments', 'tortuga' ) );
+	$comments = ob_get_contents();
+	
+	// End Output Buffering
+	ob_end_clean();
+	
+	return '<span class="meta-comments"> ' . $comments . '</span>';
+	
+} // tortuga_meta_comments()
 endif;
 
 
