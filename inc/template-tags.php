@@ -27,16 +27,45 @@ if ( ! function_exists( 'tortuga_header_image' ) ):
  * Displays the custom header image below the navigation menu
  */
 function tortuga_header_image() {
+	
+	// Get theme options from database
+	$theme_options = tortuga_theme_options();	
+	
+	// Display featured image as header image on static pages
+	if( is_page() && has_post_thumbnail() ) : ?>
 		
-	// Check if there is a custom header image
-	if( get_header_image() ) : ?>
+		<div id="headimg" class="header-image featured-image-header">
+			<?php the_post_thumbnail( 'tortuga-header-image' ); ?>
+		</div>
+	
+	<?php // Display default header image set on Appearance > Header
+	elseif( get_header_image() ) : 
+
+		// Hide header image on front page
+		if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
+			return;
+		}
+		?>
 		
 		<div id="headimg" class="header-image">
-			<img src="<?php echo get_header_image(); ?>" />
+			
+			<?php // Check if custom header image is linked
+			if( $theme_options['custom_header_link'] <> '' ) : ?>
+			
+				<a href="<?php echo esc_url( $theme_options['custom_header_link'] ); ?>">
+					<img src="<?php echo get_header_image(); ?>" />
+				</a>
+				
+			<?php else : ?>
+			
+				<img src="<?php echo get_header_image(); ?>" />
+				
+			<?php endif; ?>
+			
 		</div>
-<?php 
+	
+	<?php 
 	endif;
-
 }
 endif;
 
@@ -46,19 +75,18 @@ if ( ! function_exists( 'tortuga_post_image_archives' ) ):
  * Displays the featured image on archive pages
  */
 function tortuga_post_image_archives() {
-		
+	
 	// Get Theme Options from Database
 	$theme_options = tortuga_theme_options();
 	
-	// Display Postmeta
-	if ( true == $theme_options['post_thumbnail_archives'] ) : ?>
-		
-		<div class="entry-thumbnail">
-			<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
-				<?php the_post_thumbnail(); ?>
-			</a>
-		</div>
-<?php 
+	// Display Featured Image beside post content
+	if ( true == $theme_options['post_layout_archives'] ) : ?>
+
+		<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
+			<?php the_post_thumbnail(); ?>
+		</a>
+
+		<?php
 	endif;
 
 } // tortuga_post_image_archives()
@@ -70,17 +98,15 @@ if ( ! function_exists( 'tortuga_post_image_single' ) ):
  * Displays the featured image on single posts
  */
 function tortuga_post_image_single() {
-		
+	
 	// Get Theme Options from Database
 	$theme_options = tortuga_theme_options();
 	
-	// Display Postmeta
-	if ( true == $theme_options['post_thumbnail_single'] ) : ?>
-		
-		<div class="entry-thumbnail">
-			<?php the_post_thumbnail(); ?>
-		</div>
-<?php 
+	// Display Post Thumbnail if activated
+	if ( 'top' == $theme_options['post_layout_single'] ) :
+
+		the_post_thumbnail();
+
 	endif;
 
 } // tortuga_post_image_single()
@@ -89,49 +115,41 @@ endif;
 
 if ( ! function_exists( 'tortuga_entry_meta' ) ):	
 /**
- * Displays the date and author of posts
+ * Displays the date, author and categories of a post
  */
 function tortuga_entry_meta() {
 
 	// Get Theme Options from Database
 	$theme_options = tortuga_theme_options();
 	
-	// Display Postmeta
-	if ( true == $theme_options['meta_date'] or true == $theme_options['meta_author'] ) :
+	$postmeta = '';
 	
-		echo '<div class="entry-meta">';
+	// Display date unless user has deactivated it via settings
+	if ( true == $theme_options['meta_date'] ) {
 		
-		// Display Date unless user has deactivated it via settings
-		if ( true == $theme_options['meta_date'] ) :
+		$postmeta .= tortuga_meta_date();
 		
-			tortuga_meta_date();
-		
-		endif; 
+	}
 
-		// Display Author unless user has deactivated it via settings
-		if ( true == $theme_options['meta_author'] ) :
+	// Display author unless user has deactivated it via settings
+	if ( true == $theme_options['meta_author'] ) {
+	
+		$postmeta .= tortuga_meta_author();
+	
+	}
+	
+	// Display categories unless user has deactivated it via settings
+	if ( true == $theme_options['meta_category'] ) {
+	
+		$postmeta .= tortuga_meta_category();
+	
+	}
 		
-			tortuga_meta_author();
+	if( $postmeta ) {
 		
-		endif; 
-		
-		// Display Categories unless user has deactivated it via settings
-		if ( true == $theme_options['meta_category'] ) :
-		
-			tortuga_meta_category();
-		
-		endif; 
-		
-		// Display Author unless user has deactivated it via settings
-		if ( true == $theme_options['meta_comments'] and comments_open() ) :
-		
-			tortuga_meta_comments();
-		
-		endif; 
-
-		echo '</div>';
-		
-	endif;
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
+			
+	}
 
 } // tortuga_entry_meta()
 endif;
@@ -149,8 +167,8 @@ function tortuga_meta_date() {
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() )
 	);
-	
-	echo '<span class="meta-date">' . $time_string . '</span>';
+
+	return '<span class="meta-date">' . $time_string . '</span>';
 
 }  // tortuga_meta_date()
 endif;
@@ -168,7 +186,7 @@ function tortuga_meta_author() {
 		esc_html( get_the_author() )
 	);
 	
-	echo '<span class="meta-author"> ' . $author_string . '</span>';
+	return '<span class="meta-author"> ' . $author_string . '</span>';
 
 }  // tortuga_meta_author()
 endif;
@@ -176,32 +194,13 @@ endif;
 
 if ( ! function_exists( 'tortuga_meta_category' ) ):
 /**
- * Displays the post categories
- */
-function tortuga_meta_category() {  
-	
-	echo '<span class="meta-category"> ' . get_the_category_list(' / '). '</span>';
+ * Displays the category of posts
+ */	
+function tortuga_meta_category() { 
 
-}  // tortuga_meta_category()
-endif;
-
-
-if ( ! function_exists( 'tortuga_meta_comments' ) ):
-/**
- * Displays the post comments
- */
-function tortuga_meta_comments() {  
+	return '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
 	
-	echo '<span class="meta-comments">';
-	
-	comments_popup_link( 
-		esc_html__( 'Leave a comment', 'tortuga' ),
-		esc_html__( 'One comment', 'tortuga' ), 
-		esc_html__( '% comments', 'tortuga' ) );
-	
-	echo '</span>';
-
-}  // tortuga_meta_comments()
+} // tortuga_meta_category()
 endif;
 
 
@@ -242,6 +241,62 @@ function tortuga_more_link() { ?>
 
 <?php
 }
+endif;
+
+
+if ( ! function_exists( 'tortuga_post_navigation' ) ):
+/**
+ * Displays Single Post Navigation
+ */	
+function tortuga_post_navigation() { 
+	
+	// Get Theme Options from Database
+	$theme_options = tortuga_theme_options();
+	
+	if ( true == $theme_options['post_navigation'] ) {
+
+		the_post_navigation( array( 'prev_text' => '&laquo; %title', 'next_text' => '%title &raquo;' ) );
+			
+	}
+	
+}	
+endif;
+
+
+if ( ! function_exists( 'tortuga_breadcrumbs' ) ):
+/**
+ * Displays ThemeZee Breadcrumbs plugin
+ */	
+function tortuga_breadcrumbs() { 
+	
+	if ( function_exists( 'themezee_breadcrumbs' ) ) {
+
+		themezee_breadcrumbs( array( 
+			'before' => '<div class="breadcrumbs-container container clearfix">',
+			'after' => '</div>'
+		) );
+		
+	}
+}	
+endif;
+
+
+if ( ! function_exists( 'tortuga_related_posts' ) ):
+/**
+ * Displays ThemeZee Related Posts plugin
+ */	
+function tortuga_related_posts() { 
+	
+	if ( function_exists( 'themezee_related_posts' ) ) {
+
+		themezee_related_posts( array( 
+			'class' => 'related-posts type-page clearfix',
+			'before_title' => '<header class="page-header"><h2 class="archive-title related-posts-title">',
+			'after_title' => '</h2></header>'
+		) );
+		
+	}
+}	
 endif;
 
 
@@ -287,7 +342,7 @@ function tortuga_footer_text() { ?>
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'tortuga' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="http://themezee.com/themes/tortuga/" title="Tortuga WordPress Theme">Tortuga</a>'
+			'<a href="https://themezee.com/themes/tortuga/" title="Tortuga WordPress Theme">Tortuga</a>'
 		); ?>
 	</span>
 

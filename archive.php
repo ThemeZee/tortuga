@@ -19,16 +19,16 @@ $theme_options = tortuga_theme_options();
 		<?php if ( have_posts() ) : ?>
 		
 			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="archive-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+				
+				<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
+				<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
+			
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ 
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', $theme_options['post_content'] );
+				get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
 
 			endwhile;
 			

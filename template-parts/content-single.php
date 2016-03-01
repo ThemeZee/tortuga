@@ -8,25 +8,27 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
+		<?php tortuga_post_image_single(); ?>
+		
 		<header class="entry-header">
 			
-			<?php tortuga_post_image_single(); ?>
-
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			
 			<?php tortuga_entry_meta(); ?>
-			
+
 		</header><!-- .entry-header -->
 
 		<div class="entry-content clearfix">
-			
 			<?php the_content(); ?>
 			<!-- <?php trackback_rdf(); ?> -->
-			
 			<div class="page-links"><?php wp_link_pages(); ?></div>
+		</div><!-- .entry-content -->
+		
+		<footer class="entry-footer">
 			
 			<?php tortuga_entry_tags(); ?>
+			<?php tortuga_post_navigation(); ?>
 			
-		</div><!-- .entry-content -->
+		</footer><!-- .entry-footer -->
 
 	</article>

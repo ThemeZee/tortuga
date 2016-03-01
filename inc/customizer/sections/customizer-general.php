@@ -28,10 +28,10 @@ function tortuga_customize_register_general_settings( $wp_customize ) {
         'default'           => 'right-sidebar',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'tortuga_sanitize_layout'
+        'sanitize_callback' => 'tortuga_sanitize_select'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_control_layout', array(
+    $wp_customize->add_control( 'tortuga_theme_options[layout]', array(
         'label'    => esc_html__( 'Theme Layout', 'tortuga' ),
         'section'  => 'tortuga_section_general',
         'settings' => 'tortuga_theme_options[layout]',
@@ -43,6 +43,85 @@ function tortuga_customize_register_general_settings( $wp_customize ) {
 			)
 		)
 	);
+	
+	// Add Sticky Header Setting
+	$wp_customize->add_setting( 'tortuga_theme_options[sticky_header_title]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Tortuga_Customize_Header_Control(
+        $wp_customize, 'tortuga_theme_options[sticky_header_title]', array(
+            'label' => esc_html__( 'Sticky Header', 'tortuga' ),
+            'section' => 'tortuga_section_general',
+            'settings' => 'tortuga_theme_options[sticky_header_title]',
+            'priority' => 2
+            )
+        )
+    );
+	$wp_customize->add_setting( 'tortuga_theme_options[sticky_header]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'tortuga_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'tortuga_theme_options[sticky_header]', array(
+        'label'    => esc_html__( 'Enable sticky header feature', 'tortuga' ),
+        'section'  => 'tortuga_section_general',
+        'settings' => 'tortuga_theme_options[sticky_header]',
+        'type'     => 'checkbox',
+		'priority' => 3
+		)
+	);
+	
+	
+	// Add Post Layout Settings for archive posts
+	$wp_customize->add_setting( 'tortuga_theme_options[post_layout_archives]', array(
+        'default'           => 'left',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'tortuga_sanitize_select'
+		)
+	);
+    $wp_customize->add_control( 'tortuga_theme_options[post_layout_archives]', array(
+        'label'    => esc_html__( 'Post Layout (archive pages)', 'tortuga' ),
+        'section'  => 'tortuga_section_general',
+        'settings' => 'tortuga_theme_options[post_layout_archives]',
+        'type'     => 'select',
+		'priority' => 4,
+        'choices'  => array(
+            'left' => esc_html__( 'Show featured image beside content', 'tortuga' ),
+            'top' => esc_html__( 'Show featured image above content', 'tortuga' ),
+			'none' => esc_html__( 'Hide featured image', 'tortuga' )
+			)
+		)
+	);
+	
+	// Add Post Layout Settings for single posts
+	$wp_customize->add_setting( 'tortuga_theme_options[post_layout_single]', array(
+        'default'           => 'header',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'tortuga_sanitize_select'
+		)
+	);
+    $wp_customize->add_control( 'tortuga_theme_options[post_layout_single]', array(
+        'label'    => esc_html__( 'Post Layout (single post)', 'tortuga' ),
+        'section'  => 'tortuga_section_general',
+        'settings' => 'tortuga_theme_options[post_layout_single]',
+        'type'     => 'select',
+		'priority' => 5,
+        'choices'  => array(
+            'header' => esc_html__( 'Show featured image as header image', 'tortuga' ),
+            'top' => esc_html__( 'Show featured image above content', 'tortuga' ),
+			'none' => esc_html__( 'Hide featured image', 'tortuga' )
+			)
+		)
+	);
+
 	
 }
 add_action( 'customize_register', 'tortuga_customize_register_general_settings' );

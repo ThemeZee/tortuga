@@ -1,0 +1,186 @@
+/*
+ * ThemeZee Widget Bundle CSS
+ * https://themezee.com/plugins/widget-bundle/
+ *
+ * Copyright(C) 2015, ThemeZee.com - support@themezee.com
+ * License: GPL v3
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * @package Tortuga
+ */
+
+ 
+/*--------------------------------------------------------------
+# General Styles
+---------------------------------------------------------------- */
+
+/* Clearing Floats */
+.tzwb-clearfix:before, 
+.tzwb-clearfix:after {  
+	content: " ";
+	display: table;  
+}  
+
+.tzwb-clearfix:after {  
+	clear: both;
+}  
+
+.tzwb-clearfix {
+    *zoom: 1; /* For IE 6/7 only */  
+}
+
+
+/*--------------------------------------------------------------
+# Posts List
+---------------------------------------------------------------- */
+.tzwb-posts-list li {
+	list-style: none;
+	overflow: auto;
+	padding: 0;
+	margin-bottom: 0.5em;
+}
+
+.tzwb-posts-list .tzwb-excerpt p {
+	margin: 0;
+	padding: 0;
+}
+
+.tzwb-posts-list .wp-post-image {
+	float: left;
+	margin: 0.3em 0.8em 1em 0;
+	max-width: 90px;
+	height: auto;
+}
+
+.tzwb-posts-list .tzwb-entry-meta {
+	margin: 0.4em 0.2em 0;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+/*--------------------------------------------------------------
+# Comments List
+---------------------------------------------------------------- */
+.tzwb-comments-list li {
+	list-style: none;
+	margin-bottom: 0.5em;
+	overflow: auto;
+}
+
+.tzwb-comments-list .avatar {
+	float: left;
+	margin: 0.3em 0.8em 0.8em 0;
+}
+
+.tzwb-comments-list .tzwb-comment-content {
+	font-style: italic;
+}
+
+.tzwb-comments-list .tzwb-comment-date {
+	margin: 0.4em 0.2em 0;
+	font-size: 12px;
+	font-size: 0.75rem;
+	color: #aaa;
+	text-transform: uppercase;
+}
+
+
+/*--------------------------------------------------------------
+# Tabbed Content Widget
+---------------------------------------------------------------- */
+.tzwb-tabbed-content .tzwb-tabnavi-wrap {
+	margin: 0 -0.3em;
+	padding: 0;
+	overflow: auto;
+	list-style: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi {
+	float: left;
+	width: 100%;
+	list-style: none;
+	list-style-position: outside;
+	position: relative;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li {
+	float: left;
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a {
+	display: block;
+	margin: 0;
+	padding: 0.8em 0.8em 0.5em;
+	font-family: 'Titillium Web', Tahoma, Arial;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	color: #404040;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a:link, 
+.tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
+	color: #404040;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
+.tzwb-tabbed-content .tzwb-tabnavi li a:active {
+	color: #dd5533;
+	text-decoration: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
+	color: #dd5533;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent {
+	padding: 0;
+	margin: 1em 0 0 0;
+}
+
+
+/*--------------------------------------------------------------
+# Social Icons Widget
+---------------------------------------------------------------- */
+.tzwb-social-icons .social-icons-menu {
+	list-style: none;
+	line-height: 1;
+}
+
+.tzwb-social-icons .social-icons-menu li {
+	margin: 0 2px 2px 0;
+}
+
+.tzwb-social-icons .social-icons-menu li a {
+	padding: 0.75em;
+	background: #dd5533;
+}
+
+.tzwb-social-icons .social-icons-menu li a:before {
+	font-size: 24px;
+}
+
+.tzwb-social-icons .social-icons-menu li a:hover {
+	text-decoration: none;
+	background: #404040;
+}
+
+/*--------------------------------------------------------------
+# Facebook Like Box Widget
+---------------------------------------------------------------- */
+.tzwb-facebook-likebox .tzwb-content {
+	overflow: hidden;
+}

@@ -13,33 +13,19 @@
 	
 	<?php do_action( 'tortuga_before_footer' ); ?>
 
-	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
-		
-		<div class="footer-main container clearfix">
-			
+	<div id="footer" class="footer-wrap">
+	
+		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
+
 			<div id="footer-text" class="site-info">
-				
-				<?php do_action('tortuga_footer_text'); ?>
-			
+				<?php do_action( 'tortuga_footer_text' ); ?>
 			</div><!-- .site-info -->
 			
-			<nav id="footer-links" class="footer-navigation navigation clearfix" role="navigation">
-				<?php 
-					// Display Footer Navigation
-					wp_nav_menu( array(
-						'theme_location' => 'footer', 
-						'container' => false, 
-						'menu_class' => 'footer-navigation-menu', 
-						'echo' => true, 
-						'fallback_cb' => '',
-						'depth' => 1)
-					);
-				?>
-			</nav><!-- .footer-navigation -->
-			
-		</div><!-- .footer-main -->
+			<?php do_action( 'tortuga_footer_menu' ); ?>
 
-	</footer><!-- #colophon -->
+		</footer><!-- #colophon -->
+		
+	</div>
 
 </div><!-- #page -->
 

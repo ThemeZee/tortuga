@@ -15,7 +15,7 @@ $theme_options = tortuga_theme_options();
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
+					
 			<header class="page-header">
 				
 				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'tortuga' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
@@ -29,7 +29,7 @@ $theme_options = tortuga_theme_options();
 	
 				if ( 'post' == get_post_type() ) :
 		
-					get_template_part( 'template-parts/content', $theme_options['post_content'] );
+					get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
 				
 				else :
 				

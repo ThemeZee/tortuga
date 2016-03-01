@@ -23,20 +23,37 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Title for latest posts setting
+	$wp_customize->add_setting( 'tortuga_theme_options[latest_posts_title]', array(
+        'default'           => esc_html__( 'Latest Posts', 'tortuga' ),
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_html'
+		)
+	);
+    $wp_customize->add_control( 'tortuga_theme_options[latest_posts_title]', array(
+        'label'    => esc_html__( 'Title above Latest Posts', 'tortuga' ),
+        'section'  => 'tortuga_section_post',
+        'settings' => 'tortuga_theme_options[latest_posts_title]',
+        'type'     => 'text',
+		'priority' => 1
+		)
+	);
+
 	// Add Settings and Controls for post content
 	$wp_customize->add_setting( 'tortuga_theme_options[post_content]', array(
         'default'           => 'excerpt',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
-        'sanitize_callback' => 'tortuga_sanitize_post_content'
+        'sanitize_callback' => 'tortuga_sanitize_select'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_control_post_content', array(
+    $wp_customize->add_control( 'tortuga_theme_options[post_content]', array(
         'label'    => esc_html__( 'Post length on archives', 'tortuga' ),
         'section'  => 'tortuga_section_post',
         'settings' => 'tortuga_theme_options[post_content]',
         'type'     => 'radio',
-		'priority' => 1,
+		'priority' => 2,
         'choices'  => array(
             'index' => esc_html__( 'Show full posts', 'tortuga' ),
             'excerpt' => esc_html__( 'Show post excerpts', 'tortuga' )
@@ -52,66 +69,18 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'absint'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_control_excerpt_length', array(
+    $wp_customize->add_control( 'tortuga_theme_options[excerpt_length]', array(
         'label'    => esc_html__( 'Excerpt Length', 'tortuga' ),
         'section'  => 'tortuga_section_post',
         'settings' => 'tortuga_theme_options[excerpt_length]',
         'type'     => 'text',
 		'active_callback' => 'tortuga_control_post_content_callback',
-		'priority' => 2
-		)
-	);
-	
-	// Add Post Images Settings
-	$wp_customize->add_setting( 'tortuga_theme_options[post_images_headline]', array(
-        'default'           => '',
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'esc_attr'
-        )
-    );
-    $wp_customize->add_control( new Tortuga_Customize_Header_Control(
-        $wp_customize, 'tortuga_control_post_images_headline', array(
-            'label' => esc_html__( 'Post Images', 'tortuga' ),
-            'section' => 'tortuga_section_post',
-            'settings' => 'tortuga_theme_options[post_images_headline]',
-            'priority' => 3
-            )
-        )
-    );
-	$wp_customize->add_setting( 'tortuga_theme_options[post_thumbnail_archives]', array(
-        'default'           => true,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'tortuga_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'tortuga_control_post_thumbnail_archive', array(
-        'label'    => esc_html__( 'Display featured images on archives', 'tortuga' ),
-        'section'  => 'tortuga_section_post',
-        'settings' => 'tortuga_theme_options[post_thumbnail_archives]',
-        'type'     => 'checkbox',
-		'priority' => 4
-		)
-	);
-	$wp_customize->add_setting( 'tortuga_theme_options[post_thumbnail_single]', array(
-        'default'           => true,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'tortuga_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'tortuga_control_post_thumbnail_single', array(
-        'label'    => esc_html__( 'Display featured images on single posts', 'tortuga' ),
-        'section'  => 'tortuga_section_post',
-        'settings' => 'tortuga_theme_options[post_thumbnail_single]',
-        'type'     => 'checkbox',
-		'priority' => 5
+		'priority' => 3
 		)
 	);
 	
 	// Add Post Meta Settings
-	$wp_customize->add_setting( 'tortuga_theme_options[post_meta_headline]', array(
+	$wp_customize->add_setting( 'tortuga_theme_options[postmeta_headline]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
@@ -119,14 +88,15 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
         )
     );
     $wp_customize->add_control( new Tortuga_Customize_Header_Control(
-        $wp_customize, 'tortuga_control_post_meta_headline', array(
+        $wp_customize, 'tortuga_theme_options[postmeta_headline]', array(
             'label' => esc_html__( 'Post Meta', 'tortuga' ),
             'section' => 'tortuga_section_post',
-            'settings' => 'tortuga_theme_options[post_meta_headline]',
-            'priority' => 6
+            'settings' => 'tortuga_theme_options[postmeta_headline]',
+            'priority' => 4
             )
         )
     );
+	
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_date]', array(
         'default'           => true,
 		'type'           	=> 'option',
@@ -134,14 +104,15 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'tortuga_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_control_meta_date', array(
+    $wp_customize->add_control( 'tortuga_theme_options[meta_date]', array(
         'label'    => esc_html__( 'Display post date', 'tortuga' ),
         'section'  => 'tortuga_section_post',
         'settings' => 'tortuga_theme_options[meta_date]',
         'type'     => 'checkbox',
-		'priority' => 7
+		'priority' => 5
 		)
 	);
+	
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_author]', array(
         'default'           => true,
 		'type'           	=> 'option',
@@ -149,14 +120,15 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'tortuga_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_control_meta_author', array(
+    $wp_customize->add_control( 'tortuga_theme_options[meta_author]', array(
         'label'    => esc_html__( 'Display post author', 'tortuga' ),
         'section'  => 'tortuga_section_post',
         'settings' => 'tortuga_theme_options[meta_author]',
         'type'     => 'checkbox',
-		'priority' => 8
+		'priority' => 6
 		)
 	);
+	
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_category]', array(
         'default'           => true,
 		'type'           	=> 'option',
@@ -164,42 +136,61 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
         'sanitize_callback' => 'tortuga_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_control_meta_category', array(
+    $wp_customize->add_control( 'tortuga_theme_options[meta_category]', array(
         'label'    => esc_html__( 'Display post categories', 'tortuga' ),
         'section'  => 'tortuga_section_post',
         'settings' => 'tortuga_theme_options[meta_category]',
         'type'     => 'checkbox',
-		'priority' => 9
+		'priority' => 7
 		)
 	);
-	$wp_customize->add_setting( 'tortuga_theme_options[meta_comments]', array(
-        'default'           => true,
+
+	$wp_customize->add_setting( 'tortuga_theme_options[meta_tags]', array(
+        'default'           => false,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'tortuga_sanitize_checkbox'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_control_meta_comments', array(
-        'label'    => esc_html__( 'Display post comments', 'tortuga' ),
-        'section'  => 'tortuga_section_post',
-        'settings' => 'tortuga_theme_options[meta_comments]',
-        'type'     => 'checkbox',
-		'priority' => 10
-		)
-	);
-		$wp_customize->add_setting( 'tortuga_theme_options[meta_tags]', array(
-        'default'           => true,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'tortuga_sanitize_checkbox'
-		)
-	);
-    $wp_customize->add_control( 'tortuga_control_meta_tags', array(
-        'label'    => esc_html__( 'Display post tags', 'tortuga' ),
+    $wp_customize->add_control( 'tortuga_theme_options[meta_tags]', array(
+        'label'    => esc_html__( 'Display post tags on single posts', 'tortuga' ),
         'section'  => 'tortuga_section_post',
         'settings' => 'tortuga_theme_options[meta_tags]',
         'type'     => 'checkbox',
-		'priority' => 11
+		'priority' => 8
+		)
+	);
+	
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'tortuga_theme_options[post_footer_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Tortuga_Customize_Header_Control(
+        $wp_customize, 'tortuga_theme_options[post_footer_headline]', array(
+            'label' => esc_html__( 'Post Footer', 'tortuga' ),
+            'section' => 'tortuga_section_post',
+            'settings' => 'tortuga_theme_options[post_footer_headline]',
+            'priority' => 9
+            )
+        )
+    );
+	$wp_customize->add_setting( 'tortuga_theme_options[post_navigation]', array(
+        'default'           => true,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'tortuga_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'tortuga_theme_options[post_navigation]', array(
+        'label'    => esc_html__( 'Display post navigation on single posts', 'tortuga' ),
+        'section'  => 'tortuga_section_post',
+        'settings' => 'tortuga_theme_options[post_navigation]',
+        'type'     => 'checkbox',
+		'priority' => 10
 		)
 	);
 	

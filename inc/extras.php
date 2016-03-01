@@ -20,7 +20,7 @@ endif;
 
 
 /**
- * Adds custom theme layout and sticky navigation class to the array of body classes.
+ * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
  * @return array
@@ -31,9 +31,19 @@ function tortuga_body_classes( $classes ) {
 	$theme_options = tortuga_theme_options();
 		
 	// Switch Sidebar Layout to left
-	if ( 'left-sidebar' == $theme_options['layout']  ) :
+	if ( 'left-sidebar' == $theme_options['layout'] ) {
 		$classes[] = 'sidebar-left';
-	endif;
+	}
+	
+	// Add Sticky Header class
+	if ( true == $theme_options['sticky_header'] ) {
+		$classes[] = 'sticky-header';
+	}
+	
+	// Add Small Post Layout class
+	if ( ( is_archive() or is_home() ) and 'left' == $theme_options['post_layout_archives'] ) {
+		$classes[] = 'post-layout-small';
+	}
 
 	return $classes;
 }
@@ -67,6 +77,30 @@ add_filter('excerpt_length', 'tortuga_excerpt_length');
  * @param int $length Length of excerpt in number of words
  * @return int
  */
-function tortuga_category_posts_excerpt_length($length) {
+function tortuga_magazine_posts_excerpt_length($length) {
     return 15;
 }
+
+
+/**
+ * Set wrapper start for wooCommerce
+ *
+ */
+function tortuga_wrapper_start() {
+	echo '<section id="primary" class="content-area">';
+	echo '<main id="main" class="site-main" role="main">';
+}
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+add_action('woocommerce_before_main_content', 'tortuga_wrapper_start', 10);
+
+
+/**
+ * Set wrapper end for wooCommerce
+ *
+ */
+function tortuga_wrapper_end() {
+	echo '</main><!-- #main -->';
+	echo '</section><!-- #primary -->';
+}
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_after_main_content', 'tortuga_wrapper_end', 10);

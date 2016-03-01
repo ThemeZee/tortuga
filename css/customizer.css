@@ -6,12 +6,35 @@
  * @package Tortuga
  */
 
-#customize-control-tortuga_control_post_images_headline,
-#customize-control-tortuga_control_post_meta_headline {
-	margin-top: 12px;
+.customize-control-checkbox {
+    margin-bottom: 4px;
 }
 
-#customize-control-tortuga_control_post_images_headline,
-#customize-control-tortuga_control_post_meta_headline {
+#customize-control-tortuga_theme_options-post_layout_archives,
+#customize-control-tortuga_theme_options-post_layout_single,
+#customize-control-tortuga_theme_options-latest_posts_title,
+#customize-control-tortuga_theme_options-post_content,
+#customize-control-tortuga_theme_options-post_footer_headline,
+#customize-control-tortuga_theme_options-postmeta_headline,
+#customize-control-tortuga_theme_options-footermeta_headline,
+#customize-control-tortuga_theme_options-slider_category,
+#customize-control-tortuga_theme_options-slider_limit,
+#customize-control-tortuga_theme_options-slider_animation {
+	margin-top: 16px;
+}
+
+#customize-control-tortuga_theme_options-sticky_header_title,
+#customize-control-tortuga_theme_options-post_footer_headline,
+#customize-control-tortuga_theme_options-postmeta_headline,
+#customize-control-tortuga_theme_options-footermeta_headline,
+#customize-control-tortuga_theme_options-post_image_single_header,
+#customize-control-tortuga_theme_options-slider_activate {
 	margin-bottom: 0;
+}
+
+#customize-control-tortuga_theme_options-upgrade div {
+	margin: 4px 0 32px;
+}
+#customize-control-tortuga_theme_options-upgrade div .customize-control-title {
+	margin-bottom: 4px;
 }

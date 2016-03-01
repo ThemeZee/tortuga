@@ -7,9 +7,6 @@
  * @package Tortuga
  */
  
-// Get Theme Options from Database
-$theme_options = tortuga_theme_options();
-	
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -28,22 +25,24 @@ $theme_options = tortuga_theme_options();
 		
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tortuga' ); ?></a>
 		
+		<div id="header-top" class="header-bar-wrap"><?php do_action( 'tortuga_header_bar' ); ?></div>
+		
 		<header id="masthead" class="site-header clearfix" role="banner">
 			
 			<div class="header-main container clearfix">
 						
 				<div id="logo" class="site-branding clearfix">
 				
-					<?php do_action('tortuga_site_title'); ?>
+					<?php do_action( 'tortuga_site_title' ); ?>
 				
 				</div><!-- .site-branding -->
 				
 				<div class="header-widgets clearfix">
 					
 					<?php // Display Header Widgets
-					if( is_active_sidebar('header') ) : 
+					if( is_active_sidebar( 'header' ) ) : 
 			
-						dynamic_sidebar('header');
+						dynamic_sidebar( 'header' );
 						
 					endif; ?>
 					
@@ -70,7 +69,10 @@ $theme_options = tortuga_theme_options();
 		
 		</header><!-- #masthead -->
 		
-		<?php // Display Custom Header Image
-		tortuga_header_image(); ?>
+		<?php tortuga_header_image(); ?>
 		
+		<?php tortuga_slider(); ?>
+		
+		<?php tortuga_breadcrumbs(); ?>
+			
 		<div id="content" class="site-content container clearfix">

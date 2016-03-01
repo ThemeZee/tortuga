@@ -25,3 +25,23 @@ function tortuga_control_post_content_callback( $control ) {
 	endif;
 	
 }
+
+
+/**
+ * Adds a callback function to retrieve wether slider is activated or not
+ *
+ * @param object $control / Instance of the Customizer Control 
+ * @return bool
+ */
+function tortuga_slider_activated_callback( $control ) {
+	
+	// Check if Slider is turned on
+	if ( $control->manager->get_setting('tortuga_theme_options[slider_blog]')->value() == 1 ) :
+		return true;
+	elseif ( $control->manager->get_setting('tortuga_theme_options[slider_magazine]')->value() == 1 ) :
+		return true;
+	else :
+		return false;
+	endif;
+	
+}

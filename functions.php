@@ -38,11 +38,8 @@ function tortuga_setup() {
 	// Set detfault Post Thumbnail size
 	set_post_thumbnail_size( 900, 400, true );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Main Navigation', 'tortuga' ),
-		'footer' => esc_html__( 'Footer Navigation', 'tortuga' )
-	) );
+	// Register Navigation Menu
+	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'tortuga' ) );
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
 	add_theme_support( 'html5', array(
@@ -50,15 +47,21 @@ function tortuga_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'tortuga_custom_background_args', array('default-color' => 'e5e5e5') ) );
+	add_theme_support( 'custom-background', apply_filters( 'tortuga_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
 	
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'tortuga_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 2500,
-		'height' => 250,
+		'width'	=> 1920,
+		'height' => 480,
 		'flex-height' => true
 	) ) );
+	
+	// Add Theme Support for wooCommerce
+	add_theme_support( 'woocommerce' );
+	
+	// Add extra theme styling to the visual editor
+	add_editor_style( array( 'css/editor-style.css', tortuga_google_fonts_url() ) );
 	
 }
 endif; // tortuga_setup
@@ -72,7 +75,7 @@ add_action( 'after_setup_theme', 'tortuga_setup' );
  * @global int $content_width
  */
 function tortuga_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'tortuga_content_width', 810 );
+	$GLOBALS['content_width'] = apply_filters( 'tortuga_content_width', 840 );
 }
 add_action( 'after_setup_theme', 'tortuga_content_width', 0 );
 
@@ -87,7 +90,7 @@ function tortuga_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar', 'tortuga' ),
 		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'tortuga' ),
+		'description' => esc_html__( 'Appears on posts and pages except full width template.', 'tortuga' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -95,13 +98,13 @@ function tortuga_widgets_init() {
 	));
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'tortuga' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'tortuga' ),
-		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
+		'name' => esc_html__( 'Magazine Homepage', 'tortuga' ),
+		'id' => 'magazine-homepage',
+		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Magazine Posts widgets here.', 'tortuga' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="widget-header"><h1 class="widget-title">',
+		'after_title' => '</h1></div>',
 	));
 	
 } // tortuga_widgets_init
@@ -127,9 +130,6 @@ function tortuga_scripts() {
 	// Register and enqueue navigation.js
 	wp_enqueue_script( 'tortuga-jquery-navigation', get_template_directory_uri() .'/js/navigation.js', array('jquery') );
 	
-	// Register and enqueue sidebar.js
-	wp_enqueue_script( 'tortuga-jquery-sidebar', get_template_directory_uri() .'/js/sidebar.js', array('jquery') );
-	
 	// Register and Enqueue Google Fonts
 	wp_enqueue_style( 'tortuga-default-fonts', tortuga_google_fonts_url(), array(), null );
 
@@ -148,7 +148,7 @@ add_action( 'wp_enqueue_scripts', 'tortuga_scripts' );
 function tortuga_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array( 'Open Sans', 'Titillium Web' );
+	$font_families = array( 'Open Sans:400,400italic,700,700italic', 'Titillium Web:400,400italic,700,700italic' );
 
 	// Build Fonts URL
 	$query_args = array(
@@ -162,9 +162,29 @@ function tortuga_google_fonts_url() {
 
 
 /**
+ * Add custom sizes for featured images
+ */
+function tortuga_add_image_sizes() {
+	
+	// Add Custom Header Image Size
+	add_image_size( 'tortuga-header-image', 1920, 480, true );
+	
+	// Add different thumbnail sizes for widgets and post layouts
+	add_image_size( 'tortuga-thumbnail-small', 120, 80, true );
+	add_image_size( 'tortuga-thumbnail-medium', 360, 240, true );
+	add_image_size( 'tortuga-thumbnail-large', 600, 400, true );
+	
+}
+add_action( 'after_setup_theme', 'tortuga_add_image_sizes' );
+
+
+/**
  * Include Files
  */
  
+// include Theme Info page
+require get_template_directory() . '/inc/theme-info.php';
+
 // include Theme Customizer Options
 require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/customizer/default-options.php';
@@ -174,3 +194,14 @@ require get_template_directory() . '/inc/extras.php';
 
 // include Template Functions
 require get_template_directory() . '/inc/template-tags.php';
+
+// Include support functions for Theme Addons
+require get_template_directory() . '/inc/addons.php';
+
+// Include Post Slider Setup
+require get_template_directory() . '/inc/slider.php';
+
+// include Widget Files
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-boxed.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
+require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
