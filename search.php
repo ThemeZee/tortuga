@@ -19,30 +19,33 @@ $theme_options = tortuga_theme_options();
 			<header class="page-header">
 				
 				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'tortuga' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<p><?php get_search_form(); ?></p>
 				
 			</header><!-- .page-header -->
 			
-		<?php 
-		if (have_posts()) : 
+		<?php if ( have_posts() ) :  ?>
 		
-			while (have_posts()) : the_post();
-	
-				if ( 'post' == get_post_type() ) :
-		
-					get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
-				
-				else :
-				
-					get_template_part( 'template-parts/content', 'search' );
+			<div id="homepage-posts" class="post-wrapper clearfix">
 					
-				endif;
+				<?php while (have_posts()) : the_post();
+			
+					if ( 'post' == get_post_type() ) :
 		
-			endwhile;
+						get_template_part( 'template-parts/content' );
+				
+					else :
+					
+						get_template_part( 'template-parts/content', 'search' );
+						
+					endif;
+			
+				endwhile; ?>
+			
+			</div>
+		
+			<?php tortuga_pagination(); ?>
 
-			// Display Pagination	
-			tortuga_pagination();
-
-		else : ?>
+		<?php else : ?>
 
 			<div class="no-matches type-page">
 				
@@ -55,8 +58,6 @@ $theme_options = tortuga_theme_options();
 				<div class="entry-content">
 					
 					<p><?php esc_html_e( 'Please try again, or use the navigation menus to find what you search for.', 'tortuga' ); ?></p>
-					
-					<?php get_search_form(); ?>
 				
 				</div>
 				

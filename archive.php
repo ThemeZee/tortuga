@@ -24,18 +24,20 @@ $theme_options = tortuga_theme_options();
 				<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 			
 			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ 
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', esc_attr( $theme_options['post_content'] ) );
-
-			endwhile;
 			
-			// Display Pagination	
-			tortuga_pagination();
+			<div id="homepage-posts" class="post-wrapper clearfix">
+					
+				<?php while (have_posts()) : the_post();
+			
+					get_template_part( 'template-parts/content' );
+			
+				endwhile; ?>
+			
+			</div>
+			
+			<?php tortuga_pagination(); ?>
 
-		endif; ?>
+		<?php endif; ?>
 			
 		</main><!-- #main -->
 	</section><!-- #primary -->

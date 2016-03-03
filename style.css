@@ -463,7 +463,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	padding: 0.4em 0.8em;
+	margin: 0;
+	padding: 0.6em 1em;
 	font-size: 17px;
 	font-size: 1.0625rem;
 	color: #fff;
@@ -631,13 +632,19 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
+	color: #fff;
 	background: #303030;
+}
+
+.header-main {
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 .site-branding {
 	float: left;
 	max-width: 100%;
-	margin: 1.5em 0;
+	margin: 0;
 	padding: 0;
 }
 
@@ -668,6 +675,25 @@ textarea {
 
 .site-branding a:hover .site-title {
 	color: #ccc;
+}
+
+/* Header Widgets */
+.header-widgets {
+	display: inline;
+}
+
+.header-widget {
+	float: right;
+	margin: 0.5em 0 0 1.5em;
+}
+
+.header-widget ul {
+	margin: 0;
+	padding: 0;
+}
+
+.header-widget-title {
+	margin: 0 0 0.5em;
 }
 
 /* Custom Header Image */
@@ -936,7 +962,7 @@ textarea {
 
 .widget ul {
 	margin: 0;
-	padding: 0 0.3em;
+	padding: 0;
 	list-style: circle inside;
 }
 
@@ -954,49 +980,6 @@ textarea {
 /*--------------------------------------------------------------
 ## 11.1 - Default Widgets
 --------------------------------------------------------------*/
-
-/* Tagcloud Widget */
-.widget_tag_cloud .tagcloud {
-	font-size: 14px;
-	font-size: 0.875rem;
-}
-
-.widget_tag_cloud .tagcloud:before,
-.widget_tag_cloud .tagcloud:after {
-	content: "";
-	display: table;
-}
-
-.widget_tag_cloud .tagcloud:after {
-	clear: both;
-}
-
-.widget_tag_cloud .tagcloud a {
-	float: left;
-	display: inline-block;
-	margin: 0 2px 2px 0;
-	padding: 0.2em 0.5em 0.3em;
-	text-decoration: none;
-	background: #eee;
-	font-size: 16px !important;
-	font-size: 1rem !important;
-}
-
-.widget_tag_cloud .tagcloud a:link, 
-.widget_tag_cloud .tagcloud a:visited {
-	color: #777;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
-}
-
-.widget_tag_cloud .tagcloud a:hover, 
-.widget_tag_cloud .tagcloud a:active {
-	color: #fff;
-	background: #dd5533;
-}
 
 /* Theme Search Widget */
 .search-form {
@@ -1260,7 +1243,8 @@ textarea {
 --------------------------------------------------------------*/
 .type-post, 
 .type-page, 
-.type-attachment  {
+.type-attachment,
+.comments-area  {
 	margin: 0 0 2em 0;
 	padding: 1.5em;
 	background: #fff;
@@ -1269,6 +1253,7 @@ textarea {
 	max-width: 100%;
 }
 
+.archive-title,
 .page-title, 
 .entry-title {
 	font-family: 'Titillium Web', Tahoma, Arial;
@@ -1303,10 +1288,14 @@ textarea {
 	margin: 0 0 0.5em;
 }
 
+.entry-content p:last-child {
+	margin-bottom: 0;
+}
+
 /* Read more Link */
 .more-link {
 	display: inline-block;
-	margin: 0;
+	margin: 1.5em 0 0;
 	padding: 0.6em 1em;
 	font-size: 16px;
 	font-size: 1rem;
@@ -1543,24 +1532,13 @@ textarea {
 /* Archives and Search Heading */
 .page-header {
 	margin: 0 0 2em 0;
-	padding: 1em 1.5em;
+	padding: 1.5em;
 	background: #fff;
 	border-top: 3px solid #dd5533;
 	box-shadow: 0 2px 2px #aaa;
 }
 
-.page-header .archive-title {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	font-family: 'Titillium Web', Tahoma, Arial;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-weight: normal;
-	text-transform: uppercase;
-	color: #dd5533;
-}
-
+.homepage-description,
 .archive-description p {
 	margin-bottom: 0;
 }
@@ -1570,6 +1548,7 @@ textarea {
 	margin: 0;
 	padding: 0.5em 0;
 	background: #fff;
+	box-shadow: 0 2px 2px #aaa;
 }
 
 .breadcrumbs-container {
@@ -1678,25 +1657,29 @@ textarea {
 /*--------------------------------------------------------------
 # 11.0 - Comments
 --------------------------------------------------------------*/
+.comments-area {
+	padding: 1em 1.5em;
+}
 
 /* Comment Header */
 .comments-header,
 .comment-reply-title {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1em 0;
 }
 
 .comments-header .comments-title,
 .comment-reply-title span {
 	display: inline-block;
-	margin: 0;
-	padding: 0;
 	font-family: 'Titillium Web', Tahoma, Arial;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-weight: bold;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: normal;
 	text-transform: uppercase;
-	color: #404040;
-	border-bottom: 4px solid #eee;
+	padding: 0;
+	margin: 0;
+	color: #dd5533;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 /* Comment List */
@@ -1708,8 +1691,8 @@ textarea {
 
 .comment {
 	margin: 0 0 1.5em;
-	padding: 1.5em;
-	border: 2px solid #eee;
+	padding: 1.5em 0 0;
+	border-top: 1px dotted #aaa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1750,18 +1733,17 @@ textarea {
 
 .comment ol.children {
 	list-style: none;
+	margin: 1.5em 0 0;
 }
 
 .comment .comment-respond {
-	margin-top: 2em;
+	margin-top: 1.5em;
 }
 
 /* Comment Pagination */
 .comment-navigation {
 	margin: 0 0 1.5em;
-	padding: 0.5em 0;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	padding: 0;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1789,8 +1771,8 @@ textarea {
 	margin-top: 0.4em;
 }
 
-.comment-form .submit {
-	padding: 1em 1.6em;
+.comment-form .form-submit {
+	margin-bottom: 1em;
 }
 
 .comment-reply-title small a {

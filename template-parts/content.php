@@ -25,7 +25,7 @@
 				
 			</div><!-- .entry-content -->
 			
-			<div class="test"><?php tortuga_more_link(); ?></div>
+			<div class="read-more"><?php tortuga_more_link(); ?></div>
 		
 		</article>
 		
