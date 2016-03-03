@@ -287,7 +287,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #303030;
 	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 17px;
 	font-size: 1.0625rem;
@@ -444,7 +444,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #404040;
+	color: #303030;
 }
 
 a:focus {
@@ -490,7 +490,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #404040;
+	background: #303030;
 }
 
 input[type="text"],
@@ -662,10 +662,11 @@ textarea {
 	padding: 0;
 	color: #fff;
 	font-family: 'Titillium Web', sans-serif;
-	font-size: 38px;
-	font-size: 2.375rem;
+	font-size: 36px;
+	font-size: 2.25rem;
 	font-weight: normal;
 	text-decoration: none;
+	text-transform: uppercase;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
@@ -2071,7 +2072,7 @@ object {
 		text-decoration: inherit;
 		vertical-align: middle;
 		content: '\f419';
-		color: #404040;
+		color: #303030;
 	}
 	
 	.main-navigation-toggle:hover:after {
@@ -2084,7 +2085,7 @@ object {
 		width: 100%;
 		display: none;
 		margin-bottom: 1em;
-		border-top: 4px solid #404040;
+		border-top: 4px solid #303030;
 	}
 	
 	.main-navigation-menu a {
@@ -2153,7 +2154,7 @@ object {
 		text-decoration: inherit;
 		vertical-align: middle;
 		content: '\f431';
-		color: #404040;
+		color: #303030;
 	}
 	
 	.main-navigation-menu .submenu-dropdown-toggle:hover:before {

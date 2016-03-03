@@ -313,8 +313,8 @@ function tortuga_related_posts() {
 
 		themezee_related_posts( array( 
 			'class' => 'related-posts type-page clearfix',
-			'before_title' => '<header class="page-header"><h2 class="archive-title related-posts-title">',
-			'after_title' => '</h2></header>'
+			'before_title' => '<h2 class="page-title related-posts-title">',
+			'after_title' => '</h2>'
 		) );
 		
 	}

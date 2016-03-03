@@ -98,9 +98,9 @@ function tortuga_widgets_init() {
 	));
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'beetle' ),
+		'name' => esc_html__( 'Header', 'tortuga' ),
 		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'beetle' ),
+		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'tortuga' ),
 		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h4 class="header-widget-title">',
