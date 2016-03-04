@@ -69,10 +69,10 @@
 		
 		</header><!-- #masthead -->
 		
+		<?php tortuga_breadcrumbs(); ?>
+		
 		<?php tortuga_header_image(); ?>
 		
 		<?php tortuga_slider(); ?>
-		
-		<?php tortuga_breadcrumbs(); ?>
 			
 		<div id="content" class="site-content container clearfix">

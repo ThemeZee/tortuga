@@ -1913,33 +1913,49 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 80em) {
 
+	.container {
+		padding: 0 1.5em;
+	}
+	
 	.site-content {
-		padding-top: 2em;
+		padding-top: 1.5em;
 	}
 	
 	.content-area {
-		padding-right: 3em;
+		padding-right: 1.5em;
+	}
+	
+	.header-main {
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+	
+	.widget,
+	.page-header, 
+	.type-post, 
+	.type-page, 
+	.type-attachment,
+	.post-pagination,
+	.comments-area {
+		margin-bottom: 1.5em;
+	}
+	
+	.post-layout-columns .post-wrapper {
+		margin-right: -1.5em;
+	}
+
+	.post-layout-columns .post-wrapper .post-column {
+		padding-right: 1.5em;
 	}
 	
 }
 
 @media only screen and (max-width: 75em) {
 
-	.main-navigation-menu a {
-		font-size: 14px;
-		font-size: 0.875rem;
-		padding: 1.3em 1.1em;
-	}
-	
 	.page-title, 
 	.entry-title {
 		font-size: 36px;
 		font-size: 2.25rem;
-	}
-	
-	.post-layout-small .type-post .entry-title {
-		font-size: 26px;
-		font-size: 1.625rem;
 	}
 	
 }
@@ -1949,12 +1965,14 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
 	
-	.main-navigation-menu a {
-		font-size: 13px;
-		font-size: 0.8125rem;
-		padding: 1.5em 1em;
+	.content-area {
+		width: 70%;
 	}
-	
+
+	.sidebar {
+		width: 30%;
+	}
+
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
@@ -1992,15 +2010,44 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
 	
+	.content-area, 
+	.site-content .fullwidth-content-area {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	
+	.sidebar {
+		display: flex;
+		flex-wrap: wrap;
+		float: none;
+		padding: 0;
+		width: auto;
+		margin-right: -1.5em;
+	}
+
+	.sidebar .widget-wrap {
+		float: right;
+		display: flex;
+		width: 50%;
+		padding-right: 1.5em;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	.sidebar .widget-wrap .widget {
+		width: 100%;
+	}
+	
+	.sidebar .widget-wrap:nth-child(2n + 1) {
+		clear: left;
+	}
+
 	.page-title, 
 	.entry-title {
 		font-size: 32px;
 		font-size: 2rem;
-	}
-	
-	.post-layout-small .type-post .entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
 	}
 	
 	/*** Mobile Main Navigation ***/
@@ -2047,11 +2094,11 @@ object {
 	
 	/* Main Navigation Toggle */
 	.main-navigation-toggle {
-		float: right;
+		float: left;
 		display: inline-block;
-		margin: 1em 0;
-		padding: 1em;
-		background: none;
+		margin: 0 0 0 1.5em;
+		padding: 0.8em 1.2em;
+		background: #dd5533;
 	}
 	
 	.main-navigation-toggle:hover,
@@ -2064,7 +2111,7 @@ object {
 	.main-navigation-toggle:after {
 		float: left;
 		display: inline-block;
-		font-size: 32px;
+		font-size: 24px;
 		line-height: 1;
 		font-family: 'Genericons';
 		-webkit-font-smoothing: antialiased;
@@ -2072,29 +2119,33 @@ object {
 		text-decoration: inherit;
 		vertical-align: middle;
 		content: '\f419';
-		color: #303030;
+		color: #fff;
 	}
 	
-	.main-navigation-toggle:hover:after {
-		color: #dd5533;
+	.main-navigation-toggle:active,
+	.main-navigation-toggle:focus,
+	.main-navigation-toggle:hover {
+		background: #dd5533;
 	}
 	
 	/* Main Navigation Menu */
+	.primary-navigation {
+		padding: 0;
+	}
+	
 	.main-navigation-menu {
 		float: left;
 		width: 100%;
 		display: none;
-		margin-bottom: 1em;
-		border-top: 4px solid #303030;
+		padding: 3px 0;
+		border-top: 5px solid #dd5533;
 	}
 	
 	.main-navigation-menu a {
 		display: block;
 		clear: left;
-		font-size: 15px;
-		font-size: 0.9375rem;
-		padding: 1.2em;
-		border-bottom: 1px dotted #ccc;
+		padding: 1em 1.5em;
+		border-bottom: 1px dotted rgba(255,255,255,0.2);
 	}
 	
 	.main-navigation-menu li:last-child a {
@@ -2110,7 +2161,7 @@ object {
 	.main-navigation-menu ul a {
 		display: block;
 		width: 100%;
-		padding-left: 2em;
+		padding-left: 3em;
 	}
 	
 	.main-navigation-menu ul li ul a {
@@ -2118,19 +2169,20 @@ object {
 	}
 	
 	.main-navigation-menu ul li ul li ul a {
-		padding-left: 6em;
+		padding-left: 5em;
 	}
 	
 	.main-navigation-menu ul li ul li ul li ul a {
-		padding-left: 8em;
+		padding-left: 6em;
 	}
 	
 	.main-navigation-menu ul li:last-child a {
-		border-bottom: 1px dotted #ccc;
+		border-bottom: 1px dotted rgba(255,255,255,0.2);
 	}
 	
 	.main-navigation-menu ul ul {
-		border-top: 1px dotted #ccc;
+		border-top: 1px dotted rgba(255,255,255,0.2);
+		border-left: none;
 	}
 	
 	/* Mobile Submenu Dropdowns */
@@ -2154,11 +2206,11 @@ object {
 		text-decoration: inherit;
 		vertical-align: middle;
 		content: '\f431';
-		color: #303030;
+		color: #fff;
 	}
 	
-	.main-navigation-menu .submenu-dropdown-toggle:hover:before {
-		color: #dd5533;
+	.main-navigation-menu .submenu-dropdown-toggle:hover {
+		background: #dd5533;
 	}
 	
 	.main-navigation-menu .submenu-dropdown-toggle.active:before {
@@ -2166,7 +2218,7 @@ object {
 	}
 	
 	.main-navigation-menu ul .submenu-dropdown-toggle {
-		padding: 0.5em 1em;
+		padding: 0.55em 1em;
 	}
 	
 	.main-navigation-menu ul .submenu-dropdown-toggle:before {
@@ -2179,21 +2231,6 @@ object {
 ## 14.4 - Tablet Large ( < 880px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 55em) {
-	
-	.content-area, 
-	.site-content .fullwidth-content-area {
-		float: none;
-		width: 100%;
-		padding: 0;
-	}
-	
-	.sidebar {
-		float: none;
-		padding: 2em 2em 0;
-		width: 100%;
-		border-top: 1px solid #ddd;
-		background: #fdfdfd;
-	}
 	
 	/* Magazine Post Widgets */
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content,
