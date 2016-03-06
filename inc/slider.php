@@ -48,6 +48,21 @@ function tortuga_slider_excerpt_length($length) {
 }
 
 
+if ( ! function_exists( 'tortuga_slider_meta' ) ):	
+/**
+ * Displays the date and author on slider posts
+ */
+function tortuga_slider_meta() {
+
+	$postmeta = tortuga_meta_date();
+	$postmeta .= tortuga_meta_author();
+		
+	echo '<div class="entry-meta">' . $postmeta . '</div>';
+
+} // tortuga_slider_meta()
+endif;
+
+
 /**
  * Sets slider animation effect
  *
@@ -72,24 +87,3 @@ function tortuga_slider_options() {
 	
 } // tortuga_slider_options
 add_action('wp_enqueue_scripts', 'tortuga_slider_options');
-
-
-/**
- * Display Post Slider
- */
-function tortuga_slider() { 
-	
-	// Get Theme Options from Database
-	$theme_options = tortuga_theme_options();
-
-	// Display Featured Post Slideshow if activated
-	if ( is_page_template( 'template-slider.php' )
-		or ( true == $theme_options['slider_blog'] and is_home() ) 
-		or ( true == $theme_options['slider_magazine'] and is_page_template( 'template-magazine.php' ) )
-	) { 
-
-		get_template_part( 'template-parts/post-slider' );
-
-	}
-
-}

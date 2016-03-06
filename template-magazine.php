@@ -7,9 +7,20 @@
  * @package Tortuga
  */
  
-get_header(); ?>
+get_header(); 
+
+// Get Theme Options from Database
+$theme_options = tortuga_theme_options();
+
+// Display Slider
+if ( true == $theme_options['slider_magazine'] ) :
+
+	get_template_part( 'template-parts/post-slider' );
+	
+endif; 
+?>
 		
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-magazine content-single content-area">
 		<main id="main" class="site-main" role="main">
 			
 		<?php // Display Magazine Homepage Widgets

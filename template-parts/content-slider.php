@@ -11,7 +11,7 @@
 		<?php // Display Post Thumbnail or default thumbnail
 		if( '' != get_the_post_thumbnail() ) :
 
-			the_post_thumbnail('tortuga-header-image', array('class' => 'slide-image'));
+			the_post_thumbnail( 'tortuga-slider-image', array('class' => 'slide-image' ) );
 
 		else: ?>
 
@@ -19,16 +19,20 @@
 
 		<?php endif;?>
 	
-		<div class="slide-post clearfix">
-		
-			<div class="slide-content container clearfix">
+		<div class="slide-content clearfix">
 
-				<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-				
-				<?php tortuga_entry_meta(); ?>
+			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 			
-			</div>
+			<?php tortuga_slider_meta(); ?>
+											
+			<div class="entry-content clearfix">
+				
+				<?php the_excerpt(); ?>
+			
+			</div><!-- .entry-content -->
 						
+			<div class="read-more"><?php tortuga_more_link(); ?></div>
+			
 		</div>
 
 	</li>

@@ -32,14 +32,7 @@ function tortuga_header_image() {
 	$theme_options = tortuga_theme_options();	
 	
 	// Display featured image as header image on static pages
-	if( is_page() && has_post_thumbnail() ) : ?>
-		
-		<div id="headimg" class="header-image featured-image-header">
-			<?php the_post_thumbnail( 'tortuga-header-image' ); ?>
-		</div>
-	
-	<?php // Display default header image set on Appearance > Header
-	elseif( get_header_image() ) : 
+	if( get_header_image() ) : 
 
 		// Hide header image on front page
 		if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
@@ -67,22 +60,6 @@ function tortuga_header_image() {
 	<?php 
 	endif;
 }
-endif;
-
-
-if ( ! function_exists( 'tortuga_post_image_archives' ) ):
-/**
- * Displays the featured image on archive pages
- */
-function tortuga_post_image_archives() { ?>
-
-	<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
-		<?php the_post_thumbnail(); ?>
-	</a>
-
-	<?php
-
-} // tortuga_post_image_archives()
 endif;
 
 

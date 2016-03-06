@@ -72,7 +72,5 @@
 		<?php tortuga_breadcrumbs(); ?>
 		
 		<?php tortuga_header_image(); ?>
-		
-		<?php tortuga_slider(); ?>
 			
 		<div id="content" class="site-content container clearfix">

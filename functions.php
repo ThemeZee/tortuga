@@ -176,10 +176,10 @@ function tortuga_google_fonts_url() {
  */
 function tortuga_add_image_sizes() {
 	
-	// Add Custom Header Image Size
-	add_image_size( 'tortuga-header-image', 1920, 480, true );
+	// Add Slider Image Size
+	add_image_size( 'tortuga-slider-image', 780, 420, true );
 	
-	// Add different thumbnail sizes for widgets and post layouts
+	// Add different thumbnail sizes for Magazine Posts widgets
 	add_image_size( 'tortuga-thumbnail-small', 120, 80, true );
 	add_image_size( 'tortuga-thumbnail-medium', 360, 200, true );
 	add_image_size( 'tortuga-thumbnail-large', 600, 330, true );

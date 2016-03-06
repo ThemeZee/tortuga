@@ -13,7 +13,7 @@ get_header();
 $theme_options = tortuga_theme_options();
 ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
 					
 			<header class="page-header">

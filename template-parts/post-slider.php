@@ -22,11 +22,11 @@ $slider_query = new WP_Query($query_arguments);
 if( $slider_query->have_posts() ) :
 	
 	// Limit the number of words in slideshow post excerpts
-	add_filter('excerpt_length', 'tortuga_slider_excerpt_length');
+	add_filter( 'excerpt_length', 'tortuga_slider_excerpt_length' );
 	
 ?>
 	
-	<div id="post-slider-container" class="post-slider-container clearfix">
+	<div id="post-slider-container" class="post-slider-container type-page clearfix">
 	
 		<div id="post-slider-wrap" class="post-slider-wrap clearfix">
 		
@@ -53,7 +53,7 @@ if( $slider_query->have_posts() ) :
 <?php
 
 	// Remove excerpt filter
-	remove_filter('excerpt_length', 'tortuga_slider_excerpt_length');
+	remove_filter( 'excerpt_length', 'tortuga_slider_excerpt_length' );
 
 endif;
 	

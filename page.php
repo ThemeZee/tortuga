@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-single content-area">
 		<main id="main" class="site-main" role="main">
 					
 			<?php while (have_posts()) : the_post();

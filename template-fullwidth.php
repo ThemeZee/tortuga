@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="fullwidth-content-area content-area">
+	<section id="primary" class="content-fullwidth content-area">
 		<main id="main" class="site-main" role="main">
 					
 			<?php while (have_posts()) : the_post();

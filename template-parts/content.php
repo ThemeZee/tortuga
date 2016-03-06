@@ -10,7 +10,9 @@
 	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
-			<?php tortuga_post_image_archives(); ?>
+			<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
+				<?php the_post_thumbnail(); ?>
+			</a>
 			
 			<header class="entry-header">
 
