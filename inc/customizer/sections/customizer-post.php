@@ -47,7 +47,7 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 
 	// Add Setting and Control for Excerpt Length
 	$wp_customize->add_setting( 'tortuga_theme_options[excerpt_length]', array(
-        'default'           => 25,
+        'default'           => 20,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'absint'
