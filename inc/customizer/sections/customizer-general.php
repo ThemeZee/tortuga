@@ -45,34 +45,34 @@ function tortuga_customize_register_general_settings( $wp_customize ) {
 	);
 	
 	// Add Homepage Title
-	$wp_customize->add_setting( 'tortuga_theme_options[homepage_title]', array(
+	$wp_customize->add_setting( 'tortuga_theme_options[blog_title]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'wp_kses_post'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_theme_options[homepage_title]', array(
-        'label'    => esc_html__( 'Home Page Title', 'tortuga' ),
+    $wp_customize->add_control( 'tortuga_theme_options[blog_title]', array(
+        'label'    => esc_html__( 'Blog Title', 'tortuga' ),
         'section'  => 'tortuga_section_general',
-        'settings' => 'tortuga_theme_options[homepage_title]',
+        'settings' => 'tortuga_theme_options[blog_title]',
         'type'     => 'text',
 		'priority' => 3
 		)
 	);
 	
 	// Add Homepage Title
-	$wp_customize->add_setting( 'tortuga_theme_options[homepage_description]', array(
+	$wp_customize->add_setting( 'tortuga_theme_options[blog_description]', array(
         'default'           => '',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'wp_kses_post'
 		)
 	);
-    $wp_customize->add_control( 'tortuga_theme_options[homepage_description]', array(
-        'label'    => esc_html__( 'Home Page Description', 'tortuga' ),
+    $wp_customize->add_control( 'tortuga_theme_options[blog_description]', array(
+        'label'    => esc_html__( 'Blog Description', 'tortuga' ),
         'section'  => 'tortuga_section_general',
-        'settings' => 'tortuga_theme_options[homepage_description]',
+        'settings' => 'tortuga_theme_options[blog_description]',
         'type'     => 'textarea',
 		'priority' => 4
 		)

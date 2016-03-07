@@ -24,12 +24,12 @@ endif;
 		<main id="main" class="site-main" role="main">
 					
 			<?php // Display Homepage Title
-			if ( $theme_options['homepage_title'] <> '' ) : ?>
+			if ( $theme_options['blog_title'] <> '' ) : ?>
 					
 				<header class="page-header clearfix">
 					
-					<h1 class="page-title"><?php echo wp_kses_post( $theme_options['homepage_title'] ); ?></h1>
-					<p class="homepage-description"><?php echo wp_kses_post( $theme_options['homepage_description'] ); ?></p>
+					<h1 class="page-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+					<p class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
 					
 				</header>
 
