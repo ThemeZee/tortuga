@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tortuga\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-01-29 11:10+0100\n"
-"PO-Revision-Date: 2016-01-29 11:13+0100\n"
+"POT-Creation-Date: 2016-03-08 10:51+0100\n"
+"PO-Revision-Date: 2016-03-08 10:52+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -28,11 +28,11 @@ msgstr ""
 "Unter dieser Adresse wurde nichts gefunden. Möglicherweise hilft eine Suche "
 "oder einer der Links unterhalb?"
 
-#: comments.php:30
+#: comments.php:30 inc/template-tags.php:194
 msgid "One comment"
 msgstr "Ein Kommentar"
 
-#: comments.php:30
+#: comments.php:30 inc/template-tags.php:194
 #, php-format
 msgid "% comments"
 msgstr "% Kommentare"
@@ -61,21 +61,31 @@ msgstr "Kommentar hinterlassen"
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:88 sidebar.php:20
+#: functions.php:91 sidebar.php:20
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:90
+#: functions.php:93
 msgid "Appears on posts and pages except full width template."
 msgstr ""
 "Erscheint auf allen Beiträgen und Seiten mit Ausnahme des Fullwidth "
 "Templates."
 
-#: functions.php:98
+#: functions.php:101
+msgid "Header"
+msgstr "Header"
+
+#: functions.php:103
+msgid "Appears on header area. You can use a search or ad widget here."
+msgstr ""
+"Erscheint im Header Bereich. Du kannst hier Widgets für ein Suchfeld oder "
+"Werbung verwenden."
+
+#: functions.php:111
 msgid "Magazine Homepage"
 msgstr "Magazin Startseite"
 
-#: functions.php:100
+#: functions.php:113
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
@@ -92,11 +102,11 @@ msgstr "Zum Inhalt springen"
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: search.php:51
+#: search.php:54
 msgid "No matches"
 msgstr "Keine Treffer"
 
-#: search.php:57
+#: search.php:60
 msgid ""
 "Please try again, or use the navigation menus to find what you search for."
 msgstr ""
@@ -119,7 +129,7 @@ msgid ""
 msgstr ""
 "Bitte gehe zu Design &#8594; Widgets, um Widgets in der Sidebar hinzuzufügen."
 
-#: template-magazine.php:31
+#: template-magazine.php:42
 msgid ""
 "Please go to Appearance &#8594; Widgets and add at least one widget to the "
 "\"Magazine Homepage\" widget area. You can use the Magazine Posts widgets to "
@@ -140,22 +150,26 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Tortuga requires at least WordPress version 4.2. You are running version "
-"%s. Please upgrade and try again."
+"Tortuga requires at least WordPress version 4.2. You are running version %s. "
+"Please upgrade and try again."
 msgstr ""
-"Tortuga benötigt mindestens WordPress Version 4.2. Du verwendest Version "
-"%s. Bitte führe ein Update durch und versuche es erneut."
+"Tortuga benötigt mindestens WordPress Version 4.2. Du verwendest Version %s. "
+"Bitte führe ein Update durch und versuche es erneut."
 
-#: inc/template-tags.php:205
+#: inc/template-tags.php:162
 #, php-format
 msgid "View all posts by %s"
 msgstr "Alle Beiträge von %s ansehen"
 
-#: inc/template-tags.php:260 template-parts/content.php:22
-msgid "Read more"
-msgstr "Weiterlesen"
+#: inc/template-tags.php:194
+msgid "Leave a comment"
+msgstr "Kommentar hinterlassen"
 
-#: inc/template-tags.php:363
+#: inc/template-tags.php:239
+msgid "Continue reading &raquo;"
+msgstr "Weiterlesen &raquo;"
+
+#: inc/template-tags.php:342
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Erstellt mit %1$s und %2$s."
@@ -314,11 +328,6 @@ msgstr "Header-Bild Link"
 msgid "Hide header image on front page"
 msgstr "Verstecke Header-Bild auf der Startseite"
 
-#: inc/customizer/default-options.php:49
-#: inc/customizer/sections/customizer-post.php:28
-msgid "Latest Posts"
-msgstr "Letzte Beiträge"
-
 #: inc/customizer/functions/custom-controls.php:61
 #: inc/widgets/widget-magazine-posts-boxed.php:435
 #: inc/widgets/widget-magazine-posts-columns.php:355
@@ -343,95 +352,77 @@ msgstr "Sidebar links"
 msgid "Right Sidebar"
 msgstr "Sidebar rechts"
 
-#: inc/customizer/sections/customizer-general.php:57
-msgid "Sticky Header"
-msgstr "Sticky Header"
+#: inc/customizer/sections/customizer-general.php:56
+msgid "Blog Title"
+msgstr "Blog Titel"
 
-#: inc/customizer/sections/customizer-general.php:72
-msgid "Enable sticky header feature"
-msgstr "Aktiviere das Sticky Header Feature"
-
-#: inc/customizer/sections/customizer-general.php:90
-msgid "Post Layout (archive pages)"
-msgstr "Beitrags-Layout (Archive)"
-
-#: inc/customizer/sections/customizer-general.php:96
-msgid "Show featured image beside content"
-msgstr "Zeige Beitragsbild neben dem Inhalt"
-
-#: inc/customizer/sections/customizer-general.php:97
-#: inc/customizer/sections/customizer-general.php:119
-msgid "Show featured image above content"
-msgstr "Zeige Beitragsbild über dem Inhalt"
-
-#: inc/customizer/sections/customizer-general.php:98
-#: inc/customizer/sections/customizer-general.php:120
-msgid "Hide featured image"
-msgstr "Beitragsbild verbergen"
-
-#: inc/customizer/sections/customizer-general.php:112
-msgid "Post Layout (single post)"
-msgstr "Beitrags-Layout (einzelner Beitrag)"
-
-#: inc/customizer/sections/customizer-general.php:118
-msgid "Show featured image as header image"
-msgstr "Zeige Beitragsbild als Header-Bild"
+#: inc/customizer/sections/customizer-general.php:73
+msgid "Blog Description"
+msgstr "Blog Beschreibung"
 
 #: inc/customizer/sections/customizer-post.php:20
 msgid "Post Settings"
 msgstr "Beitrags-Einstellungen"
 
 #: inc/customizer/sections/customizer-post.php:35
-msgid "Title above Latest Posts"
-msgstr "Titel über den letzten Beiträgen"
+msgid "Post Layout (archive pages)"
+msgstr "Beitrags-Layout (Archive)"
 
-#: inc/customizer/sections/customizer-post.php:52
-msgid "Post length on archives"
-msgstr "Beitragslänge in Archivseiten"
+#: inc/customizer/sections/customizer-post.php:41
+msgid "One Column"
+msgstr "Eine Spalte"
 
-#: inc/customizer/sections/customizer-post.php:58
-msgid "Show full posts"
-msgstr "Zeige ganze Beiträge"
+#: inc/customizer/sections/customizer-post.php:42
+msgid "Two Columns"
+msgstr "Zwei Spalten"
 
-#: inc/customizer/sections/customizer-post.php:59
-msgid "Show post excerpts"
-msgstr "Zeige Beitragsauszüge"
+#: inc/customizer/sections/customizer-post.php:43
+msgid "Three Columns without Sidebar"
+msgstr "Drei Spalten ohne Sidebar"
 
-#: inc/customizer/sections/customizer-post.php:73
+#: inc/customizer/sections/customizer-post.php:57
 msgid "Excerpt Length"
 msgstr "Länge des Textauszugs"
 
-#: inc/customizer/sections/customizer-post.php:92
+#: inc/customizer/sections/customizer-post.php:75
 msgid "Post Meta"
 msgstr "Beitrags-Metadaten"
 
-#: inc/customizer/sections/customizer-post.php:108
+#: inc/customizer/sections/customizer-post.php:91
 #: inc/widgets/widget-magazine-posts-boxed.php:457
 #: inc/widgets/widget-magazine-posts-columns.php:403
 #: inc/widgets/widget-magazine-posts-grid.php:446
 msgid "Display post date"
 msgstr "Zeige das Datum des Beitrags"
 
-#: inc/customizer/sections/customizer-post.php:124
+#: inc/customizer/sections/customizer-post.php:107
 #: inc/widgets/widget-magazine-posts-boxed.php:464
 #: inc/widgets/widget-magazine-posts-columns.php:410
 #: inc/widgets/widget-magazine-posts-grid.php:453
 msgid "Display post author"
 msgstr "Zeige den Author des Beitrags"
 
-#: inc/customizer/sections/customizer-post.php:140
+#: inc/customizer/sections/customizer-post.php:123
 msgid "Display post categories"
 msgstr "Zeige die Kategorien des Beitrags"
 
-#: inc/customizer/sections/customizer-post.php:156
+#: inc/customizer/sections/customizer-post.php:139
+msgid "Display post comments"
+msgstr "Zeige Beitragskommentare"
+
+#: inc/customizer/sections/customizer-post.php:157
+msgid "Single Posts"
+msgstr "Einzelne Beiträge"
+
+#: inc/customizer/sections/customizer-post.php:174
+msgid "Display featured image on single posts"
+msgstr "Zeige Beitragsbilder in einzelnen Beiträgen"
+
+#: inc/customizer/sections/customizer-post.php:190
 msgid "Display post tags on single posts"
 msgstr "Zeige die Schlagwörter in einzelnen Beiträgen"
 
-#: inc/customizer/sections/customizer-post.php:174
-msgid "Post Footer"
-msgstr "Beitrags-Footer"
-
-#: inc/customizer/sections/customizer-post.php:189
+#: inc/customizer/sections/customizer-post.php:206
 msgid "Display post navigation on single posts"
 msgstr "Zeige Beitrags-Navigation"
 
@@ -588,6 +579,48 @@ msgstr "Dreispaltiges Raster"
 msgid "Display post excerpt"
 msgstr "Zeige Beitragsauszug"
 
+#~ msgid "Read more"
+#~ msgstr "Weiterlesen"
+
+#~ msgid "Latest Posts"
+#~ msgstr "Letzte Beiträge"
+
+#~ msgid "Sticky Header"
+#~ msgstr "Sticky Header"
+
+#~ msgid "Enable sticky header feature"
+#~ msgstr "Aktiviere das Sticky Header Feature"
+
+#~ msgid "Show featured image beside content"
+#~ msgstr "Zeige Beitragsbild neben dem Inhalt"
+
+#~ msgid "Show featured image above content"
+#~ msgstr "Zeige Beitragsbild über dem Inhalt"
+
+#~ msgid "Hide featured image"
+#~ msgstr "Beitragsbild verbergen"
+
+#~ msgid "Post Layout (single post)"
+#~ msgstr "Beitrags-Layout (einzelner Beitrag)"
+
+#~ msgid "Show featured image as header image"
+#~ msgstr "Zeige Beitragsbild als Header-Bild"
+
+#~ msgid "Title above Latest Posts"
+#~ msgstr "Titel über den letzten Beiträgen"
+
+#~ msgid "Post length on archives"
+#~ msgstr "Beitragslänge in Archivseiten"
+
+#~ msgid "Show full posts"
+#~ msgstr "Zeige ganze Beiträge"
+
+#~ msgid "Show post excerpts"
+#~ msgstr "Zeige Beitragsauszüge"
+
+#~ msgid "Post Footer"
+#~ msgstr "Beitrags-Footer"
+
 #~ msgid "Enter password to view comments."
 #~ msgstr "Passwort eingeben, um Kommentare zu sehen."
 
@@ -706,17 +739,11 @@ msgstr "Zeige Beitragsauszug"
 #~ msgid "Display featured images on archive pages"
 #~ msgstr "Zeige Beitragsbilder auf Archivseiten"
 
-#~ msgid "Display featured images on single posts"
-#~ msgstr "Zeige Beitragsbilder in einzelnen Beiträgen"
-
 #~ msgid "Text after Excerpts"
 #~ msgstr "Text nach Beitragsauszug"
 
 #~ msgid "Display [...] after excerpts"
 #~ msgstr "Zeige [...] nach dem Textauszug"
-
-#~ msgid "Display post tags"
-#~ msgstr "Zeige die Schlagwörter des Beitrags"
 
 #~ msgid "Select Featured Posts"
 #~ msgstr "Hervorgehobene Beiträge wählen"
@@ -759,9 +786,6 @@ msgstr "Zeige Beitragsauszug"
 #~ msgid "Edit Post"
 #~ msgstr "Beitrag bearbeiten"
 
-#~ msgid "Leave a comment"
-#~ msgstr "Kommentar hinterlassen"
-
 #~ msgid "https://themezee.com/themes/courage/"
 #~ msgstr "https://themezee.com/de/themes/courage/"
 
@@ -803,11 +827,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Read more &raquo;"
 #~ msgstr "Weiterlesen &raquo;"
-
-#~ msgid "Appears on header area. You can use a search or ad widget here."
-#~ msgstr ""
-#~ "Erscheint im Header Bereich. Du kannst hier Widgets für ein Suchfeld oder "
-#~ "Werbung verwenden."
 
 #~ msgid "tagged with %1$s"
 #~ msgstr "Schlagworte %1$s"
@@ -875,9 +894,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Display date, author and comments"
 #~ msgstr "Zeige Datum, Autor und Kommentare"
-
-#~ msgid "Continue reading &raquo;"
-#~ msgstr "Weiterlesen &raquo;"
 
 #~ msgid "Featured Content"
 #~ msgstr "Hervorgehobene Beiträge"
@@ -957,12 +973,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Post Layout"
 #~ msgstr "Beitrags-Layout"
-
-#~ msgid "One Column"
-#~ msgstr "Eine Spalte"
-
-#~ msgid "Two Columns"
-#~ msgstr "Zwei Spalten"
 
 #~ msgid "https://themezee.com/themes/rubine/"
 #~ msgstr "https://themezee.com/de/themes/rubine/"
@@ -1107,10 +1117,6 @@ msgstr "Zeige Beitragsauszug"
 #~ msgstr "Navigation"
 
 #~ msgctxt "color setting"
-#~ msgid "Post Titles"
-#~ msgstr "Beitrags-Titel"
-
-#~ msgctxt "color setting"
 #~ msgid "Widget Titles"
 #~ msgstr "Widget Titel"
 
@@ -1195,10 +1201,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Remove spacing on header area for fullwidth logo images."
 #~ msgstr "Entferne Abstände im Header für Fullwidth Logo Bilder."
-
-#~ msgctxt "color setting"
-#~ msgid "Header"
-#~ msgstr "Header"
 
 #~ msgctxt "color setting"
 #~ msgid "Footer Widgets"
@@ -1553,9 +1555,6 @@ msgstr "Zeige Beitragsauszug"
 
 #~ msgid "Show Faces"
 #~ msgstr "Zeige Fans"
-
-#~ msgid "Show Page Posts"
-#~ msgstr "Zeige Beiträge"
 
 #~ msgid "Recent Comments (ThemeZee)"
 #~ msgstr "Letzte Kommentare (ThemeZee)"

@@ -1,4 +1,4 @@
-Tortuga WordPress Theme, Copyright 2015 ThemeZee.com
+Tortuga WordPress Theme, Copyright 2016 ThemeZee.com
 Tortuga is distributed under the terms of the GNU GPL
 
 ===================================
@@ -88,43 +88,31 @@ F) Licenses of bundled resources
 	License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
-	5. Open Sans Font - https://www.google.com/fonts/specimen/Open Sans
-	License: Distributed under the terms of the Open Sans Font License (http://font.ubuntu.com/ufl/)
-	Copyright: 2015 Dalton Maag
+	5. Open Sans Font - https://www.google.com/fonts/specimen/Open+Sans
+	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+	Copyright: 2012 Steve Matteson
 	
-	6. Titillium Web Font - https://www.google.com/fonts/specimen/Titillium Web
-	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-	Copyright: 2015 Matt McInerney, Pablo Impallari
+	6. Titillium Web Font - https://www.google.com/fonts/specimen/Titillium+Web
+	License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
+	Copyright: 2013 Accademia di Belle Arti di Urbino
 	
 	7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 	
-	Image 1: https://pixabay.com/en/sea-ocean-water-light-diver-79606/
+	Image 1: https://pixabay.com/en/martinique-sunset-boat-twilight-844982/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2012 David Mark (https://pixabay.com/en/users/tpsdave-12019/)
+	Copyright: 2009 Agnès alias agnesti (https://pixabay.com/en/users/agnesti-1137469/)
 	
-	Image 2: https://pixabay.com/en/beach-hut-beach-vacation-holidays-237489/
+	Image 2: https://pixabay.com/en/pirate-port-harbour-festival-1101524/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2011 Sharon Ang (https://pixabay.com/en/users/sharonang-99559/)
+	Copyright: 2012 Petra (https://pixabay.com/en/users/ptra-359668/)
 	
-	Image 3: https://pixabay.com/en/dolphin-marine-mammals-water-sea-203875/
+	Image 3: https://pixabay.com/en/thailand-longtail-boat-sea-1195997/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2011 Claudia Beer (https://pixabay.com/en/users/Claudia14-80737/)
+	Copyright: 2008 kod88 (https://pixabay.com/en/users/kod88-2044225/)
 	
-	Image 4: https://pixabay.com/en/mallorca-cala-blue-water-beach-109204/
+	Image 4: https://pixabay.com/en/garda-sunset-mountains-mood-dusk-202068/
 	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2013 mruizdeassin (https://pixabay.com/en/users/mruizdeassin-33807/)
-	
-	Image 5: https://pixabay.com/en/shells-massage-therapy-sand-beach-792912/
-	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2011 Julia Roman (https://pixabay.com/en/users/julesroman-359800/)
-	
-	Image 6: https://pixabay.com/en/universal-studios-island-of-adventure-241597/
-	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2012 Rafael (https://pixabay.com/en/users/rafaelsamir-127598/)
-	
-	Image 7: https://pixabay.com/en/dubrovnik-croatia-kings-landing-512798/
-	License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-	Copyright: 2014 Ivan Ivankovic (https://pixabay.com/en/users/fjaka-551782/)
+	Copyright: 2012 Sabrina Schlich (https://pixabay.com/en/users/sabrinaschlich-77730/)
 
 ===================================
 Enjoy!

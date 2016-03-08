@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tortuga\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-01-29 11:10+0100\n"
-"PO-Revision-Date: 2016-01-29 11:10+0100\n"
+"POT-Creation-Date: 2016-03-08 10:51+0100\n"
+"PO-Revision-Date: 2016-03-08 10:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -30,11 +30,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:30
+#: comments.php:30 inc/template-tags.php:194
 msgid "One comment"
 msgstr ""
 
-#: comments.php:30
+#: comments.php:30 inc/template-tags.php:194
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -63,19 +63,27 @@ msgstr ""
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:88 sidebar.php:20
+#: functions.php:91 sidebar.php:20
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:93
 msgid "Appears on posts and pages except full width template."
 msgstr ""
 
-#: functions.php:98
+#: functions.php:101
+msgid "Header"
+msgstr ""
+
+#: functions.php:103
+msgid "Appears on header area. You can use a search or ad widget here."
+msgstr ""
+
+#: functions.php:111
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:113
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
@@ -90,11 +98,11 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:51
+#: search.php:54
 msgid "No matches"
 msgstr ""
 
-#: search.php:57
+#: search.php:60
 msgid ""
 "Please try again, or use the navigation menus to find what you search for."
 msgstr ""
@@ -114,7 +122,7 @@ msgid ""
 "Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
 
-#: template-magazine.php:31
+#: template-magazine.php:42
 msgid ""
 "Please go to Appearance &#8594; Widgets and add at least one widget to the "
 "\"Magazine Homepage\" widget area. You can use the Magazine Posts widgets to "
@@ -130,20 +138,24 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Tortuga requires at least WordPress version 4.2. You are running version "
-"%s. Please upgrade and try again."
+"Tortuga requires at least WordPress version 4.2. You are running version %s. "
+"Please upgrade and try again."
 msgstr ""
 
-#: inc/template-tags.php:205
+#: inc/template-tags.php:162
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:260 template-parts/content.php:22
-msgid "Read more"
+#: inc/template-tags.php:194
+msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:363
+#: inc/template-tags.php:239
+msgid "Continue reading &raquo;"
+msgstr ""
+
+#: inc/template-tags.php:342
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
@@ -293,11 +305,6 @@ msgstr ""
 msgid "Hide header image on front page"
 msgstr ""
 
-#: inc/customizer/default-options.php:49
-#: inc/customizer/sections/customizer-post.php:28
-msgid "Latest Posts"
-msgstr ""
-
 #: inc/customizer/functions/custom-controls.php:61
 #: inc/widgets/widget-magazine-posts-boxed.php:435
 #: inc/widgets/widget-magazine-posts-columns.php:355
@@ -322,38 +329,12 @@ msgstr ""
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:57
-msgid "Sticky Header"
+#: inc/customizer/sections/customizer-general.php:56
+msgid "Blog Title"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:72
-msgid "Enable sticky header feature"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:90
-msgid "Post Layout (archive pages)"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:96
-msgid "Show featured image beside content"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:97
-#: inc/customizer/sections/customizer-general.php:119
-msgid "Show featured image above content"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:98
-#: inc/customizer/sections/customizer-general.php:120
-msgid "Hide featured image"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:112
-msgid "Post Layout (single post)"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:118
-msgid "Show featured image as header image"
+#: inc/customizer/sections/customizer-general.php:73
+msgid "Blog Description"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:20
@@ -361,56 +342,64 @@ msgid "Post Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:35
-msgid "Title above Latest Posts"
+msgid "Post Layout (archive pages)"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:52
-msgid "Post length on archives"
+#: inc/customizer/sections/customizer-post.php:41
+msgid "One Column"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:58
-msgid "Show full posts"
+#: inc/customizer/sections/customizer-post.php:42
+msgid "Two Columns"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:59
-msgid "Show post excerpts"
+#: inc/customizer/sections/customizer-post.php:43
+msgid "Three Columns without Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:73
+#: inc/customizer/sections/customizer-post.php:57
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:92
+#: inc/customizer/sections/customizer-post.php:75
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:108
+#: inc/customizer/sections/customizer-post.php:91
 #: inc/widgets/widget-magazine-posts-boxed.php:457
 #: inc/widgets/widget-magazine-posts-columns.php:403
 #: inc/widgets/widget-magazine-posts-grid.php:446
 msgid "Display post date"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:124
+#: inc/customizer/sections/customizer-post.php:107
 #: inc/widgets/widget-magazine-posts-boxed.php:464
 #: inc/widgets/widget-magazine-posts-columns.php:410
 #: inc/widgets/widget-magazine-posts-grid.php:453
 msgid "Display post author"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:140
+#: inc/customizer/sections/customizer-post.php:123
 msgid "Display post categories"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:156
-msgid "Display post tags on single posts"
+#: inc/customizer/sections/customizer-post.php:139
+msgid "Display post comments"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:157
+msgid "Single Posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:174
-msgid "Post Footer"
+msgid "Display featured image on single posts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:189
+#: inc/customizer/sections/customizer-post.php:190
+msgid "Display post tags on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:206
 msgid "Display post navigation on single posts"
 msgstr ""
 
