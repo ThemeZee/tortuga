@@ -2,6 +2,10 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.1
+-----------------------------------
+[fixed] styling of gallery items
+
 Version 1.0
 -----------------------------------
 [added] Magazine Homepage template
