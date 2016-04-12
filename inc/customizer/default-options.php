@@ -40,6 +40,7 @@ function tortuga_theme_options() {
 function tortuga_default_options() {
 
 	$default_options = array(
+		'site_title'						=> true,
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
