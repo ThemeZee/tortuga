@@ -2,6 +2,10 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.2
+-----------------------------------
+[updated] flexlider to version 2.6.0
+
 Version 1.0.1
 -----------------------------------
 [fixed] styling of gallery items
