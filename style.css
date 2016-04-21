@@ -323,7 +323,8 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: #fff;
+	border: 1px solid #ddd;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -375,16 +376,40 @@ body {
 	background: #ddd; /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
+blockquote {
+	margin: 0 0 1.5em;
+	border: 1px solid #ddd;
+	border-left: 3px solid #dd5533;
+	padding: 0.05em 1.25em 1em;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-style: italic;
+	color: #777;
 }
 
-blockquote,
-q {
-	quotes: "" "";
+blockquote cite,
+blockquote small {
+	margin-top: 1em;
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+	color: #404040;
+}
+
+blockquote cite:before,
+blockquote small:before {
+	content: "\2014\00a0";
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0.5em;
 }
 
 hr {
@@ -396,7 +421,8 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em;
+	padding: 0 0 0 1.25em;
 }
 
 ul {
@@ -418,7 +444,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 0 1.5em;
 }
 
 img {
@@ -428,7 +454,15 @@ img {
 
 table {
 	margin: 0 0 1.5em;
+	border: none;
+	table-layout: fixed;
 	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 0.3em 0.6em;
 }
 
 a {
