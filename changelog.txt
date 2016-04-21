@@ -4,7 +4,10 @@ Tortuga Changelog
 
 Version 1.0.2
 -----------------------------------
-[updated] flexlider to version 2.6.0
+[added] support for new custom logo feature from WordPress 4.5
+[added] setting to hide site title
+[added] version numbers to wp_enqueue_style and wp_enqueue_script functions
+[updated] flexlider, html5shiv and Genericons
 
 Version 1.0.1
 -----------------------------------

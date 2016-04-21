@@ -52,7 +52,7 @@ function tortuga_setup() {
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'tortuga_custom_logo_args', array(
 		'height' => 50,
-		'width' => 350,
+		'width' => 250,
 		'flex-height' => true,
 		'flex-width' => true,
 	) ) );
