@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tortuga
@@ -1659,7 +1659,6 @@ textarea {
 }
 
 .post-layout-columns .post-wrapper .post-column {
-	float: left;
 	display: flex;
 	padding-right: 2em;
 	-webkit-box-sizing: border-box;
@@ -1693,10 +1692,6 @@ textarea {
 	width: 50%;
 }
 
-.post-layout-two-columns .post-wrapper .post-column:nth-child(2n + 1) {
-	clear: left;
-}
-
 /* 3 Columns */
 .post-layout-three-columns .content-archive {
 	float: none;
@@ -1708,8 +1703,26 @@ textarea {
 	width: 33.3333333333333%;
 }
 
-.post-layout-three-columns .post-wrapper .post-column:nth-child(3n + 1) {
-	clear: left;
+/* Post Columns Fixes for IE 10 and IE 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	
+	.post-layout-columns .post-wrapper .post-column {
+		float: left;
+		display: block;
+	}
+	
+	.post-layout-two-columns .post-wrapper .post-column:nth-child(2n + 1) {
+		clear: left;
+	}
+	
+	.post-layout-three-columns .post-wrapper .post-column:nth-child(3n + 1) {
+		clear: left;
+	}
+	
+	.post-layout-columns .post-wrapper .post-column .type-post {
+		display: block;
+	}
+
 }
 
 /*--------------------------------------------------------------

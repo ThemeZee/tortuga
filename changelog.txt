@@ -2,6 +2,10 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.3
+-----------------------------------
+[fixed] broken two column post layout in Internet Explorer
+
 Version 1.0.2
 -----------------------------------
 [added] support for new custom logo feature from WordPress 4.5
