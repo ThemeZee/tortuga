@@ -6,6 +6,7 @@ Version 1.0.4
 -----------------------------------
 [added] extra setting to display tagline in header area
 [updated] editor-style.css
+[set] minimum required WordPress version to 4.4
 
 Version 1.0.3
 -----------------------------------

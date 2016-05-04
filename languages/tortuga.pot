@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tortuga\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-03-08 10:51+0100\n"
-"PO-Revision-Date: 2016-03-08 10:51+0100\n"
+"POT-Creation-Date: 2016-05-04 11:13+0100\n"
+"PO-Revision-Date: 2016-05-04 11:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -30,11 +30,11 @@ msgid ""
 "of the links below?"
 msgstr ""
 
-#: comments.php:30 inc/template-tags.php:194
+#: comments.php:30 inc/template-tags.php:252
 msgid "One comment"
 msgstr ""
 
-#: comments.php:30 inc/template-tags.php:194
+#: comments.php:30 inc/template-tags.php:252
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -63,27 +63,27 @@ msgstr ""
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:91 sidebar.php:20
+#: functions.php:99 sidebar.php:20
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:101
 msgid "Appears on posts and pages except full width template."
 msgstr ""
 
-#: functions.php:101
+#: functions.php:109
 msgid "Header"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:111
 msgid "Appears on header area. You can use a search or ad widget here."
 msgstr ""
 
-#: functions.php:111
+#: functions.php:119
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:121
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Magazine Posts "
 "widgets here."
@@ -129,33 +129,27 @@ msgid ""
 "set up the theme like the demo website."
 msgstr ""
 
-#: inc/back-compat.php:40
-msgid ""
-"%$1s requires at least WordPress version 4.2. You are running version %$2s. "
-"Please upgrade and try again."
-msgstr ""
-
-#: inc/back-compat.php:49 inc/back-compat.php:61
+#: inc/back-compat.php:42 inc/back-compat.php:52 inc/back-compat.php:65
 #, php-format
 msgid ""
-"Tortuga requires at least WordPress version 4.2. You are running version %s. "
+"%1$s requires at least WordPress version %2$s. You are running version %3$s. "
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/template-tags.php:162
+#: inc/template-tags.php:220
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:194
+#: inc/template-tags.php:252
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:239
+#: inc/template-tags.php:297
 msgid "Continue reading &raquo;"
 msgstr ""
 
-#: inc/template-tags.php:342
+#: inc/template-tags.php:400
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
@@ -169,15 +163,15 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:102
+#: inc/theme-info.php:49 inc/customizer/customizer.php:136
 msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:103
+#: inc/theme-info.php:50 inc/customizer/customizer.php:137
 msgid "https://themezee.com/themes/tortuga/"
 msgstr ""
 
-#: inc/theme-info.php:50 inc/customizer/customizer.php:104
+#: inc/theme-info.php:50 inc/customizer/customizer.php:138
 msgid "Theme Page"
 msgstr ""
 
@@ -190,16 +184,16 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:53 inc/theme-info.php:74
-#: inc/customizer/customizer.php:105
+#: inc/customizer/customizer.php:139
 msgid "https://themezee.com/docs/tortuga-documentation/"
 msgstr ""
 
 #: inc/theme-info.php:53 inc/theme-info.php:68
-#: inc/customizer/customizer.php:106
+#: inc/customizer/customizer.php:140
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:54 inc/customizer/customizer.php:108
+#: inc/theme-info.php:54 inc/customizer/customizer.php:142
 msgid "Rate this theme"
 msgstr ""
 
@@ -298,10 +292,18 @@ msgid "Background"
 msgstr ""
 
 #: inc/customizer/customizer.php:53
-msgid "Header Image Link"
+msgid "Display Site Title"
 msgstr ""
 
 #: inc/customizer/customizer.php:70
+msgid "Display Tagline"
+msgstr ""
+
+#: inc/customizer/customizer.php:87
+msgid "Header Image Link"
+msgstr ""
+
+#: inc/customizer/customizer.php:104
 msgid "Hide header image on front page"
 msgstr ""
 
