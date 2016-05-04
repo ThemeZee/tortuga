@@ -5,6 +5,7 @@ Tortuga Changelog
 Version 1.0.4
 -----------------------------------
 [added] extra setting to display tagline in header area
+[updated] editor-style.css
 
 Version 1.0.3
 -----------------------------------
