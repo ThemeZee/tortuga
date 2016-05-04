@@ -2,6 +2,10 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.4
+-----------------------------------
+[added] extra setting to display tagline in header area
+
 Version 1.0.3
 -----------------------------------
 [fixed] broken two column post layout in Internet Explorer

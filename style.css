@@ -727,6 +727,12 @@ textarea {
 	height: auto;
 }
 
+.site-description {
+	margin: 0 0 0.75em;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
 /* Header Widgets */
 .header-widgets {
 	display: inline;
@@ -2676,7 +2682,7 @@ object {
 --------------------------------------------------------------*/
 
 /* Ensure navigation is visible on desktop view */
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 60.001em) {
 	
 	.main-navigation-menu {
 		display: block !important;

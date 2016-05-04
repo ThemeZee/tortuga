@@ -35,7 +35,8 @@
 				
 					<?php tortuga_site_logo(); ?>
 					<?php tortuga_site_title(); ?>
-				
+					<?php tortuga_site_description(); ?>
+					
 				</div><!-- .site-branding -->
 				
 				<div class="header-widgets clearfix">

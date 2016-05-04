@@ -53,6 +53,33 @@ function tortuga_site_title() {
 endif;
 
 
+if ( ! function_exists( 'tortuga_site_description' ) ): 
+/**
+ * Displays the site description in the header area
+ */
+function tortuga_site_description() {
+	
+	// Get theme options from database
+	$theme_options = tortuga_theme_options();	
+	
+	// Return early if site title is deactivated
+	if( false == $theme_options['site_description'] ) {
+		return;
+	}
+	
+	$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
+	
+	if ( $description || is_customize_preview() ) : ?>
+
+		<p class="site-description"><?php echo $description; ?></p>
+	
+	<?php 
+	endif;
+	
+}
+endif;
+
+
 if ( ! function_exists( 'tortuga_header_image' ) ):
 /**
  * Displays the custom header image below the navigation menu

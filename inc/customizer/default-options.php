@@ -41,6 +41,7 @@ function tortuga_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,
+		'site_description'					=> false,
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
