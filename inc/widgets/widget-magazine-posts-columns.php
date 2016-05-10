@@ -21,7 +21,8 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'tortuga' ), wp_get_theme()->Name ), // Name
 			array( 
 				'classname' => 'tortuga-magazine-posts-columns', 
-				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'tortuga' ) 
+				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'tortuga' ),
+				'customize_selective_refresh' => true, 
 			) // Args
 		);
 

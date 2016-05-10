@@ -2,6 +2,11 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.5
+-----------------------------------
+[added] selective refresh support in customizer for sidebars and widgets
+[fixed] empty comments box when comments are deactivated
+
 Version 1.0.4
 -----------------------------------
 [added] extra setting to display tagline in header area
