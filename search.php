@@ -68,6 +68,11 @@ $theme_options = tortuga_theme_options();
 		</main><!-- #main -->
 	</section><!-- #primary -->
 	
-	<?php get_sidebar(); ?>
+	<?php // Do not display Sidebar on Three Column Post Layout
+	if ( $theme_options['post_layout'] <> 'three-columns' ) :
+		
+		get_sidebar(); 
+		
+	endif; ?>
 	
 <?php get_footer(); ?>

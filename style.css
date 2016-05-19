@@ -2688,7 +2688,7 @@ object {
 /*--------------------------------------------------------------
 ## 15.1 - Sidebar Left Layout
 --------------------------------------------------------------*/
-.sidebar-left .content-area {
+.sidebar-left .content-single {
 	float: right;
 	padding-right: 0;
 	padding-left: 2em;
@@ -2700,7 +2700,7 @@ object {
 
 @media only screen and (max-width: 80em) {
 
-	.sidebar-left .content-area {
+	.sidebar-left .content-single {
 		padding-right: 0;
 		padding-left: 1.5em;
 	}
@@ -2709,7 +2709,7 @@ object {
 
 @media only screen and (max-width: 60em) {
 	
-	.sidebar-left .content-area {
+	.sidebar-left .content-single {
 		padding: 0;
 	}
 	

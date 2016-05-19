@@ -34,8 +34,8 @@
 # Posts List
 ---------------------------------------------------------------- */
 .tzwb-posts-list li {
+	clear: left;
 	list-style: none;
-	overflow: auto;
 	padding: 0;
 	margin-bottom: 0.5em;
 }
@@ -61,9 +61,10 @@
 # Comments List
 ---------------------------------------------------------------- */
 .tzwb-comments-list li {
+	clear: left;
 	list-style: none;
+	padding: 0;
 	margin-bottom: 0.5em;
-	overflow: auto;
 }
 
 .tzwb-comments-list .avatar {
