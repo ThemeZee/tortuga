@@ -2,6 +2,11 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.6
+-----------------------------------
+[improved] styling of Calendar Widget
+[fixed] post layout issues with Infinite Scroll
+
 Version 1.0.5
 -----------------------------------
 [added] selective refresh support in customizer for sidebars and widgets
