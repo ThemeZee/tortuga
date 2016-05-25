@@ -2384,7 +2384,7 @@ object {
 		display: inline-block;
 	}
 	
-	.widget-magazine-posts .large-post .entry-title 	{
+	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
@@ -2634,7 +2634,9 @@ object {
 	}
 	
 	.widget-magazine-posts .large-post .entry-content,
-	.widget-magazine-posts .large-post .entry-content .more-link {
+	.widget-magazine-posts .large-post .entry-content .more-link,
+	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content, 
+	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content .more-link {
 		display: inline-block;
 	}
 	
@@ -2688,7 +2690,7 @@ object {
 /*--------------------------------------------------------------
 ## 15.1 - Sidebar Left Layout
 --------------------------------------------------------------*/
-.sidebar-left .content-single {
+.sidebar-left .content-area {
 	float: right;
 	padding-right: 0;
 	padding-left: 2em;
@@ -2700,7 +2702,7 @@ object {
 
 @media only screen and (max-width: 80em) {
 
-	.sidebar-left .content-single {
+	.sidebar-left .content-area {
 		padding-right: 0;
 		padding-left: 1.5em;
 	}
@@ -2709,12 +2711,17 @@ object {
 
 @media only screen and (max-width: 60em) {
 	
-	.sidebar-left .content-single {
+	.sidebar-left .content-area {
 		padding: 0;
 	}
 	
 }
-	
+
+.sidebar-left.post-layout-three-columns .content-archive {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
 
 /*--------------------------------------------------------------
 # 16.0 - Media Query Fixes
