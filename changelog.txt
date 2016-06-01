@@ -2,6 +2,11 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.7
+-----------------------------------
+[updated] theme screenshot
+[fixed] three column post layout
+
 Version 1.0.6
 -----------------------------------
 [improved] styling of Calendar Widget
