@@ -63,7 +63,7 @@
 							'menu_class' => 'main-navigation-menu',
 							'echo' => true,
 							'fallback_cb' => 'tortuga_default_menu',
-							),
+							)
 						);
 					?>
 				</nav><!-- #main-navigation -->
