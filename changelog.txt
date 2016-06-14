@@ -2,6 +2,14 @@
 Tortuga Changelog
 ===================================
 
+Version 1.0.8
+-----------------------------------
+[added] added alt and srcset attributes to custom header image
+[added] support for scroll method of Infinite Scroll
+[removed] theme prefixes for loading common third-party scripts
+[updated] theme tags in style.css
+[improved] code formatting and comments
+
 Version 1.0.7
 -----------------------------------
 [updated] theme screenshot
