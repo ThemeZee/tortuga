@@ -1615,6 +1615,18 @@ textarea {
 	display: none;
 }
 
+.infinite-scroll #infinite-handle,
+.infinite-scroll .infinite-loader {
+	width: 100%;
+	text-align: center;
+}
+
+.infinite-scroll .infinite-loader .spinner {
+	left: auto;
+	margin: 0 auto;
+	bottom: -1em;
+}
+
 .infinite-scroll #infinite-handle span {
 	display: inline-block;
 	margin: 0 0 2em;
