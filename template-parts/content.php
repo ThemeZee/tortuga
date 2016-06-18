@@ -11,7 +11,7 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
+		<a href="<?php the_permalink(); ?>" rel="bookmark">
 			<?php the_post_thumbnail(); ?>
 		</a>
 
