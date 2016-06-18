@@ -22,27 +22,16 @@ if ( have_comments() or comments_open() ) : ?>
 	<div id="comments" class="comments-area">
 
 		<?php if ( have_comments() ) : ?>
-			
+
 			<header class="comments-header">
-				
+
 				<h2 class="comments-title">
 					<?php comments_number( '', esc_html__( 'One comment', 'tortuga' ), esc_html__( '% comments', 'tortuga' ) );?>
 				</h2>
-				
+
 			</header><!-- .comment-header -->
-					
 
-			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<nav id="comment-nav-above" class="comment-navigation clearfix" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'tortuga' ); ?></h2>
-				<div class="nav-links">
-
-					<div class="nav-previous"><?php previous_comments_link( esc_html__( '&laquo; Older Comments', 'tortuga' ) ); ?></div>
-					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &raquo;', 'tortuga' ) ); ?></div>
-
-				</div><!-- .nav-links -->
-			</nav><!-- #comment-nav-above -->
-			<?php endif; // Check for comment navigation. ?>
+			<?php the_comments_navigation(); ?>
 
 			<ol class="comment-list">
 				<?php
@@ -54,17 +43,7 @@ if ( have_comments() or comments_open() ) : ?>
 				?>
 			</ol><!-- .comment-list -->
 
-			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<nav id="comment-nav-below" class="comment-navigation clearfix" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'tortuga' ); ?></h2>
-				<div class="nav-links">
-
-					<div class="nav-previous"><?php previous_comments_link( esc_html__( '&laquo; Older Comments', 'tortuga' ) ); ?></div>
-					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &raquo;', 'tortuga' ) ); ?></div>
-
-				</div><!-- .nav-links -->
-			</nav><!-- #comment-nav-below -->
-			<?php endif; // Check for comment navigation. ?>
+			<?php the_comments_navigation(); ?>
 
 		<?php endif; // Check for have_comments(). ?>
 
@@ -82,5 +61,5 @@ if ( have_comments() or comments_open() ) : ?>
 		); ?>
 
 	</div><!-- #comments -->
-	
+
 <?php endif; ?>
