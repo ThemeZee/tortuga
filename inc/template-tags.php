@@ -313,7 +313,10 @@ function tortuga_post_navigation() {
 
 	if ( true === $theme_options['post_navigation'] ) {
 
-		the_post_navigation( array( 'prev_text' => '&laquo; %title', 'next_text' => '%title &raquo;' ) );
+		the_post_navigation( array(
+			'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'tortuga' ) . '</span>%title',
+			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'tortuga' ) . '</span>%title',
+		) );
 
 	}
 
@@ -373,8 +376,8 @@ function tortuga_pagination() {
 		'format' => '?paged=%#%',
 		'current' => max( 1, get_query_var( 'paged' ) ),
 		'total' => $wp_query->max_num_pages,
-		'next_text' => '&raquo;',
-		'prev_text' => '&laquo',
+		'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'tortuga' ) . '</span>&raquo;',
+		'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'tortuga' ) . '</span>',
 		'add_args' => false,
 	) );
 
