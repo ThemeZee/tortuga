@@ -16,14 +16,15 @@ $theme_options = tortuga_theme_options();
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
 
+		<?php
+		if ( have_posts() ) :  ?>
+
 			<header class="page-header">
 
 				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'tortuga' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 				<p><?php get_search_form(); ?></p>
 
 			</header><!-- .page-header -->
-
-		<?php if ( have_posts() ) :  ?>
 
 			<div id="post-wrapper" class="post-wrapper clearfix">
 
@@ -45,25 +46,12 @@ $theme_options = tortuga_theme_options();
 
 			<?php tortuga_pagination(); ?>
 
-		<?php else : ?>
+		<?php
+		else :
 
-			<div class="no-matches type-page">
+			get_template_part( 'template-parts/content', 'none' );
 
-				<header class="entry-header">
-
-					<h2 class="page-title"><?php esc_html_e( 'No matches', 'tortuga' ); ?></h2>
-
-				</header><!-- .entry-header -->
-
-				<div class="entry-content">
-
-					<p><?php esc_html_e( 'Please try again, or use the navigation menus to find what you search for.', 'tortuga' ); ?></p>
-
-				</div>
-
-			</div>
-
-		<?php endif; ?>
+		endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

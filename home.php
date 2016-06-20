@@ -33,21 +33,28 @@ endif;
 
 				</header>
 
-			<?php endif; ?>
+			<?php endif;
 
-			<div id="post-wrapper" class="post-wrapper clearfix">
+			if ( have_posts() ) : ?>
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+				<div id="post-wrapper" class="post-wrapper clearfix">
+
+					<?php
+					while ( have_posts() ) : the_post();
 
 						get_template_part( 'template-parts/content' );
 
-					endwhile;
+					endwhile; ?>
 
-				endif; ?>
+				</div>
 
-			</div>
+				<?php tortuga_pagination();
 
-			<?php tortuga_pagination(); ?>
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
