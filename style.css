@@ -506,9 +506,6 @@ input[type="submit"] {
 	border: none;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -651,8 +648,6 @@ textarea {
 	float: left;
 	width: 73%;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -713,9 +708,6 @@ textarea {
 .site-title a:visited {
 	color: #fff;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -810,9 +802,6 @@ textarea {
 	text-decoration: none;
 	text-transform: uppercase;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -866,9 +855,6 @@ textarea {
 	font-size: 0.8125rem;
 	border-bottom: 1px dotted rgba(255,255,255,0.2);
 	-webkit-transition: none;
-	-moz-transition: none;
-	-ms-transition: none;
-	-o-transition: none;
 	transition: none;
 }
 
@@ -1062,8 +1048,6 @@ textarea {
 	margin: 0;
 	width: 100%;
 	padding: 0.5em 1.5em 0.5em 0.7em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-appearance: none;
 }
@@ -1076,9 +1060,6 @@ textarea {
 	padding: 0.65em 0.75em 0 0.2em;
 	cursor: pointer;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1185,8 +1166,6 @@ textarea {
 	display: block;
 	width: 33.33333333%;
 	padding-right: 1.5em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1199,8 +1178,6 @@ textarea {
 	float: left;
 	display: block;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1227,8 +1204,6 @@ textarea {
 	width: 50%;
 	margin: 0;
 	padding-right: 0.75em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1236,8 +1211,6 @@ textarea {
 	float: right;
 	width: 50%;
 	padding-left: 0.75em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1251,8 +1224,6 @@ textarea {
 	width: 50%;
 	margin-bottom: 1em;
 	padding-right: 0.75em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1260,8 +1231,6 @@ textarea {
 	width: 50%;
 	margin-left: 50%;
 	padding-left: 0.75em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1274,8 +1243,6 @@ textarea {
 	float: left;
 	width: 50%;
 	padding-right: 1.5em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1306,8 +1273,6 @@ textarea {
 	float: left;
 	margin-bottom: -1.5em;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1320,8 +1285,6 @@ textarea {
 	float: left;
 	width: 50%;
 	padding-right: 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1329,8 +1292,6 @@ textarea {
 	margin-left: 50%;
 	width: 50%;
 	padding-left: 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1374,9 +1335,6 @@ textarea {
 	color: #dd5533;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1407,9 +1365,6 @@ textarea {
 	background: #dd5533;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1525,9 +1480,6 @@ textarea {
 .entry-tags .meta-tags a:visited {
 	color: #fff;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1572,9 +1524,6 @@ textarea {
 	color: #fff;
 	background: #dd5533;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1715,36 +1664,46 @@ textarea {
 
 /* Post Columns */
 .post-layout-columns .post-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-right: -2em;
 }
 
 .post-layout-columns .post-wrapper .post-column {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.post-layout-columns .post-wrapper .post-column .type-post {
+.post-layout-columns .post-wrapper .post-column article {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
-.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
+.post-layout-columns .post-wrapper .post-column article .entry-title {
 	font-size: 22px;
 	font-size: 1.375rem;
 }
 
-.post-layout-columns .post-wrapper .post-column  .type-post .entry-content {
+.post-layout-columns .post-wrapper .post-column article .entry-content {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
 	flex-grow: 1;
 	font-size: 16px;
 	font-size: 1rem;
 }
 
-.post-layout-columns .post-wrapper .post-column  .type-post .more-link {
+.post-layout-columns .post-wrapper .post-column article .more-link {
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -1765,26 +1724,23 @@ textarea {
 	width: 33.3333333333333%;
 }
 
-/* Post Columns Fixes for IE 10 and IE 11 */
+/* Post Columns Fixes for IE 10 and IE 11*/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
-	.post-layout-columns .post-wrapper .post-column {
-		float: left;
+	.post-layout-columns .post-wrapper .post-column,
+	.post-layout-columns .post-wrapper .post-column article {
 		display: block;
 	}
 
-	.post-layout-two-columns .post-wrapper .post-column:nth-child(2n + 1) {
-		clear: left;
-	}
+}
 
-	.post-layout-three-columns .post-wrapper .post-column:nth-child(3n + 1) {
-		clear: left;
+/* Fix Render Bug for Safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column {
+			margin-right: -1px;
+		}
 	}
-
-	.post-layout-columns .post-wrapper .post-column .type-post {
-		display: block;
-	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2010,8 +1966,6 @@ object {
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -2112,7 +2066,7 @@ object {
 		width: 30%;
 	}
 
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
@@ -2163,7 +2117,10 @@ object {
 	}
 
 	.sidebar {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		float: none;
 		padding: 0;
@@ -2173,11 +2130,11 @@ object {
 
 	.sidebar .widget-wrap {
 		float: right;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		width: 50%;
 		padding-right: 1.5em;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
@@ -2224,7 +2181,7 @@ object {
 		font-size: 1.625rem;
 	}
 
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
@@ -2449,7 +2406,7 @@ object {
 		font-size: 1.5rem;
 	}
 
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
@@ -2516,7 +2473,7 @@ object {
 	.archive-title,
 	.page-title,
 	.entry-title,
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
@@ -2626,7 +2583,7 @@ object {
 	.archive-title,
 	.page-title,
 	.entry-title,
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
@@ -2682,7 +2639,7 @@ object {
 	.archive-title,
 	.page-title,
 	.entry-title,
-	.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
 		margin: 0 0 0.5em;
 		font-size: 18px;
 		font-size: 1.125rem;
