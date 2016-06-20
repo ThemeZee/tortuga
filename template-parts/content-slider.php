@@ -10,7 +10,7 @@
 <li id="slide-<?php the_ID(); ?>" class="zeeslide clearfix">
 
 	<?php // Display Post Thumbnail or default thumbnail.
-	if ( '' != get_the_post_thumbnail() ) :
+	if ( has_post_thumbnail() ) :
 
 		the_post_thumbnail( 'tortuga-slider-image', array( 'class' => 'slide-image' ) );
 
