@@ -1,0 +1,145 @@
+=== Tortuga ===
+Author URI: https://themezee.com
+Theme URI: https://themezee.com/themes/tortuga/
+Contributors: themezee
+Tags: two-columns, light, purple, custom-background, custom-header, custom-menu, editor-style, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
+Requires at least: 4.4
+Tested up to: 4.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website.
+
+== Description ==
+
+Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
+
+For more information about Tortuga please go to https://themezee.com/themes/tortuga/
+
+== Installation ==
+
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Tortuga in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away.
+4. Go to https://themezee.com/docs/tortuga-documentation/ for a guide on how to customize this theme.
+5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+
+== Changelog ==
+
+= 1.1.0 =
+* added readme.txt file
+* improved styling of navigation menus
+* added styling for mega menu plugin
+* updated tags in style.css
+
+= 1.0.9 =
+* added content-none.php template file
+* added post image template function
+* added new comments navigation function
+* improved accessibility of navigation menus
+
+= 1.0.8 =
+* added added alt and srcset attributes to custom header image
+* added support for scroll method of Infinite Scroll
+* removed theme prefixes for loading common third-party scripts
+* updated theme tags in style.css
+* improved code formatting and comments
+
+= 1.0.7 =
+* updated theme screenshot
+* fixed three column post layout
+
+= 1.0.6 =
+* improved styling of Calendar Widget
+* fixed post layout issues with Infinite Scroll
+
+= 1.0.5 =
+* added selective refresh support in customizer for sidebars and widgets
+* fixed empty comments box when comments are deactivated
+
+= 1.0.4 =
+* added extra setting to display tagline in header area
+* updated editor-style.css
+* set minimum required WordPress version to 4.4
+
+= 1.0.3 =
+* fixed broken two column post layout in Internet Explorer
+
+= 1.0.2 =
+* added support for new custom logo feature from WordPress 4.5
+* added setting to hide site title
+* added version numbers to wp_enqueue_style and wp_enqueue_script functions
+* updated flexlider, html5shiv and Genericons
+
+= 1.0.1 =
+* fixed styling of gallery items
+
+= 1.0 =
+* added Magazine Homepage template
+* added two column post layout
+* added post slider
+
+Version 0.9
+-----------------------------------
+Initial Release
+
+== Copyright ==
+
+Tortuga WordPress Theme, Copyright 2016 ThemeZee.com
+Tortuga is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+== Ressources ==
+
+Tortuga bundles the following third-party resources:
+
+1. Genericons Icon Font - http://genericons.com
+License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright: 2015 Automattic, Inc., https://automattic.com/
+
+2. Underscores - http://underscores.me/
+License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright: 2012-2015 Automattic, Inc., https://automattic.com/
+
+3. normalize.css - http://necolas.github.io/normalize.css/
+License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
+Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
+
+4. FlexSlider - https://github.com/woothemes/FlexSlider
+License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+Copyright: 2015 WooThemes, http://www.woothemes.com
+
+5. Open Sans Font - https://www.google.com/fonts/specimen/Open+Sans
+License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+Copyright: 2012 Steve Matteson
+
+6. Titillium Web Font - https://www.google.com/fonts/specimen/Titillium+Web
+License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
+Copyright: 2013 Accademia di Belle Arti di Urbino
+
+7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+
+Image 1: https://pixabay.com/en/martinique-sunset-boat-twilight-844982/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2009 Agnès alias agnesti (https://pixabay.com/en/users/agnesti-1137469/)
+
+Image 2: https://pixabay.com/en/pirate-port-harbour-festival-1101524/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2012 Petra (https://pixabay.com/en/users/ptra-359668/)
+
+Image 3: https://pixabay.com/en/thailand-longtail-boat-sea-1195997/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2008 kod88 (https://pixabay.com/en/users/kod88-2044225/)
+
+Image 4: https://pixabay.com/en/garda-sunset-mountains-mood-dusk-202068/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2012 Sabrina Schlich (https://pixabay.com/en/users/sabrinaschlich-77730/)
