@@ -26,11 +26,13 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.1.1 =
+* updated tags in style.css
+
 = 1.1.0 =
 * added readme.txt file
 * improved styling of navigation menus
 * added styling for mega menu plugin
-* updated tags in style.css
 
 = 1.0.9 =
 * added content-none.php template file
