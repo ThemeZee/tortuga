@@ -56,7 +56,7 @@ function tortuga_slider_meta() {
 	$postmeta = tortuga_meta_date();
 	$postmeta .= tortuga_meta_author();
 
-	echo '<div class="entry-meta">' . $postmeta . '</div>';
+	echo '<div class="entry-meta clearfix">' . $postmeta . '</div>';
 
 }
 endif;
