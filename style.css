@@ -4,11 +4,11 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tortuga
-Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, grid-layout, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
+Tags: two-columns, light, blue, custom-background, custom-header, custom-menu,  editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -129,8 +129,8 @@ dfn {
 }
 
 h1 {
-	font-size: 2em;
 	margin: 0.67em 0;
+	font-size: 2em;
 }
 
 mark {
@@ -144,10 +144,10 @@ small {
 
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
 }
 
 sup {
@@ -183,8 +183,8 @@ code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace;
 	font-size: 1em;
+	font-family: monospace, monospace;
 }
 
 button,
@@ -192,9 +192,9 @@ input,
 optgroup,
 select,
 textarea {
+	margin: 0;
 	color: inherit;
 	font: inherit;
-	margin: 0;
 }
 
 button {
@@ -210,8 +210,8 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button;
 	cursor: pointer;
+	-webkit-appearance: button;
 }
 
 button[disabled],
@@ -221,8 +221,8 @@ html input[disabled] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
 	padding: 0;
+	border: 0;
 }
 
 input {
@@ -241,8 +241,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="search"] {
-	-webkit-appearance: textfield;
 	box-sizing: content-box;
+	-webkit-appearance: textfield;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -251,14 +251,14 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 fieldset {
-	border: 1px solid #c0c0c0;
 	margin: 0 2px;
 	padding: 0.35em 0.625em 0.75em;
+	border: 1px solid #c0c0c0;
 }
 
 legend {
-	border: 0;
 	padding: 0;
+	border: 0;
 }
 
 textarea {
@@ -270,8 +270,8 @@ optgroup {
 }
 
 table {
-	border-collapse: collapse;
 	border-spacing: 0;
+	border-collapse: collapse;
 }
 
 td,
@@ -288,9 +288,9 @@ input,
 select,
 textarea {
 	color: #303030;
-	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 17px;
 	font-size: 1.0625rem;
+	font-family: 'Open Sans', Tahoma, Arial;
 	line-height: 1.75;
 }
 
@@ -323,25 +323,25 @@ address {
 }
 
 pre {
-	background: #fff;
+	overflow: auto;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	max-width: 100%;
 	border: 1px solid #ddd;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	background: #fff;
 	font-size: 15px;
 	font-size: 0.9375rem;
+	font-family: "Courier 10 Pitch", Courier, monospace;
 	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
 }
 
 code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 abbr,
@@ -378,23 +378,23 @@ body {
 
 blockquote {
 	margin: 0 0 1.5em;
+	padding: 0.05em 1.25em 1em;
 	border: 1px solid #ddd;
 	border-left: 3px solid #dd5533;
-	padding: 0.05em 1.25em 1em;
+	color: #777;
+	font-style: italic;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-style: italic;
-	color: #777;
 }
 
 blockquote cite,
 blockquote small {
-	margin-top: 1em;
 	display: block;
+	margin-top: 1em;
+	color: #404040;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
-	color: #404040;
 }
 
 blockquote cite:before,
@@ -413,10 +413,10 @@ blockquote > :last-child {
 }
 
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
 	margin-bottom: 1.5em;
+	height: 1px;
+	border: 0;
+	background-color: #ccc;
 }
 
 ul,
@@ -448,21 +448,21 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+	height: auto; /* Make sure images are scaled correctly. */
 }
 
 table {
 	margin: 0 0 1.5em;
+	width: 100%;
 	border: none;
 	table-layout: fixed;
-	width: 100%;
 }
 
 th,
 td {
-	border: 1px solid #ddd;
 	padding: 0.3em 0.6em;
+	border: 1px solid #ddd;
 }
 
 a {
@@ -499,12 +499,12 @@ input[type="reset"],
 input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
+	border: none;
+	background: #dd5533;
+	color: #fff;
+	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	color: #fff;
-	background: #dd5533;
-	border: none;
-	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
@@ -530,10 +530,10 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	max-width: 100%;
 	padding: 0.3em 0.6em;
-	color: #666;
+	max-width: 100%;
 	border: 1px solid #ddd;
+	color: #666;
 }
 
 input[type="text"]:focus,
@@ -542,8 +542,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	color: #111;
 	border: 1px solid #ccc;
+	color: #111;
 }
 
 textarea {
@@ -555,33 +555,33 @@ textarea {
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
-	height: 1px;
-	width: 1px;
 	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
 }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
+	top: 5px;
+	left: 5px;
+	z-index: 100000; /* Above WP toolbar. */
 	display: block;
+	clip: auto !important;
+	padding: 15px 23px 14px;
+	width: auto;
+	height: auto;
+	border-radius: 3px;
+	background-color: #f1f1f1;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	color: #21759b;
+	text-decoration: none;
+	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
 	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
 }
 
 /*--------------------------------------------------------------
@@ -600,10 +600,10 @@ textarea {
 }
 
 .aligncenter {
-	clear: both;
 	display: block;
-	margin-left: auto;
+	clear: both;
 	margin-right: auto;
+	margin-left: auto;
 }
 
 /*--------------------------------------------------------------
@@ -615,8 +615,8 @@ textarea {
 .post-navigation .nav-links:after,
 .comment-navigation:before,
 .comment-navigation:after {
-	content: "";
 	display: table;
+	content: "";
 }
 
 .clearfix:after,
@@ -629,15 +629,15 @@ textarea {
 # 8.0 - Layout Structure
 --------------------------------------------------------------*/
 .site {
-	width: 100%;
 	margin: 0;
+	width: 100%;
 }
 
 .container {
-	max-width: 1320px;
-	width: 100%;
 	margin: 0 auto;
 	padding: 0 2em;
+	max-width: 1320px;
+	width: 100%;
 }
 
 .site-content {
@@ -646,9 +646,9 @@ textarea {
 
 .content-area {
 	float: left;
-	width: 73%;
-	padding-right: 2em;
 	box-sizing: border-box;
+	padding-right: 2em;
+	width: 73%;
 }
 
 .sidebar {
@@ -659,16 +659,16 @@ textarea {
 /* Fullwidth Template */
 .site-content .content-fullwidth {
 	float: none;
-	width: 100%;
 	padding: 0;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
-	color: #fff;
 	background: #303030;
+	color: #fff;
 }
 
 .header-main {
@@ -678,17 +678,17 @@ textarea {
 
 .site-branding {
 	float: left;
-	max-width: 100%;
 	margin: 1em 0;
 	padding: 0;
+	max-width: 100%;
 }
 
 .site-branding a:link,
 .site-branding a:visited,
 .site-branding a:hover {
-	text-decoration: none;
 	padding: 0;
 	border: none;
+	text-decoration: none;
 }
 
 .site-title {
@@ -696,12 +696,12 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	font-family: 'Titillium Web', sans-serif;
-	font-size: 36px;
-	font-size: 2.25rem;
-	font-weight: normal;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 36px;
+	font-size: 2.25rem;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 .site-title a:link,
@@ -719,10 +719,10 @@ textarea {
 .site-branding .custom-logo {
 	margin: 0.5em 1em 0 0;
 	padding: 0;
-	border: none;
-	vertical-align: top;
 	max-width: 100%;
 	height: auto;
+	border: none;
+	vertical-align: top;
 }
 
 .site-description {
@@ -757,9 +757,9 @@ textarea {
 
 .header-image img {
 	max-width: 1920px;
-	vertical-align: top;
 	width: 100%;
 	height: auto;
+	vertical-align: top;
 }
 
 /*--------------------------------------------------------------
@@ -770,10 +770,10 @@ textarea {
 ## 10.1 - Main Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	color: #fff;
-	background: rgba(0,0,0,0.15);
 	border-bottom: 5px solid #dd5533;
+	background: rgba(0,0,0,0.15);
 	box-shadow: inset 0 1px 0 rgba(0,0,0, 0.05);
+	color: #fff;
 }
 
 .main-navigation-toggle {
@@ -781,13 +781,13 @@ textarea {
 }
 
 .main-navigation-menu {
+	position: relative;
 	float: left;
-	width: 100%;
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
+	width: 100%;
 	list-style-position: outside;
-	position: relative;
+	list-style-type: none;
 }
 
 .main-navigation-menu li {
@@ -796,12 +796,12 @@ textarea {
 
 .main-navigation-menu a {
 	display: block;
-	font-family: 'Titillium Web', Tahoma, Arial;
-	font-size: 16px;
-	font-size: 1rem;
 	padding: 0.8em 1.2em 0.7em;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: 'Titillium Web', Tahoma, Arial;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
@@ -809,15 +809,15 @@ textarea {
 .main-navigation-menu > .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.4em 0 0 0.3em;
+	color: #fff;
+	content: '\f431';
+	vertical-align: top;
+	text-decoration: inherit;
 	font-size: 16px;
-	line-height: 1;
 	font-family: 'Genericons';
+	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-decoration: inherit;
-	vertical-align: top;
-	content: '\f431';
-	color: #fff;
 }
 
 .main-navigation-menu a:link,
@@ -833,28 +833,28 @@ textarea {
 
 .main-navigation-menu ul {
 	position: absolute;
-	display: none;
 	z-index: 99;
+	display: none;
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
-	list-style-position: outside;
-	background: #303030;
 	border-top: 5px solid #dd5533;
+	background: #303030;
+	list-style-position: outside;
+	list-style-type: none;
 }
 
 .main-navigation-menu ul li {
-	float: none;
 	position: relative;
+	float: none;
 }
 
 .main-navigation-menu ul a {
+	padding: 1em;
 	min-width: 250px;
 	min-width: 16rem;
-	padding: 1em;
+	border-bottom: 1px dotted rgba(255,255,255,0.2);
 	font-size: 13px;
 	font-size: 0.8125rem;
-	border-bottom: 1px dotted rgba(255,255,255,0.2);
 	-webkit-transition: none;
 	transition: none;
 }
@@ -866,20 +866,17 @@ textarea {
 .main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.4em 0 0 0.3em;
+	color: #fff;
+	content: '\f431';
+	vertical-align: top;
+	text-decoration: inherit;
 	font-size: 14px;
-	line-height: 1;
 	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-decoration: inherit;
-	vertical-align: top;
-	content: '\f431';
-	color: #fff;
-	-webkit-transform: rotate(270deg);
-	-moz-transform: rotate(270deg);
-	-o-transform: rotate(270deg);
-	-ms-transform: rotate(270deg);
-	transform: rotate(270deg);
 }
 
 .main-navigation-menu li ul ul {
@@ -932,8 +929,8 @@ textarea {
 .mega-menu-content .widget_pages ul li a:hover,
 .mega-menu-content .widget_categories ul li a:hover,
 .mega-menu-content .widget_archive ul li a:hover {
-	color: #fff;
 	background: #dd5533;
+	color: #fff;
 }
 
 .mega-menu-content .mega-menu-widget .entry-meta,
@@ -947,8 +944,8 @@ textarea {
 .social-icons-menu {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
 	list-style-position: outside;
+	list-style-type: none;
 	line-height: 1;
 }
 
@@ -971,15 +968,15 @@ textarea {
 
 /* Add Genericons */
 .social-icons-menu li a:before {
-	color: #fff;
 	display: inline-block;
+	color: #fff;
+	vertical-align: top;
+	text-decoration: inherit;
+	font-size: 16px;
+	font-family: 'Genericons';
+	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-size: 16px;
-	line-height: 1;
-	font-family: 'Genericons';
-	text-decoration: inherit;
-	vertical-align: top;
 }
 
 .social-icons-menu li a:before { content: '\f408'; } /* Default Icon */
@@ -1021,10 +1018,10 @@ textarea {
 .widget {
 	margin: 0 0 2em 0;
 	padding: 1em 1.5em 1.5em;
-	background: #fff;
-	border-top: 3px solid #dd5533;
-	box-shadow: 0 2px 2px #aaa;
 	max-width: 100%;
+	border-top: 3px solid #dd5533;
+	background: #fff;
+	box-shadow: 0 2px 2px #aaa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1037,12 +1034,12 @@ textarea {
 	display: block;
 	margin: 0;
 	padding: 0;
-	font-family: 'Titillium Web', Tahoma, Arial;
+	color: #dd5533;
+	text-transform: uppercase;
+	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-weight: normal;
-	text-transform: uppercase;
-	color: #dd5533;
+	font-family: 'Titillium Web', Tahoma, Arial;
 }
 
 .widget ul {
@@ -1053,8 +1050,8 @@ textarea {
 
 .widget ul .children,
 .widget ul .sub-menu {
-	padding: 0;
 	margin: 0.5em 0 0.5em 1em;
+	padding: 0;
 }
 
 /* Make sure select elements fit in widgets. */
@@ -1068,12 +1065,12 @@ textarea {
 
 /* Theme Search Widget */
 .search-form {
-	display: block;
 	position: relative;
-	width: 100%;
+	display: block;
+	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	width: 100%;
 }
 
 .search-form .screen-reader-text {
@@ -1082,10 +1079,10 @@ textarea {
 
 .search-form .search-field {
 	display: inline-block;
-	margin: 0;
-	width: 100%;
-	padding: 0.5em 1.5em 0.5em 0.7em;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0.5em 1.5em 0.5em 0.7em;
+	width: 100%;
 	-webkit-appearance: none;
 }
 
@@ -1093,8 +1090,8 @@ textarea {
 	position: absolute;
 	top: 0;
 	right: 0;
-	border: none;
 	padding: 0.65em 0.75em 0 0.2em;
+	border: none;
 	cursor: pointer;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
@@ -1103,17 +1100,17 @@ textarea {
 .search-form .search-submit .genericon-search {
 	display: inline-block;
 	padding: 0.05em 0 0.55em 0.45em;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 24px;
-	line-height: 1;
-	font-family: 'Genericons';
+	color: #fff;
+	content: '\f400';
+	vertical-align: middle;
 	text-decoration: inherit;
 	font-weight: normal;
 	font-style: normal;
-	vertical-align: middle;
-	color: #fff;
-	content: '\f400';
+	font-size: 24px;
+	font-family: 'Genericons';
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Theme Calendar Widget */
@@ -1143,8 +1140,8 @@ textarea {
 }
 
 .widget_calendar table tfoot tr td {
-	border: none;
 	padding-top: 1em;
+	border: none;
 }
 
 .widget_calendar table tfoot tr #prev {
@@ -1167,8 +1164,8 @@ textarea {
 	margin: 0 0 1.5em 0;
 	padding: 0;
 	border: none;
-	box-shadow: none;
 	background: none;
+	box-shadow: none;
 }
 
 .widget-magazine-posts .type-post .wp-post-image {
@@ -1199,11 +1196,11 @@ textarea {
 }
 
 .widget-magazine-posts .medium-post {
-	float: left;
 	display: block;
-	width: 33.33333333%;
-	padding-right: 1.5em;
+	float: left;
 	box-sizing: border-box;
+	padding-right: 1.5em;
+	width: 33.33333333%;
 }
 
 .widget-magazine-posts .medium-post .entry-title {
@@ -1212,10 +1209,10 @@ textarea {
 }
 
 .widget-magazine-posts .small-post {
-	float: left;
 	display: block;
-	width: 100%;
+	float: left;
 	box-sizing: border-box;
+	width: 100%;
 }
 
 .widget-magazine-posts .small-post .wp-post-image {
@@ -1238,17 +1235,17 @@ textarea {
 /* Magazine Posts Boxed Widget Horizontal Style */
 .widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .wp-post-image {
 	float: left;
-	width: 50%;
+	box-sizing: border-box;
 	margin: 0;
 	padding-right: 0.75em;
-	box-sizing: border-box;
+	width: 50%;
 }
 
 .widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
 	float: right;
-	width: 50%;
-	padding-left: 0.75em;
 	box-sizing: border-box;
+	padding-left: 0.75em;
+	width: 50%;
 }
 
 .widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .medium-posts {
@@ -1258,17 +1255,17 @@ textarea {
 /* Magazine Posts Boxed Widget Vertical Style */
 .widget-magazine-posts-boxed .magazine-posts-boxed-vertical .large-post {
 	float: left;
-	width: 50%;
+	box-sizing: border-box;
 	margin-bottom: 1em;
 	padding-right: 0.75em;
-	box-sizing: border-box;
+	width: 50%;
 }
 
 .widget-magazine-posts-boxed .magazine-posts-boxed-vertical .small-posts {
-	width: 50%;
+	box-sizing: border-box;
 	margin-left: 50%;
 	padding-left: 0.75em;
-	box-sizing: border-box;
+	width: 50%;
 }
 
 /* Magazine Posts Grid Widget */
@@ -1278,17 +1275,17 @@ textarea {
 
 .widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
 	float: left;
-	width: 50%;
-	padding-right: 1.5em;
 	box-sizing: border-box;
+	padding-right: 1.5em;
+	width: 50%;
 }
 
 /* Magazine Posts Columns Widget */
 .tortuga-magazine-posts-columns {
 	padding: 0;
 	border: none;
-	box-shadow: none;
 	background: none;
+	box-shadow: none;
 }
 
 .tortuga-magazine-posts-columns .widget-magazine-posts {
@@ -1298,19 +1295,19 @@ textarea {
 .widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content {
 	margin: 0;
 	padding: 1em 1.5em 1.5em;
-	background: #fff;
-	border-top: 3px solid #dd5533;
-	box-shadow: 0 2px 2px #aaa;
 	max-width: 100%;
+	border-top: 3px solid #dd5533;
+	background: #fff;
+	box-shadow: 0 2px 2px #aaa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content .magazine-posts-columns-post-list {
 	float: left;
+	box-sizing: border-box;
 	margin-bottom: -1.5em;
 	width: 100%;
-	box-sizing: border-box;
 }
 
 .widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content {
@@ -1320,21 +1317,21 @@ textarea {
 
 .widget-magazine-posts-columns .magazine-posts-column-left {
 	float: left;
-	width: 50%;
-	padding-right: 1em;
 	box-sizing: border-box;
+	padding-right: 1em;
+	width: 50%;
 }
 
 .widget-magazine-posts-columns .magazine-posts-column-right {
-	margin-left: 50%;
-	width: 50%;
-	padding-left: 1em;
 	box-sizing: border-box;
+	margin-left: 50%;
+	padding-left: 1em;
+	width: 50%;
 }
 
 .widget-magazine-posts-columns .medium-post {
-	width: 100%;
 	padding-right: 0;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -1346,25 +1343,25 @@ textarea {
 .comments-area  {
 	margin: 0 0 2em 0;
 	padding: 1.5em;
-	background: #fff;
-	border-top: 3px solid #dd5533;
-	box-shadow: 0 2px 2px #aaa;
 	max-width: 100%;
+	border-top: 3px solid #dd5533;
+	background: #fff;
+	box-shadow: 0 2px 2px #aaa;
 }
 
 .archive-title,
 .page-title,
 .entry-title {
-	font-family: 'Titillium Web', Tahoma, Arial;
-	font-size: 28px;
-	font-size: 1.75rem;
-	font-weight: normal;
-	text-transform: uppercase;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	color: #dd5533;
+	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	font-weight: normal;
+	font-size: 28px;
+	font-size: 1.75rem;
+	font-family: 'Titillium Web', Tahoma, Arial;
 }
 
 .entry-title a:link,
@@ -1396,11 +1393,11 @@ textarea {
 	display: inline-block;
 	margin: 1.5em 0 0;
 	padding: 0.6em 1em;
+	background: #dd5533;
+	color: #fff;
+	text-decoration: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	color: #fff;
-	background: #dd5533;
-	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
@@ -1451,11 +1448,11 @@ textarea {
 
 .entry-meta span:before {
 	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px 'Genericons';
-	vertical-align: middle;
-	color: #333;
 	margin-right: 0.2em;
+	color: #333;
+	vertical-align: middle;
+	font: normal 16px 'Genericons';
+	-webkit-font-smoothing: antialiased;
 }
 
 .entry-meta .meta-date:before{
@@ -1489,8 +1486,8 @@ textarea {
 .widget_tag_cloud .tagcloud:after,
 .entry-tags .meta-tags:before,
 .entry-tags .meta-tags:after {
-	content: "";
 	display: table;
+	content: "";
 }
 
 .widget_tag_cloud .tagcloud:after,
@@ -1500,15 +1497,15 @@ textarea {
 
 .widget_tag_cloud .tagcloud a,
 .entry-tags .meta-tags a {
-	float: left;
 	display: inline-block;
+	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.2em 0.5em;
-	text-decoration: none;
 	background: #303030;
+	text-decoration: none;
+	text-transform: uppercase;
 	font-size: 12px !important;
 	font-size: 0.75rem !important;
-	text-transform: uppercase;
 }
 
 .widget_tag_cloud .tagcloud a:link,
@@ -1524,8 +1521,8 @@ textarea {
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	color: #fff;
 	background: #dd5533;
+	color: #fff;
 }
 
 /* Post Navigation */
@@ -1555,11 +1552,11 @@ textarea {
 	display: inline-block;
 	margin: 0 0 3px;
 	padding: 0.3em 0.8em;
+	background: #dd5533;
+	color: #fff;
+	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
-	text-decoration: none;
-	color: #fff;
-	background: #dd5533;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
@@ -1584,10 +1581,10 @@ textarea {
 	display: inline-block;
 	margin: 0 3px 3px 0;
 	padding: 0.4em 1em;
+	background: #303030;
+	color: #fff;
 	text-align: center;
 	text-decoration: none;
-	color: #fff;
-	background: #303030;
 }
 
 .post-pagination a:link,
@@ -1613,9 +1610,9 @@ textarea {
 }
 
 .infinite-scroll .infinite-loader .spinner {
+	bottom: -1em;
 	left: auto;
 	margin: 0 auto;
-	bottom: -1em;
 }
 
 .infinite-scroll #infinite-handle span {
@@ -1623,9 +1620,9 @@ textarea {
 	margin: 0 0 2em;
 	padding: 0.4em 1em;
 	background: #303030;
+	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	text-decoration: none;
 }
 
 .infinite-scroll #infinite-handle span:hover {
@@ -1636,8 +1633,8 @@ textarea {
 .page-header {
 	margin: 0 0 2em 0;
 	padding: 1.5em;
-	background: #fff;
 	border-top: 3px solid #dd5533;
+	background: #fff;
 	box-shadow: 0 2px 2px #aaa;
 }
 
@@ -1672,19 +1669,18 @@ textarea {
 
 .breadcrumbs .trail-browse {
 	margin-right: 0.5em;
+	font-weight: normal;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: normal;
 }
 
 .breadcrumbs .trail-items {
-
 	list-style: none;
 }
 
 .breadcrumbs .trail-items li::after {
-	content: "\00bb"; /* Raquo */
 	padding: 0 0.5em;
+	content: "\00bb"; /* Raquo */
 }
 
 .trail-separator-slash .trail-items li::after { content: "\002F"; }
@@ -1713,18 +1709,18 @@ textarea {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	padding-right: 2em;
 	box-sizing: border-box;
+	padding-right: 2em;
 }
 
 .post-layout-columns .post-wrapper .post-column article {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
 }
 
 .post-layout-columns .post-wrapper .post-column article .entry-title {
@@ -1733,11 +1729,11 @@ textarea {
 }
 
 .post-layout-columns .post-wrapper .post-column article .entry-content {
-	-webkit-box-flex: 1;
-	-ms-flex-positive: 1;
 	flex-grow: 1;
 	font-size: 16px;
 	font-size: 1rem;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
 }
 
 .post-layout-columns .post-wrapper .post-column article .more-link {
@@ -1753,8 +1749,8 @@ textarea {
 /* 3 Columns */
 .post-layout-three-columns .content-archive {
 	float: none;
-	width: 100%;
 	padding: 0;
+	width: 100%;
 }
 
 .post-layout-three-columns .post-wrapper .post-column {
@@ -1763,7 +1759,6 @@ textarea {
 
 /* Post Columns Fixes for IE 10 and IE 11*/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
 	.post-layout-columns .post-wrapper .post-column,
 	.post-layout-columns .post-wrapper .post-column article {
 		display: block;
@@ -1796,16 +1791,16 @@ textarea {
 .comments-header .comments-title,
 .comment-reply-title span {
 	display: inline-block;
-	font-family: 'Titillium Web', Tahoma, Arial;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-weight: normal;
-	text-transform: uppercase;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	color: #dd5533;
+	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	font-weight: normal;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-family: 'Titillium Web', Tahoma, Arial;
 }
 
 /* Comment List */
@@ -1825,8 +1820,8 @@ textarea {
 
 .comment-meta {
 	float: left;
-	width: 100%;
 	padding: 0;
+	width: 100%;
 }
 
 .comment-meta .comment-author img {
@@ -1858,8 +1853,8 @@ textarea {
 }
 
 .comment ol.children {
-	list-style: none;
 	margin: 1.5em 0 0;
+	list-style: none;
 }
 
 .comment .comment-respond {
@@ -1914,9 +1909,9 @@ textarea {
 .comment-reply-title small a {
 	margin-left: 1em;
 	text-decoration: underline;
+	font-weight: normal;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: normal;
 }
 
 /*--------------------------------------------------------------
@@ -1927,9 +1922,9 @@ textarea {
 }
 
 .site-footer {
+	color: #ddd;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	color: #ddd;
 }
 
 .site-footer .site-info {
@@ -1939,8 +1934,8 @@ textarea {
 
 .site-footer a:link,
 .site-footer a:visited {
-	color: #fff;
 	border-bottom: 1px dotted #aaa;
+	color: #fff;
 }
 
 .site-footer a:hover,
@@ -1955,10 +1950,10 @@ textarea {
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
 	margin-top: 0;
+	margin-bottom: 0;
 	padding: 0;
+	border: none;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -1998,12 +1993,12 @@ object {
 
 .gallery-item {
 	display: inline-block;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0.75em 1em 0 0;
-	text-align: center;
-	vertical-align: top;
 	width: 100%;
-	box-sizing: border-box;
+	vertical-align: top;
+	text-align: center;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -2052,7 +2047,6 @@ object {
 ## 14.1 - Desktop X-Large ( < 1200px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 80em) {
-
 	.container {
 		padding: 0 1.5em;
 	}
@@ -2094,7 +2088,6 @@ object {
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
-
 	.content-area {
 		width: 70%;
 	}
@@ -2134,7 +2127,6 @@ object {
 ## 14.2 - Desktop Medium ( < 1040px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 65em) {
-
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .entry-content {
 		display: none;
 	}
@@ -2145,12 +2137,11 @@ object {
 ## 14.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
-
 	.content-area,
 	.site-content .content-fullwidth {
 		float: none;
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 
 	.sidebar {
@@ -2160,19 +2151,19 @@ object {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		float: none;
+		margin-right: -1.5em;
 		padding: 0;
 		width: auto;
-		margin-right: -1.5em;
 	}
 
 	.sidebar .widget-wrap {
-		float: right;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		width: 50%;
-		padding-right: 1.5em;
+		float: right;
 		box-sizing: border-box;
+		padding-right: 1.5em;
+		width: 50%;
 	}
 
 	.sidebar .widget-wrap .widget {
@@ -2185,8 +2176,8 @@ object {
 
 	.site-branding {
 		float: none;
-		text-align: center;
 		margin: 0;
+		text-align: center;
 	}
 
 	.header-widgets {
@@ -2195,11 +2186,11 @@ object {
 	}
 
 	.header-widget {
-		float: none;
 		display: inline-block;
+		float: none;
 		margin: 1em 0 0;
-		vertical-align: top;
 		max-width: 100%;
+		vertical-align: top;
 
 	}
 
@@ -2227,22 +2218,22 @@ object {
 
 	/* Reset */
 	.main-navigation-menu li {
-		float: none;
 		position: static;
+		float: none;
 	}
 
 	.main-navigation-menu ul,
 	.mega-menu-item .mega-menu-content,
 	.mega-menu-item .mega-menu-content .mega-menu-widget {
 		position: static;
-		display: block;
-		left: auto;
 		top: auto;
+		left: auto;
+		display: block;
 	}
 
 	.main-navigation-menu ul a {
-		width: auto;
 		float: none;
+		width: auto;
 	}
 
 	.main-navigation-menu li ul ul {
@@ -2258,8 +2249,8 @@ object {
 
 	/* Main Navigation Toggle */
 	.main-navigation-toggle {
-		float: left;
 		display: inline-block;
+		float: left;
 		margin: 0 0 0 1.5em;
 		padding: 0.8em 1.2em;
 		background: #dd5533;
@@ -2268,22 +2259,22 @@ object {
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
-		cursor: pointer;
 		background: none;
+		cursor: pointer;
 	}
 
 	.main-navigation-toggle:after {
-		float: left;
 		display: inline-block;
+		float: left;
+		color: #fff;
+		content: '\f419';
+		vertical-align: middle;
+		text-decoration: inherit;
 		font-size: 24px;
-		line-height: 1;
 		font-family: 'Genericons';
+		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-decoration: inherit;
-		vertical-align: middle;
-		content: '\f419';
-		color: #fff;
 	}
 
 	.main-navigation-toggle:active,
@@ -2294,10 +2285,10 @@ object {
 
 	/* Main Navigation Menu */
 	.main-navigation-menu {
-		float: left;
-		width: 100%;
 		display: none;
+		float: left;
 		padding: 3px 0;
+		width: 100%;
 		border-top: 5px solid #dd5533;
 	}
 
@@ -2320,8 +2311,8 @@ object {
 
 	.main-navigation-menu ul a {
 		display: block;
-		width: 100%;
 		padding-left: 3em;
+		width: 100%;
 	}
 
 	.main-navigation-menu ul li ul a {
@@ -2347,8 +2338,8 @@ object {
 
 	/* Mobile Submenu Dropdowns */
 	.main-navigation-menu .submenu-dropdown-toggle {
-		float: right;
 		display: block;
+		float: right;
 		margin: 0;
 		padding: 0.8em 1.2em;
 	}
@@ -2358,15 +2349,15 @@ object {
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:before {
+		color: #fff;
+		content: '\f431';
+		vertical-align: middle;
+		text-decoration: inherit;
 		font-size: 32px;
-		line-height: 1;
 		font-family: 'Genericons';
+		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-decoration: inherit;
-		vertical-align: middle;
-		content: '\f431';
-		color: #fff;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover,
@@ -2438,7 +2429,6 @@ object {
 ## 14.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
-
 	.archive-title,
 	.page-title,
 	.entry-title {
@@ -2477,7 +2467,6 @@ object {
 ## 14.6 - Tablet Small ( < 720px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 45em) {
-
 	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 15px;
 		font-size: 0.9375rem;
@@ -2493,15 +2482,14 @@ object {
 ## 14.7 - Mobile Extra Large ( < 640px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
-
 	.post-layout-columns .post-wrapper {
 		display: block;
 		margin-right: 0;
 	}
 
 	.post-layout-columns .post-wrapper .post-column {
-		float: none;
 		display: block;
+		float: none;
 		padding-right: 0;
 	}
 
@@ -2530,8 +2518,8 @@ object {
 
 	.sidebar .widget-wrap {
 		float: none;
-		width: 100%;
 		padding-right: 0;
+		width: 100%;
 	}
 
 	/* Magazine Post Widgets */
@@ -2544,16 +2532,16 @@ object {
 	.widget-magazine-posts-boxed .magazine-posts-boxed-vertical .large-post,
 	.widget-magazine-posts-columns .magazine-posts-column-left {
 		float: none;
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 
 	.widget-magazine-posts-boxed .magazine-posts-boxed-vertical .small-posts,
 	.widget-magazine-posts-columns .magazine-posts-column-right {
-		width: 100%;
-		padding-top: 1em;
 		margin-left: 0;
+		padding-top: 1em;
 		padding-left: 0;
+		width: 100%;
 	}
 
 	.widget-magazine-posts .large-post .wp-post-image {
@@ -2564,8 +2552,8 @@ object {
 
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
 		float: right;
-		width: 50%;
 		padding-left: 1.5em;
+		width: 50%;
 	}
 
 	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
@@ -2597,15 +2585,14 @@ object {
 ## 14.8 - Mobile Large ( < 560px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
-
 	.widget-magazine-posts-grid .medium-post-row {
 		margin-right: 0;
 	}
 
 	.widget-magazine-posts .medium-post {
 		float: none;
-		width: 100%;
 		padding-right: 0;
+		width: 100%;
 	}
 
 	.widget-magazine-posts .medium-post .wp-post-image {
@@ -2620,7 +2607,6 @@ object {
 ## 14.9 - Mobile Medium ( < 480px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
-
 	.site-branding .site-title {
 		font-size: 32px;
 		font-size: 2rem;
@@ -2654,8 +2640,8 @@ object {
 
 	.widget-magazine-posts-boxed .magazine-posts-boxed-horizontal .large-post .post-content {
 		float: none;
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 
 	.widget-magazine-posts .large-post .entry-title {
@@ -2676,7 +2662,6 @@ object {
 ## 14.10 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 20em) {
-
 	.site-branding .site-title {
 		font-size: 28px;
 		font-size: 1.75rem;
@@ -2700,9 +2685,9 @@ object {
 
 	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
+		vertical-align: top;
 		font-size: 13px;
 		font-size: 0.8125rem;
-		vertical-align: top;
 	}
 
 	.widget-magazine-posts .medium-post .entry-meta,
@@ -2731,7 +2716,6 @@ object {
 }
 
 @media only screen and (max-width: 80em) {
-
 	.sidebar-left .content-area {
 		padding-right: 0;
 		padding-left: 1.5em;
@@ -2740,7 +2724,6 @@ object {
 }
 
 @media only screen and (max-width: 60em) {
-
 	.sidebar-left .content-area {
 		padding: 0;
 	}
@@ -2749,8 +2732,8 @@ object {
 
 .sidebar-left.post-layout-three-columns .content-archive {
 	float: none;
-	width: 100%;
 	padding: 0;
+	width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -2759,7 +2742,6 @@ object {
 
 /* Ensure navigation is visible on desktop view */
 @media only screen and (min-width: 60.001em) {
-
 	.main-navigation-menu {
 		display: block !important;
 	}

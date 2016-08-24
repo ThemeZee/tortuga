@@ -26,6 +26,9 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.1.2 =
+* added Right-to-Left language support
+
 = 1.1.1 =
 * updated tags in style.css
 

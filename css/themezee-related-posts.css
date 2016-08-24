@@ -49,9 +49,9 @@ ul.related-posts-list {
 	float: left;
 	margin: 0 1em 0 0;
 	padding: 0;
-	border: none;
 	max-width: 20%;
 	height: auto;
+	border: none;
 }
 
 
@@ -68,9 +68,9 @@ ul.related-posts-list {
 
 .related-posts-columns .related-post-column {
 	float: left;
+	box-sizing: border-box;
 	margin-bottom: 2em;
 	padding-right: 2em;
-	box-sizing: border-box;
 }
 
 .related-posts-two-columns .related-post-column {
@@ -139,7 +139,6 @@ ul.related-posts-list {
 ---------------------------------------------------------------- */
 
 @media only screen and (max-width: 80em) {
-
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
 		font-size: 22px;
@@ -149,7 +148,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 70em) {
-
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
 		font-size: 20px;
@@ -159,7 +157,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 50em) {
-
 	/* Columns */
 	.related-posts-four-columns .related-post-column {
 		width: 50%;
@@ -205,7 +202,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 40em) {
-
 	.related-posts-two-columns .related-post-column .entry-title,
 	.related-posts-four-columns .related-post-column .entry-title {
 		font-size: 16px;
@@ -215,7 +211,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 35em) {
-
 	/* Columns */
 	.related-posts-three-columns {
 		margin: 0;
@@ -223,14 +218,13 @@ ul.related-posts-list {
 
 	.related-posts-three-columns .related-post-column {
 		float: none;
-		width: 100%;
 		padding-right: 0;
+		width: 100%;
 	}
 
 }
 
 @media only screen and (max-width: 25em) {
-
 	/* Columns */
 	.related-posts-two-columns,
 	.related-posts-four-columns {
@@ -240,8 +234,8 @@ ul.related-posts-list {
 	.related-posts-two-columns .related-post-column,
 	.related-posts-four-columns .related-post-column {
 		float: none;
-		width: 100%;
 		padding-right: 0;
+		width: 100%;
 	}
 
 	/* List */
@@ -254,7 +248,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 20em) {
-
 	.related-posts .entry-meta .meta-date,
 	.related-posts .entry-meta .meta-author  {
 		display: block;
