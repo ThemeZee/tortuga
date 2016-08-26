@@ -376,6 +376,10 @@ li > ol {
 		float: right;
 	}
 
+	.main-navigation-menu li {
+		width: 100%;
+	}
+
 	.main-navigation-menu a {
 		clear: right;
 	}
