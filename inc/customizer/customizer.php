@@ -29,7 +29,7 @@ function tortuga_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'tortuga' ),
-		'description'    => '',
+		'description'    => tortuga_customize_theme_links(),
 	) );
 
 	// Add postMessage support for site title and description.
@@ -122,32 +122,54 @@ add_action( 'customize_preview_init', 'tortuga_customize_preview_js' );
 
 
 /**
- * Embed JS file for Customizer Controls
- */
-function tortuga_customize_controls_js() {
-
-	wp_enqueue_script( 'tortuga-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-
-	// Localize the script.
-	wp_localize_script( 'tortuga-customizer-controls', 'tortuga_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'tortuga' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/tortuga/', 'tortuga' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=tortuga&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'tortuga' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/tortuga-documentation/', 'tortuga' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=tortuga&utm_content=documentation' ),
-		'docuLabel'	=> esc_html__( 'Theme Documentation', 'tortuga' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/tortuga?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'tortuga' ),
-		)
-	);
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'tortuga_customize_controls_js' );
-
-
-/**
  * Embed CSS styles for the theme options in the Customizer
  */
 function tortuga_customize_preview_css() {
-	wp_enqueue_style( 'tortuga-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'tortuga-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 }
 add_action( 'customize_controls_print_styles', 'tortuga_customize_preview_css' );
+
+/**
+ * Returns Theme Links
+ */
+function tortuga_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'tortuga' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/tortuga/', 'tortuga' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=tortuga&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'tortuga' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/tortuga/?utm_source=theme-info&utm_medium=textlink&utm_campaign=tortuga&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'tortuga' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/tortuga-documentation/', 'tortuga' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=tortuga&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'tortuga' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/tortuga/reviews/?filter=5', 'tortuga' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'tortuga' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
+}
