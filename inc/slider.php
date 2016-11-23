@@ -21,14 +21,14 @@ function tortuga_slider_scripts() {
 	// Register and enqueue FlexSlider JS and CSS if necessary.
 	if ( true === $theme_options['slider_blog'] or true === $theme_options['slider_magazine'] or is_page_template( 'template-slider.php' ) ) :
 
-		// FlexSlider CSS.
-		wp_enqueue_style( 'tortuga-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
-
 		// FlexSlider JS.
-		wp_enqueue_script( 'flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider setup.
-		wp_enqueue_script( 'tortuga-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'flexslider' ) );
+		wp_enqueue_script( 'tortuga-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery-flexslider' ) );
+
+		// Register and enqueue slider CSS.
+		wp_enqueue_style( 'tortuga-slider', get_template_directory_uri() . '/css/flexslider.css' );
 
 	endif;
 
@@ -48,17 +48,17 @@ function tortuga_slider_excerpt_length( $length ) {
 
 
 if ( ! function_exists( 'tortuga_slider_meta' ) ) :
-/**
- * Displays the date and author on slider posts
- */
-function tortuga_slider_meta() {
+	/**
+	 * Displays the date and author on slider posts
+	 */
+	function tortuga_slider_meta() {
 
-	$postmeta = tortuga_meta_date();
-	$postmeta .= tortuga_meta_author();
+		$postmeta = tortuga_meta_date();
+		$postmeta .= tortuga_meta_author();
 
-	echo '<div class="entry-meta clearfix">' . $postmeta . '</div>';
+		echo '<div class="entry-meta clearfix">' . $postmeta . '</div>';
 
-}
+	}
 endif;
 
 
@@ -76,13 +76,13 @@ function tortuga_slider_options() {
 	$params = array();
 
 	// Set slider animation.
-	$params['animation'] = $theme_options['slider_animation'];
+	$params['animation'] = ( 'fade' === $theme_options['slider_animation'] ) ? 'fade' : 'slide';
 
 	// Set slider speed.
-	$params['speed'] = $theme_options['slider_speed'];
+	$params['speed'] = absint( $theme_options['slider_speed'] );
 
 	// Passing parameters to Flexslider.
-	wp_localize_script( 'tortuga-post-slider', 'tortuga_slider_params', $params );
+	wp_localize_script( 'tortuga-slider', 'tortuga_slider_params', $params );
 
 }
 add_action( 'wp_enqueue_scripts', 'tortuga_slider_options' );
