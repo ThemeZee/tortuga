@@ -6,14 +6,14 @@
  */
 
 if ( ! function_exists( 'tortuga_default_menu' ) ) :
-/**
- * Display default page as navigation if no custom menu was set
- */
-function tortuga_default_menu() {
+	/**
+	 * Display default page as navigation if no custom menu was set
+	 */
+	function tortuga_default_menu() {
 
-	echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">'. wp_list_pages( 'title_li=&echo=0' ) .'</ul>';
+		echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">' . wp_list_pages( 'title_li=&echo=0' ) . '</ul>';
 
-}
+	}
 endif;
 
 
@@ -28,8 +28,10 @@ function tortuga_body_classes( $classes ) {
 	// Get theme options from database.
 	$theme_options = tortuga_theme_options();
 
-	// Switch sidebar layout to left.
-	if ( 'left-sidebar' == $theme_options['layout'] ) {
+	// Check if sidebar widget area is empty or switch sidebar layout to left.
+	if ( ! is_active_sidebar( 'sidebar' ) ) {
+		$classes[] = 'no-sidebar';
+	} elseif ( 'left-sidebar' == $theme_options['layout'] ) {
 		$classes[] = 'sidebar-left';
 	}
 

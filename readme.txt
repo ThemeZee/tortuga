@@ -28,6 +28,7 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 = 1.1.4 =
 * improved escaping and sanitizing of widget settings and slider options
+* added full-width posts by automatically centering layout if sidebar widget area is empty
 
 = 1.1.3 =
 * fixed mobile menus on RTL language sites
