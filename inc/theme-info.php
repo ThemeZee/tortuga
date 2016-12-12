@@ -45,7 +45,7 @@ function tortuga_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'tortuga' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/tortuga/', 'tortuga' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=tortuga&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'tortuga' ); ?></a>
-				<a href="http://preview.themezee.com/tortuga/?utm_source=theme-info&utm_medium=textlink&utm_campaign=tortuga&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'tortuga' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=tortuga&utm_source=theme-info&utm_medium=textlink&utm_campaign=tortuga&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'tortuga' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/tortuga-documentation/', 'tortuga' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=tortuga&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'tortuga' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/tortuga/reviews/?filter=5', 'tortuga' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'tortuga' ); ?></a>
 			</p>
@@ -130,7 +130,7 @@ function tortuga_theme_info_page() {
 							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'tortuga' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+							<a href="<?php echo esc_url( admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ) ); ?>" class="button button-secondary">
 								<?php esc_html_e( 'Install Plugins', 'tortuga' ); ?>
 							</a>
 						</p>
