@@ -29,14 +29,6 @@ if ( ! function_exists( 'tortuga_site_title' ) ) :
 	 */
 	function tortuga_site_title() {
 
-		// Get theme options from database.
-		$theme_options = tortuga_theme_options();
-
-		// Return early if site title is deactivated.
-		if ( false == $theme_options['site_title'] ) {
-			return;
-		}
-
 		if ( is_home() or is_page_template( 'template-magazine.php' )  ) : ?>
 
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -56,14 +48,6 @@ if ( ! function_exists( 'tortuga_site_description' ) ) :
 	 * Displays the site description in the header area
 	 */
 	function tortuga_site_description() {
-
-		// Get theme options from database.
-		$theme_options = tortuga_theme_options();
-
-		// Return early if site title is deactivated.
-		if ( false == $theme_options['site_description'] ) {
-			return;
-		}
 
 		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
 
