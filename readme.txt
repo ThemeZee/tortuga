@@ -2,9 +2,9 @@
 Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/tortuga/
 Contributors: themezee
-Tags: two-columns, light, purple, custom-background, custom-header, custom-menu, editor-style, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
+Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.4
-Tested up to: 4.6
+Tested up to: 4.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,11 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.1.5 =
+* added editor shortcuts and instant live preview for site title and tagline in Customizer
+* updated post pagination to use newer functions
+* changed demo links in Customizer and Theme Info
 
 = 1.1.4 =
 * improved escaping and sanitizing of widget settings and slider options
