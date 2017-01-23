@@ -2427,6 +2427,11 @@ object {
 		font-size: 1rem;
 	}
 
+	/* Footer */
+	.site-footer .site-info {
+		float: none;
+		text-align: center;
+	}
 }
 
 /*--------------------------------------------------------------
