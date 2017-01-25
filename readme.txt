@@ -26,6 +26,10 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.1.6 =
+* added fullwidth page template for blog posts
+* added centered page template for posts and static pages
+
 = 1.1.5 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * updated post pagination to use newer functions
