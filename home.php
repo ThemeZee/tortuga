@@ -23,19 +23,32 @@ endif;
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php // Display Homepage Title.
-			if ( '' !== $theme_options['blog_title'] ) : ?>
+			<?php
+			// Display Magazine Homepage Widgets.
+			if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
 
-				<header class="page-header clearfix">
+				<div id="magazine-homepage-widgets" class="widget-area clearfix">
 
-					<h1 class="page-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
-					<p class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
+					<?php dynamic_sidebar( 'magazine-homepage' ); ?>
 
-				</header>
+				</div><!-- #magazine-homepage-widgets -->
 
-			<?php endif;
+				<?php
+			endif;
 
-			if ( have_posts() ) : ?>
+			if ( have_posts() ) :
+
+				// Display Homepage Title.
+				if ( '' !== $theme_options['blog_title'] ) : ?>
+
+					<header class="page-header clearfix">
+
+						<h1 class="page-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+						<p class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
+
+					</header>
+
+				<?php endif; ?>
 
 				<div id="post-wrapper" class="post-wrapper clearfix">
 

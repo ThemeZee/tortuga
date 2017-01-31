@@ -27,6 +27,7 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 == Changelog ==
 
 = 1.1.6 =
+* added Magazine Homepage widgets to blog index
 * added fullwidth page template for blog posts
 * added centered page template for posts and static pages
 
