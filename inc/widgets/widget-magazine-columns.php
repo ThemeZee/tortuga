@@ -1,8 +1,8 @@
 <?php
 /**
- * Magazine Posts Columns Widget
+ * Magazine Columns Widget
  *
- * Display the latest posts from two categories in a 2-column layout.
+ * Display the latest posts from two categories in a two column layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
  * @package Tortuga
@@ -21,21 +21,14 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'tortuga-magazine-posts-columns', // ID.
-			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'tortuga' ), wp_get_theme()->Name ), // Name.
+			esc_html__( 'Magazine (Columns)', 'tortuga' ), // Name.
 			array(
-				'classname' => 'tortuga-magazine-posts-columns',
+				'classname' => 'tortuga-magazine-columns-widget',
 				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'tortuga' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
-
-		// Delete Widget Cache on certain actions.
-		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'deleted_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'switch_theme', array( $this, 'delete_widget_cache' ) );
-
 	}
-
 
 	/**
 	 * Set default settings of the widget
@@ -49,14 +42,10 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 			'category_two_title'	=> '',
 			'number'				=> 4,
 			'highlight_post'		=> true,
-			'meta_date'				=> true,
-			'meta_author'			=> false,
 		);
 
 		return $defaults;
-
 	}
-
 
 	/**
 	 * Main Function to display the widget
@@ -67,22 +56,6 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $instance / Settings for this widget instance.
 	 */
 	function widget( $args, $instance ) {
-
-		$cache = array();
-
-		// Get Widget Object Cache.
-		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_tortuga_magazine_posts_columns', 'widget' );
-		}
-		if ( ! is_array( $cache ) ) {
-			$cache = array();
-		}
-
-		// Display Widget from Cache if exists.
-		if ( isset( $cache[ $this->id ] ) ) {
-			echo $cache[ $this->id ];
-			return;
-		}
 
 		// Start Output Buffering.
 		ob_start();
@@ -107,16 +80,9 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 		<?php
 		echo $args['after_widget'];
 
-		// Set Cache.
-		if ( ! $this->is_preview() ) {
-			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_tortuga_magazine_posts_columns', $cache, 'widget' );
-		} else {
-			ob_end_flush();
-		}
-
-	} // widget()
-
+		// End Output Buffering.
+		ob_end_flush();
+	}
 
 	/**
 	 * Renders the Widget Content
@@ -130,7 +96,11 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $settings / Settings for this widget instance.
 	 */
 	function render( $args, $settings ) {
-	?>
+
+		// Get cached post ids.
+		$post_ids_category_one = tortuga_get_magazine_post_ids( $this->id . '-left-category', $settings['category_one'], $settings['number'] );
+		$post_ids_category_two = tortuga_get_magazine_post_ids( $this->id . '-right-category', $settings['category_two'], $settings['number'] );
+		?>
 
 		<div class="magazine-posts-column-left magazine-posts-columns clearfix">
 
@@ -140,7 +110,7 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_one'], $settings['category_one_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_one'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_one ); ?>
 				</div>
 
 			</div>
@@ -155,16 +125,15 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_two'], $settings['category_two_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_two'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_two ); ?>
 				</div>
 
 			</div>
 
 		</div>
 
-	<?php
-	} // render()
-
+		<?php
+	}
 
 	/**
 	 * Display Magazine Posts Loop
@@ -172,18 +141,16 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @used-by this->render()
 	 *
 	 * @param array $settings / Settings for this widget instance.
-	 * @param int   $category_id / ID of the selected category.
+	 * @param array $post_ids / Array with post ids.
 	 */
-	function magazine_posts( $settings, $category_id ) {
+	function magazine_posts( $settings, $post_ids ) {
 
-		// Get latest posts from database.
+		// Fetch posts from database.
 		$query_arguments = array(
-			'posts_per_page' => (int) $settings['number'],
-			'ignore_sticky_posts' => true,
-			'cat' => (int) $category_id,
+			'post__in'            => $post_ids,
+			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
-		$i = 0;
 
 		// Check if there are posts.
 		if ( $posts_query->have_posts() ) :
@@ -196,46 +163,16 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				if ( true === $settings['highlight_post'] and ( isset( $i ) and 0 === $i  ) ) : ?>
+				// Display first post differently.
+				if ( true === $settings['highlight_post'] and 0 === $posts_query->current_post ) :
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
+					get_template_part( 'template-parts/widgets/magazine-large-post', 'columns' );
 
-						<header class="entry-header">
+				else :
 
-							<?php tortuga_post_image( 'tortuga-thumbnail-large' ); ?>
+					get_template_part( 'template-parts/widgets/magazine-small-post', 'columns' );
 
-							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-							<?php $this->entry_meta( $settings ); ?>
-
-						</header><!-- .entry-header -->
-
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<?php tortuga_more_link(); ?>
-						</div><!-- .entry-content -->
-
-					</article>
-
-				<?php else : ?>
-
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
-
-						<?php tortuga_post_image( 'tortuga-thumbnail-small' ); ?>
-
-						<div class="small-post-content">
-
-							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-							<?php $this->entry_meta( $settings ); ?>
-
-						</div>
-
-					</article>
-
-				<?php
 				endif;
-				$i++;
 
 			endwhile;
 
@@ -246,39 +183,7 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		// Reset Postdata.
 		wp_reset_postdata();
-
-	} // magazine_posts()
-
-
-	/**
-	 * Displays Entry Meta of Posts
-	 *
-	 * @param array $settings / Settings for this widget instance.
-	 */
-	function entry_meta( $settings ) {
-
-		$postmeta = '';
-
-		if ( true === $settings['meta_date'] ) {
-
-			$postmeta .= tortuga_meta_date();
-
-		}
-
-		if ( true === $settings['meta_author'] ) {
-
-			$postmeta .= tortuga_meta_author();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
-
-	} // entry_meta()
-
+	}
 
 	/**
 	 * Displays Category Widget Title
@@ -315,9 +220,7 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 			endif;
 
 		endif;
-
-	} // category_title()
-
+	}
 
 	/**
 	 * Update Widget Settings
@@ -335,14 +238,11 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 		$instance['category_two'] = (int) $new_instance['category_two'];
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['highlight_post'] = ! empty( $new_instance['highlight_post'] );
-		$instance['meta_date'] = ! empty( $new_instance['meta_date'] );
-		$instance['meta_author'] = ! empty( $new_instance['meta_author'] );
 
-		$this->delete_widget_cache();
+		tortuga_flush_magazine_post_ids();
 
 		return $instance;
 	}
-
 
 	/**
 	 * Displays Widget Settings Form in the Backend
@@ -410,31 +310,7 @@ class Tortuga_Magazine_Posts_Columns_Widget extends WP_Widget {
 			</label>
 		</p>
 
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ); ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'tortuga' ); ?>
-			</label>
-		</p>
-
-		<p>
-			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ); ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'tortuga' ); ?>
-			</label>
-		</p>
-
-<?php
-	} // form()
-
-
-	/**
-	 * Delete Widget Cache
-	 */
-	public function delete_widget_cache() {
-
-		wp_cache_delete( 'widget_tortuga_magazine_posts_columns', 'widget' );
-
+		<?php
 	}
 }
 

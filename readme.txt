@@ -26,6 +26,11 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.1.7 =
+* added template files for Magazine widgets to improve child theme compatibility
+* improved transient caching of Magazine widgets for increased performance
+* replaced Magazine Boxed widget with Horizontal Box and Vertical Box widget
+
 = 1.1.6 =
 * added Magazine Homepage widgets to blog index
 * added fullwidth page template for blog posts
