@@ -149,44 +149,13 @@ if ( ! function_exists( 'tortuga_entry_meta' ) ) :
 	 */
 	function tortuga_entry_meta() {
 
-		// Get theme options from database.
-		$theme_options = tortuga_theme_options();
+		$postmeta = tortuga_meta_date();
+		$postmeta .= tortuga_meta_author();
+		$postmeta .= tortuga_meta_category();
+		$postmeta .= tortuga_meta_comments();
 
-		$postmeta = '';
+		echo '<div class="entry-meta">' . $postmeta . '</div>';
 
-		// Display date unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_date'] ) {
-
-			$postmeta .= tortuga_meta_date();
-
-		}
-
-		// Display author unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_author'] ) {
-
-			$postmeta .= tortuga_meta_author();
-
-		}
-
-		// Display categories unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_category'] ) {
-
-			$postmeta .= tortuga_meta_category();
-
-		}
-
-		// Display categories unless user has deactivated it via settings.
-		if ( true === $theme_options['meta_comments'] ) {
-
-			$postmeta .= tortuga_meta_comments();
-
-		}
-
-		if ( $postmeta ) {
-
-			echo '<div class="entry-meta">' . $postmeta . '</div>';
-
-		}
 	}
 endif;
 
@@ -291,14 +260,11 @@ if ( ! function_exists( 'tortuga_entry_tags' ) ) :
 	 */
 	function tortuga_entry_tags() {
 
-		// Get theme options from database.
-		$theme_options = tortuga_theme_options();
-
 		// Get tags.
 		$tag_list = get_the_tag_list( '', '' );
 
 		// Display tags.
-		if ( $tag_list && $theme_options['meta_tags'] ) : ?>
+		if ( $tag_list ) : ?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -335,7 +301,7 @@ if ( ! function_exists( 'tortuga_post_navigation' ) ) :
 		// Get theme options from database.
 		$theme_options = tortuga_theme_options();
 
-		if ( true === $theme_options['post_navigation'] ) {
+		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
 				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'tortuga' ) . '</span>%title',
