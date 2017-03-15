@@ -160,30 +160,6 @@ if ( ! function_exists( 'tortuga_entry_meta' ) ) :
 endif;
 
 
-if ( ! function_exists( 'tortuga_magazine_entry_meta' ) ) :
-	/**
-	 * Displays the date and author of magazine posts
-	 */
-	function tortuga_magazine_entry_meta() {
-
-		$postmeta = tortuga_meta_date();
-		$postmeta .= tortuga_meta_author();
-
-		echo '<div class="entry-meta">' . $postmeta . '</div>';
-	}
-endif;
-
-
-if ( ! function_exists( 'tortuga_magazine_entry_date' ) ) :
-	/**
-	 * Displays the date of magazine posts
-	 */
-	function tortuga_magazine_entry_date() {
-		echo '<div class="entry-meta">' . tortuga_meta_date() . '</div>';
-	}
-endif;
-
-
 if ( ! function_exists( 'tortuga_meta_date' ) ) :
 	/**
 	 * Displays the post date
