@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tortuga
@@ -1803,15 +1803,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 
 }
 
-/* Fix Render Bug for Safari */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.post-layout-columns .post-wrapper .post-column {
-			margin-right: -1px;
-		}
-	}
-}
-
 /*--------------------------------------------------------------
 # 11.0 - Comments
 --------------------------------------------------------------*/
@@ -2787,5 +2778,26 @@ object {
 	.main-navigation-menu {
 		display: block !important;
 	}
+}
 
+/*--------------------------------------------------------------
+# 20.0 - CSS Hacks for Safari
+--------------------------------------------------------------*/
+
+/* Fix Flexbox issues for Safari 6.1-10.0 */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column {
+			margin-right: -1px;
+		}
+	}
+}
+
+/* Fix Flexbox issues for Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column {
+			margin-right: -1px;
+		}
+	}
 }
