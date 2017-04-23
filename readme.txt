@@ -26,6 +26,11 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.2.4 =
+* added post hyperlinks to slider images in post slider
+* added own template function to display slider image for better child theme support
+* fixed slider images getting stretched when too small images are uploaded
+
 = 1.2.3 =
 * fixed flexbox layout issues appearing with the latest Safari 10.1 version
 * fixed horizontal scrolling issue on mobile devices when elements are hidden in theme options
