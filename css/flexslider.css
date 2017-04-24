@@ -87,7 +87,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .zeeflex-viewport {
 	max-height: 2000px;
-	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
 }
 
@@ -152,7 +151,6 @@ html[xmlns] .zeeflexslider .zeeslides {
 	text-align: left;
 	font-size: 0;
 	cursor: pointer;
-	-webkit-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
 
@@ -212,7 +210,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 55em) {
-	.post-slider .zeeslide .slide-image {
+	.post-slider .zeeslide .slide-image-wrap {
 		float: none;
 		padding: 0;
 		width: 100%;
