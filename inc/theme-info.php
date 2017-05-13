@@ -16,7 +16,7 @@ function tortuga_theme_info_menu_link() {
 	$theme = wp_get_theme();
 
 	add_theme_page(
-		sprintf( esc_html__( 'Welcome to %1$s %2$s', 'tortuga' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ),
+		sprintf( esc_html__( 'Welcome to %1$s %2$s', 'tortuga' ), $theme->display( 'Name' ), $theme->display( 'Version' ) ),
 		esc_html__( 'Theme Info', 'tortuga' ),
 		'edit_theme_options',
 		'tortuga',
@@ -37,9 +37,9 @@ function tortuga_theme_info_page() {
 
 	<div class="wrap theme-info-wrap">
 
-		<h1><?php printf( esc_html__( 'Welcome to %1$s %2$s', 'tortuga' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ); ?></h1>
+		<h1><?php printf( esc_html__( 'Welcome to %1$s %2$s', 'tortuga' ), $theme->display( 'Name' ), $theme->display( 'Version' ) ); ?></h1>
 
-		<div class="theme-description"><?php echo $theme->get( 'Description' ); ?></div>
+		<div class="theme-description"><?php echo $theme->display( 'Description' ); ?></div>
 
 		<hr>
 		<div class="important-links clearfix">
@@ -54,7 +54,7 @@ function tortuga_theme_info_page() {
 
 		<div id="getting-started">
 
-			<h3><?php printf( esc_html__( 'Getting Started with %s', 'tortuga' ), $theme->get( 'Name' ) ); ?></h3>
+			<h3><?php printf( esc_html__( 'Getting Started with %s', 'tortuga' ), $theme->display( 'Name' ) ); ?></h3>
 
 			<div class="columns-wrapper clearfix">
 
@@ -77,7 +77,7 @@ function tortuga_theme_info_page() {
 						<h4><?php esc_html_e( 'Theme Options', 'tortuga' ); ?></h4>
 
 						<p class="about">
-							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'tortuga' ), $theme->get( 'Name' ) ); ?>
+							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'tortuga' ), $theme->display( 'Name' ) ); ?>
 						</p>
 						<p>
 							<a href="<?php echo wp_customize_url(); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'tortuga' ); ?></a>
@@ -148,7 +148,7 @@ function tortuga_theme_info_page() {
 
 			<p>
 				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'tortuga' ),
-					$theme->get( 'Name' ),
+					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'tortuga' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=tortuga" title="ThemeZee">ThemeZee</a>',
 					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/tortuga/reviews/?filter=5', 'tortuga' ) . '" title="' . esc_attr__( 'Review Tortuga', 'tortuga' ) . '">' . esc_html__( 'rate it', 'tortuga' ) . '</a>'
 				); ?>
@@ -169,7 +169,7 @@ function tortuga_theme_info_page() {
 function tortuga_theme_info_page_css( $hook ) {
 
 	// Load styles and scripts only on theme info page.
-	if ( 'appearance_page_tortuga' != $hook ) {
+	if ( 'appearance_page_tortuga' !== $hook ) {
 		return;
 	}
 
