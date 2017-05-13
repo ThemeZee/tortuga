@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 1.2.4
+Version: 1.2.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tortuga
@@ -731,6 +731,7 @@ textarea {
 }
 
 .site-branding .custom-logo-link {
+	float: left;
 	display: block;
 }
 
@@ -2197,6 +2198,10 @@ object {
 		float: none;
 		margin: 0;
 		text-align: center;
+	}
+
+	.site-branding .custom-logo-link {
+		float: none;
 	}
 
 	.header-widgets {

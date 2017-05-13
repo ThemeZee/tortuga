@@ -26,6 +26,10 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.2.5 =
+* fixed alignment of site logo and site title when used together
+* use localized theme name and description on theme info page
+
 = 1.2.4 =
 * added transient caching to post slider
 * added post hyperlinks to slider images in post slider
