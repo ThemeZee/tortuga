@@ -14,10 +14,18 @@ function tortuga_theme_addons_setup() {
 	add_theme_support( 'tortuga-pro' );
 
 	// Add theme support for ThemeZee Plugins.
-	add_theme_support( 'themezee-widget-bundle' );
 	add_theme_support( 'themezee-breadcrumbs' );
-	add_theme_support( 'themezee-related-posts' );
 	add_theme_support( 'themezee-mega-menu', array( 'primary', 'secondary' ) );
+
+	// Add theme support for Widget Bundle.
+	add_theme_support( 'themezee-widget-bundle', array(
+		'thumbnail_size' => array( 90, 65 ),
+	) );
+
+	// Add theme support for Related Posts.
+	add_theme_support( 'themezee-related-posts', array(
+		'thumbnail_size' => array( 480, 320 ),
+	) );
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
@@ -60,21 +68,6 @@ function tortuga_theme_addons_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'tortuga_theme_addons_scripts' );
-
-
-/**
- * Add custom image sizes for theme addons
- */
-function tortuga_theme_addons_image_sizes() {
-
-	// Add Widget Bundle thumbnail.
-	add_image_size( 'tzwb-thumbnail', 90, 65, true );
-
-	// Add Related Posts thumbnail.
-	add_image_size( 'themezee-related-posts', 480, 320, true );
-
-}
-add_action( 'after_setup_theme', 'tortuga_theme_addons_image_sizes' );
 
 
 /**
