@@ -730,12 +730,8 @@ textarea {
 	color: #ccc;
 }
 
-.site-branding .custom-logo-link {
-	float: left;
-	display: block;
-}
-
 .site-branding .custom-logo {
+	float: left;
 	margin: 0.5em 1em 0 0;
 	padding: 0;
 	max-width: 100%;
@@ -2200,7 +2196,7 @@ object {
 		text-align: center;
 	}
 
-	.site-branding .custom-logo-link {
+	.site-branding .custom-logo {
 		float: none;
 	}
 
