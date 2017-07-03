@@ -4,11 +4,11 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 1.2.5
+Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tortuga
-Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Tags: two-columns, custom-background, custom-header, custom-logo, custom-menu, editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -2792,4 +2792,30 @@ object {
 			margin-right: -1px;
 		}
 	}
+}
+
+/*--------------------------------------------------------------
+21.0 Customizer Preview
+--------------------------------------------------------------*/
+.magazine-widgets-placeholder {
+	position: relative;
+	padding: 1em;
+}
+
+.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 1em 1em 1em 55px;
+	color: #0085ba;
+	border: 2px dashed #0085ba;
+}
+
+/* Add some space around the visual edit shortcut buttons. */
+.magazine-widgets-placeholder .customize-partial-edit-shortcut button {
+	left: 15px;
+	top: 13px;
 }

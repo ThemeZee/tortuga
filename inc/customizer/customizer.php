@@ -7,12 +7,14 @@
 
 // Load Customizer Helper Functions.
 require( get_template_directory() . '/inc/customizer/functions/custom-controls.php' );
+require( get_template_directory() . '/inc/customizer/functions/magazine-widget-area-control.php' );
 require( get_template_directory() . '/inc/customizer/functions/sanitize-functions.php' );
 require( get_template_directory() . '/inc/customizer/functions/callback-functions.php' );
 
 // Load Customizer Section Files.
 require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
 
@@ -142,7 +144,7 @@ function tortuga_customize_partial_blogdescription() {
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
 function tortuga_customize_preview_js() {
-	wp_enqueue_script( 'tortuga-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170515', true );
+	wp_enqueue_script( 'tortuga-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170627', true );
 }
 add_action( 'customize_preview_init', 'tortuga_customize_preview_js' );
 
