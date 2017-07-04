@@ -26,6 +26,11 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.3 =
+* added improved Magazine Widget Customizer Control
+* added default widget titles for Magazine widgets
+* ignore sticky posts in Magazine widgets
+
 = 1.2.5 =
 * fixed alignment of site logo and site title when used together
 * use localized theme name and description on theme info page

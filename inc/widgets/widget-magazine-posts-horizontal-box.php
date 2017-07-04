@@ -24,7 +24,7 @@ class Tortuga_Magazine_Horizontal_Box_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Horizontal Box)', 'tortuga' ), // Name.
 			array(
 				'classname' => 'tortuga-magazine-horizontal-box-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a horizontal box. Please use this widget ONLY in the Magazine Homepage widget area.', 'tortuga' ),
+				'description' => esc_html__( 'Displays your posts from a selected category in a horizontal box.', 'tortuga' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,8 +36,8 @@ class Tortuga_Magazine_Horizontal_Box_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'title'				=> '',
-			'category'			=> 0,
+			'title'    => esc_html__( 'Magazine (Horizontal Box)', 'tortuga' ),
+			'category' => 0,
 		);
 
 		return $defaults;
