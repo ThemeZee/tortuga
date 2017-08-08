@@ -11,7 +11,7 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php tortuga_post_image(); ?>
+		<?php tortuga_post_image_archives(); ?>
 
 		<header class="entry-header">
 

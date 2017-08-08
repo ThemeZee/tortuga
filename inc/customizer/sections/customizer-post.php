@@ -131,22 +131,6 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		)
 	) );
 
-	// Featured Image Setting.
-	$wp_customize->add_setting( 'tortuga_theme_options[post_image_single]', array(
-		'default'           => true,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'tortuga_sanitize_checkbox',
-	) );
-
-	$wp_customize->add_control( 'tortuga_theme_options[post_image_single]', array(
-		'label'    => esc_html__( 'Display featured image on single posts', 'tortuga' ),
-		'section'  => 'tortuga_section_post',
-		'settings' => 'tortuga_theme_options[post_image_single]',
-		'type'     => 'checkbox',
-		'priority' => 90,
-	) );
-
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_tags]', array(
 		'default'           => true,
 		'type'           	=> 'option',
@@ -159,7 +143,7 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'tortuga_section_post',
 		'settings' => 'tortuga_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 100,
+		'priority' => 90,
 	) );
 
 	$wp_customize->add_setting( 'tortuga_theme_options[post_navigation]', array(
@@ -174,7 +158,49 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'tortuga_section_post',
 		'settings' => 'tortuga_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 110,
+		'priority' => 100,
+	) );
+
+	// Add Featured Images Headline.
+	$wp_customize->add_control( new Tortuga_Customize_Header_Control(
+		$wp_customize, 'tortuga_theme_options[featured_images]', array(
+			'label'    => esc_html__( 'Featured Images', 'tortuga' ),
+			'section'  => 'tortuga_section_post',
+			'settings' => array(),
+			'priority' => 110,
+		)
+	) );
+
+	// Add Setting and Control for featured images on blog and archives.
+	$wp_customize->add_setting( 'tortuga_theme_options[post_image_archives]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'tortuga_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'tortuga_theme_options[post_image_archives]', array(
+		'label'    => esc_html__( 'Display on blog and archives', 'tortuga' ),
+		'section'  => 'tortuga_section_post',
+		'settings' => 'tortuga_theme_options[post_image_archives]',
+		'type'     => 'checkbox',
+		'priority' => 120,
+	) );
+
+	// Add Setting and Control for featured images on single posts.
+	$wp_customize->add_setting( 'tortuga_theme_options[post_image_single]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'tortuga_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'tortuga_theme_options[post_image_single]', array(
+		'label'    => esc_html__( 'Display on single posts', 'tortuga' ),
+		'section'  => 'tortuga_section_post',
+		'settings' => 'tortuga_theme_options[post_image_single]',
+		'type'     => 'checkbox',
+		'priority' => 130,
 	) );
 }
 add_action( 'customize_register', 'tortuga_customize_register_post_settings' );

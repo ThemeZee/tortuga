@@ -29,7 +29,7 @@ if ( ! function_exists( 'tortuga_site_title' ) ) :
 	 */
 	function tortuga_site_title() {
 
-		if ( is_home() or is_page_template( 'template-magazine.php' )  ) : ?>
+		if ( is_home() or is_page_template( 'template-magazine.php' ) ) : ?>
 
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
@@ -116,6 +116,28 @@ if ( ! function_exists( 'tortuga_post_image' ) ) :
 
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( $size, $attr ); ?>
+			</a>
+
+		<?php
+		endif;
+	}
+endif;
+
+
+if ( ! function_exists( 'tortuga_post_image_archives' ) ) :
+	/**
+	 * Displays the featured image on archive posts.
+	 */
+	function tortuga_post_image_archives() {
+
+		// Get theme options from database.
+		$theme_options = tortuga_theme_options();
+
+		// Display Post Thumbnail if activated.
+		if ( true === $theme_options['post_image_archives'] && has_post_thumbnail() ) : ?>
+
+			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
+				<?php the_post_thumbnail(); ?>
 			</a>
 
 		<?php
