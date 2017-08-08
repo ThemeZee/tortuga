@@ -18,14 +18,14 @@ function tortuga_customize_register_general_settings( $wp_customize ) {
 	$wp_customize->add_section( 'tortuga_section_general', array(
 		'title'    => esc_html__( 'General Settings', 'tortuga' ),
 		'priority' => 10,
-		'panel' => 'tortuga_options_panel',
+		'panel'    => 'tortuga_options_panel',
 	) );
 
 	// Add Settings and Controls for Layout.
 	$wp_customize->add_setting( 'tortuga_theme_options[layout]', array(
 		'default'           => 'right-sidebar',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_select',
 	) );
 
