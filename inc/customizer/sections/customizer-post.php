@@ -25,7 +25,7 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'tortuga_theme_options[excerpt_length]', array(
 		'default'           => 20,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
@@ -175,7 +175,7 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'tortuga_theme_options[post_image_archives]', array(
 		'default'           => true,
 		'type'              => 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_checkbox',
 	) );
 
@@ -202,5 +202,26 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 130,
 	) );
+
+	// Add Partial for Excerpt Length and Post Images on blog and archives.
+	$wp_customize->selective_refresh->add_partial( 'tortuga_blog_layout_partial', array(
+		'selector'         => '.site-main .post-wrapper',
+		'settings'         => array(
+			'tortuga_theme_options[excerpt_length]',
+			'tortuga_theme_options[post_image_archives]',
+		),
+		'render_callback'  => 'tortuga_customize_partial_blog_layout',
+		'fallback_refresh' => false,
+	) );
 }
 add_action( 'customize_register', 'tortuga_customize_register_post_settings' );
+
+/**
+ * Render the blog layout for the selective refresh partial.
+ */
+function tortuga_customize_partial_blog_layout() {
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content' );
+	}
+}
