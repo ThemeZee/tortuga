@@ -14,7 +14,7 @@
  */
 function tortuga_customize_register_post_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Post Settings.
 	$wp_customize->add_section( 'tortuga_section_post', array(
 		'title'    => esc_html__( 'Post Settings', 'tortuga' ),
 		'priority' => 30,
@@ -24,7 +24,7 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'tortuga_theme_options[excerpt_length]', array(
 		'default'           => 20,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
@@ -37,26 +37,20 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'priority' => 10,
 	) );
 
-	// Add Post Meta Settings.
-	$wp_customize->add_setting( 'tortuga_theme_options[postmeta_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Post Details Headline.
 	$wp_customize->add_control( new Tortuga_Customize_Header_Control(
 		$wp_customize, 'tortuga_theme_options[postmeta_headline]', array(
-			'label' => esc_html__( 'Post Meta', 'tortuga' ),
-			'section' => 'tortuga_section_post',
-			'settings' => 'tortuga_theme_options[postmeta_headline]',
+			'label'    => esc_html__( 'Post Meta', 'tortuga' ),
+			'section'  => 'tortuga_section_post',
+			'settings' => array(),
 			'priority' => 30,
 		)
 	) );
 
+	// Add Meta Date setting and control.
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_date]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_checkbox',
 	) );
@@ -69,9 +63,10 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'priority' => 40,
 	) );
 
+	// Add Meta Author setting and control.
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_author]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_checkbox',
 	) );
@@ -84,9 +79,10 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'priority' => 50,
 	) );
 
+	// Add Meta Category setting and control.
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_category]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_checkbox',
 	) );
@@ -99,9 +95,10 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'priority' => 60,
 	) );
 
+	// Add Meta Comments setting and control.
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_comments]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_checkbox',
 	) );
@@ -114,26 +111,20 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'priority' => 70,
 	) );
 
-	// Add Single Post Settings.
-	$wp_customize->add_setting( 'tortuga_theme_options[single_post_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-	) );
-
+	// Add Single Posts Headline.
 	$wp_customize->add_control( new Tortuga_Customize_Header_Control(
 		$wp_customize, 'tortuga_theme_options[single_post_headline]', array(
-			'label' => esc_html__( 'Single Posts', 'tortuga' ),
-			'section' => 'tortuga_section_post',
-			'settings' => 'tortuga_theme_options[single_post_headline]',
+			'label'    => esc_html__( 'Single Posts', 'tortuga' ),
+			'section'  => 'tortuga_section_post',
+			'settings' => array(),
 			'priority' => 80,
 		)
 	) );
 
+	// Add Meta Tags setting and control.
 	$wp_customize->add_setting( 'tortuga_theme_options[meta_tags]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_checkbox',
 	) );
@@ -146,9 +137,10 @@ function tortuga_customize_register_post_settings( $wp_customize ) {
 		'priority' => 90,
 	) );
 
+	// Add Post Navigation setting and control.
 	$wp_customize->add_setting( 'tortuga_theme_options[post_navigation]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'tortuga_sanitize_checkbox',
 	) );

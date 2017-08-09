@@ -14,14 +14,14 @@
  */
 function tortuga_customize_register_blog_settings( $wp_customize ) {
 
-	// Add Sections for Post Settings.
+	// Add Section for Blog Settings.
 	$wp_customize->add_section( 'tortuga_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'tortuga' ),
 		'priority' => 25,
 		'panel'    => 'tortuga_options_panel',
 	) );
 
-	// Add Post Layout Settings for archive posts.
+	// Add Blog Layout setting and control.
 	$wp_customize->add_setting( 'tortuga_theme_options[post_layout]', array(
 		'default'           => 'two-columns',
 		'type'              => 'option',
