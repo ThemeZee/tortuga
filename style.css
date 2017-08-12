@@ -1397,16 +1397,12 @@ textarea {
 	margin: 0 0 0.5em;
 }
 
-.entry-content p:last-child {
-	margin-bottom: 0;
-}
-
 .sticky {}
 
 /* Read more Link */
 .more-link {
 	display: inline-block;
-	margin: 1.5em 0 0;
+	margin: 0;
 	padding: 0.6em 1em;
 	background: #dd5533;
 	color: #fff;
@@ -1429,8 +1425,8 @@ textarea {
 
 /* Page Links | wp_link_pages() */
 .page-links {
-	margin: 0;
-	word-spacing: 1em;
+	margin: 0 0 1.5em;
+	word-spacing: 0.75em;
 	font-weight: bold;
 }
 

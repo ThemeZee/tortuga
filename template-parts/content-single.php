@@ -33,6 +33,7 @@
 	<footer class="entry-footer">
 
 		<?php tortuga_entry_tags(); ?>
+		<?php do_action( 'tortuga_author_bio' ); ?>
 		<?php tortuga_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
