@@ -55,6 +55,9 @@
 			<div id="main-navigation-wrap" class="primary-navigation-wrap">
 
 				<nav id="main-navigation" class="primary-navigation navigation container clearfix" role="navigation">
+
+					<?php do_action( 'tortuga_header_search' ); ?>
+
 					<?php
 						// Display Main Navigation.
 						wp_nav_menu( array(
