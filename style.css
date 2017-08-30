@@ -727,7 +727,7 @@ textarea {
 
 .site-title a:hover,
 .site-title a:active {
-	color: #ccc;
+	color: rgba(255,255,255,0.6);
 }
 
 .site-branding .custom-logo {
@@ -818,12 +818,12 @@ textarea {
 	font-size: 1rem;
 	font-family: 'Titillium Web', Tahoma, Arial;
 	transition: all 0.2s ease;
+	color: #fff;
 }
 
 .main-navigation-menu > .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.4em 0 0 0.3em;
-	color: #fff;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
@@ -879,7 +879,6 @@ textarea {
 .main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.4em 0 0 0.3em;
-	color: #fff;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
@@ -973,6 +972,7 @@ textarea {
 	display: inline-block;
 	padding: 0.5em;
 	text-decoration: none;
+	color: #fff;
 }
 
 .social-icons-menu li a .screen-reader-text {
@@ -982,7 +982,6 @@ textarea {
 /* Add Genericons */
 .social-icons-menu li a:before {
 	display: inline-block;
-	color: #fff;
 	vertical-align: top;
 	text-decoration: inherit;
 	font-size: 16px;
@@ -1459,7 +1458,6 @@ textarea {
 .entry-meta span:before {
 	display: inline-block;
 	margin-right: 0.2em;
-	color: #333;
 	vertical-align: middle;
 	font: normal 16px 'Genericons';
 	-webkit-font-smoothing: antialiased;
@@ -1934,7 +1932,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 }
 
 .site-footer {
-	color: #ddd;
+	color: rgba(255,255,255,0.6);
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -1946,14 +1944,14 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 
 .site-footer a:link,
 .site-footer a:visited {
-	border-bottom: 1px dotted #aaa;
+	border-bottom: 1px dotted rgba(255,255,255,0.6);
 	color: #fff;
 }
 
 .site-footer a:hover,
 .site-footer a:focus,
 .site-footer a:active {
-	color: #ddd;
+	color: rgba(255,255,255,0.6);
 }
 
 /*--------------------------------------------------------------
@@ -2256,6 +2254,7 @@ object {
 		top: auto;
 		left: auto;
 		margin: 0;
+		border: none;
 	}
 
 	.main-navigation-menu > .menu-item-has-children > a:after,
@@ -2269,20 +2268,20 @@ object {
 		float: left;
 		margin: 0 0 0 1.5em;
 		padding: 0.8em 1.2em;
+		color: #fff;
 		background: #dd5533;
 	}
 
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
-		background: none;
+		background: #dd5533;
 		cursor: pointer;
 	}
 
 	.main-navigation-toggle:after {
 		display: inline-block;
 		float: left;
-		color: #fff;
 		content: '\f419';
 		vertical-align: middle;
 		text-decoration: inherit;
@@ -2291,12 +2290,6 @@ object {
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
-
-	.main-navigation-toggle:active,
-	.main-navigation-toggle:focus,
-	.main-navigation-toggle:hover {
-		background: #dd5533;
 	}
 
 	/* Main Navigation Menu */
@@ -2336,20 +2329,15 @@ object {
 	}
 
 	.main-navigation-menu ul li ul li ul a {
-		padding-left: 5em;
+		padding-left: 6em;
 	}
 
 	.main-navigation-menu ul li ul li ul li ul a {
-		padding-left: 6em;
+		padding-left: 8em;
 	}
 
 	.main-navigation-menu ul li:last-child a {
 		border-bottom: 1px dotted rgba(255,255,255,0.2);
-	}
-
-	.main-navigation-menu ul ul {
-		border-top: 1px dotted rgba(255,255,255,0.2);
-		border-left: none;
 	}
 
 	/* Mobile Submenu Dropdowns */
@@ -2358,14 +2346,16 @@ object {
 		float: right;
 		margin: 0;
 		padding: 0.8em 1.2em;
+		color: #fff;
 	}
 
-	.main-navigation-menu .submenu-dropdown-toggle:hover {
+	.main-navigation-menu .submenu-dropdown-toggle:hover,
+	.main-navigation-menu .submenu-dropdown-toggle:active {
+		background: #dd5533;
 		cursor: pointer;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:before {
-		color: #fff;
 		content: '\f431';
 		vertical-align: middle;
 		text-decoration: inherit;
@@ -2374,11 +2364,6 @@ object {
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-	}
-
-	.main-navigation-menu .submenu-dropdown-toggle:hover,
-	.main-navigation-menu .submenu-dropdown-toggle:active {
-		background: #dd5533;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle.active:before {
