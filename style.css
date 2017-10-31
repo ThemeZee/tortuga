@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 1.4.1
+Version: 1.4.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tortuga
@@ -1979,6 +1979,8 @@ object {
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	font-size: 13px;
+	font-size: 0.8125rem;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1998,14 +2000,14 @@ object {
 ## 13.2 - Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.25em;
+	margin-bottom: 1em;
 }
 
 .gallery-item {
 	display: inline-block;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0.75em 1em 0 0;
+	padding: 0 1em 0.75em 0;
 	width: 100%;
 	vertical-align: top;
 	text-align: center;
@@ -2047,6 +2049,7 @@ object {
 	display: block;
 	font-size: 13px;
 	font-size: 0.8125rem;
+	margin-bottom: 0.75em;
 }
 
 /*--------------------------------------------------------------
@@ -2447,6 +2450,18 @@ object {
 		font-size: 1.25rem;
 	}
 
+	/* Gallery */
+	.gallery-item {
+		padding: 0 0.75em 0.5em 0;
+	}
+
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 25%;
+	}
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
@@ -2629,6 +2644,16 @@ object {
 	.alignright, .alignleft {
 		float: none;
 		margin: 1em 0;
+	}
+
+	/* Gallery */
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 50%;
 	}
 
 	/* Magazine Homepage: Category Post Widgets */

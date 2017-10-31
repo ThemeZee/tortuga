@@ -26,6 +26,10 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.4.2 =
+* improved styling of image captions
+* improved styling of galleries
+
 = 1.4.1 =
 * added action hook for author bio and header search
 * added filter to allow plugins to add own elements to be hidden
