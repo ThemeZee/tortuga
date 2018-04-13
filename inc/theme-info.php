@@ -174,7 +174,7 @@ function tortuga_theme_info_page_css( $hook ) {
 	}
 
 	// Embed theme info css style.
-	wp_enqueue_style( 'tortuga-theme-info-css', get_template_directory_uri() . '/css/theme-info.css' );
+	wp_enqueue_style( 'tortuga-theme-info-css', get_template_directory_uri() . '/assets/css/theme-info.css' );
 
 }
 add_action( 'admin_enqueue_scripts', 'tortuga_theme_info_page_css' );
