@@ -1422,6 +1422,10 @@ textarea {
 	text-decoration: none;
 }
 
+.more-link:after {
+	content: " \00BB";
+}
+
 /* Page Links | wp_link_pages() */
 .page-links {
 	margin: 0 0 1.5em;
