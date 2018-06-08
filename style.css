@@ -1916,6 +1916,12 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	margin-bottom: 1em;
 }
 
+.comment-form input[type="checkbox"] + label {
+	display: inline;
+	padding-left: 0.5em;
+	font-weight: normal;
+}
+
 .comment-reply-title small a {
 	margin-left: 1em;
 	text-decoration: underline;
