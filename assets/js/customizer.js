@@ -69,6 +69,13 @@
 		} );
 	} );
 
+	// Read More textfield.
+	wp.customize( 'tortuga_theme_options[read_more_text]', function( value ) {
+		value.bind( function( to ) {
+			$( 'a.more-link' ).text( to );
+		} );
+	} );
+
 	// Post Date checkbox.
 	wp.customize( 'tortuga_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {
