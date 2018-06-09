@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tortuga\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2017-08-09 16:23+0200\n"
+"POT-Creation-Date: 2018-06-09 13:06+0200\n"
 "PO-Revision-Date: 2016-09-16 11:22+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -148,6 +148,11 @@ msgstr ""
 msgid "Rate this theme"
 msgstr ""
 
+#: inc/customizer/default-options.php:60
+#: inc/customizer/sections/customizer-blog.php:107
+msgid "Continue reading"
+msgstr ""
+
 #: inc/customizer/functions/custom-controls.php:65
 #: inc/widgets/widget-magazine-posts-columns.php:257
 #: inc/widgets/widget-magazine-posts-columns.php:278
@@ -201,34 +206,42 @@ msgid "Blog Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-blog.php:33
-msgid "Blog Layout"
-msgstr ""
-
-#: inc/customizer/sections/customizer-blog.php:39
-msgid "One Column"
-msgstr ""
-
-#: inc/customizer/sections/customizer-blog.php:40
-msgid "Two Columns"
-msgstr ""
-
-#: inc/customizer/sections/customizer-blog.php:41
-msgid "Three Columns without Sidebar"
-msgstr ""
-
-#: inc/customizer/sections/customizer-blog.php:54
 msgid "Blog Title"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:76
+#: inc/customizer/sections/customizer-blog.php:55
 msgid "Blog Description"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:92
+#: inc/customizer/sections/customizer-blog.php:77
+msgid "Blog Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:83
+msgid "One Column"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:84
+msgid "Two Columns"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:85
+msgid "Three Columns without Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:98
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:114
+msgid "Read More Text"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:124
 msgid "Magazine Widgets"
 msgstr ""
 
-#: inc/customizer/sections/customizer-blog.php:108
+#: inc/customizer/sections/customizer-blog.php:140
 msgid "Display Magazine widgets on blog index"
 msgstr ""
 
@@ -252,52 +265,48 @@ msgstr ""
 msgid "Post Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:33
-msgid "Excerpt Length"
+#: inc/customizer/sections/customizer-post.php:27
+msgid "Post Details"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:43
-msgid "Post Meta"
+msgid "Display date"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:59
-msgid "Display post date"
+msgid "Display author"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:75
-msgid "Display post author"
+msgid "Display categories"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:91
-msgid "Display post categories"
+msgid "Display comments"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:107
-msgid "Display post comments"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:117
+#: inc/customizer/sections/customizer-post.php:101
 msgid "Single Posts"
 msgstr ""
 
+#: inc/customizer/sections/customizer-post.php:117
+msgid "Display tags"
+msgstr ""
+
 #: inc/customizer/sections/customizer-post.php:133
-msgid "Display post tags on single posts"
+msgid "Display previous/next post navigation"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:149
-msgid "Display post navigation on single posts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:159
+#: inc/customizer/sections/customizer-post.php:143
 msgid "Featured Images"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:175
-msgid "Display on blog and archives"
+#: inc/customizer/sections/customizer-post.php:159
+msgid "Display images on blog and archives"
 msgstr ""
 
-#: inc/customizer/sections/customizer-post.php:191
-msgid "Display on single posts"
+#: inc/customizer/sections/customizer-post.php:175
+msgid "Display image on single posts"
 msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:19
@@ -364,31 +373,27 @@ msgstr ""
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:325
-msgid "Continue reading &raquo;"
-msgstr ""
-
-#: inc/template-tags.php:344
+#: inc/template-tags.php:350
 msgctxt "post navigation"
 msgid "Previous Post:"
 msgstr ""
 
-#: inc/template-tags.php:345
+#: inc/template-tags.php:351
 msgctxt "post navigation"
 msgid "Next Post:"
 msgstr ""
 
-#: inc/template-tags.php:398
+#: inc/template-tags.php:404
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:399
+#: inc/template-tags.php:405
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
 
-#: inc/template-tags.php:413
+#: inc/template-tags.php:419
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
