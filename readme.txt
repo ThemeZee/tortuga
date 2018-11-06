@@ -26,6 +26,11 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.7 =
+* added styling for Gutenberg blocks
+* added custom color palette for Gutenberg
+* added editor styling for WordPress 5.0
+
 = 1.6 =
 * added new setting to change the text of the Read More button
 * updated and restructured blog and post settings
