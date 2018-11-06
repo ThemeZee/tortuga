@@ -55,17 +55,17 @@ if ( ! function_exists( 'tortuga_setup' ) ) :
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'tortuga_custom_logo_args', array(
-			'height' => 50,
-			'width' => 250,
+			'height'      => 50,
+			'width'       => 250,
 			'flex-height' => true,
-			'flex-width' => true,
+			'flex-width'  => true,
 		) ) );
 
 		// Set up the WordPress core custom header feature.
 		add_theme_support( 'custom-header', apply_filters( 'tortuga_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 1920,
-			'height' => 480,
+			'width'       => 1920,
+			'height'      => 480,
 			'flex-height' => true,
 		) ) );
 
@@ -78,6 +78,34 @@ if ( ! function_exists( 'tortuga_setup' ) ) :
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add custom color palette for Gutenberg.
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'tortuga' ),
+				'slug'  => 'primary',
+				'color' => apply_filters( 'tortuga_primary_color', '#dd5533' ),
+			),
+			array(
+				'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'tortuga' ),
+				'slug'  => 'white',
+				'color' => '#ffffff',
+			),
+			array(
+				'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'tortuga' ),
+				'slug'  => 'light-gray',
+				'color' => '#f0f0f0',
+			),
+			array(
+				'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'tortuga' ),
+				'slug'  => 'dark-gray',
+				'color' => '#777777',
+			),
+			array(
+				'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'tortuga' ),
+				'slug'  => 'black',
+				'color' => '#303030',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'tortuga_setup' );
@@ -103,35 +131,34 @@ add_action( 'after_setup_theme', 'tortuga_content_width', 0 );
 function tortuga_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'tortuga' ),
-		'id' => 'sidebar',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'tortuga' ),
+		'name'          => esc_html__( 'Sidebar', 'tortuga' ),
+		'id'            => 'sidebar',
+		'description'   => esc_html__( 'Appears on posts and pages except the full width template.', 'tortuga' ),
 		'before_widget' => '<div class="widget-wrap"><aside id="%1$s" class="widget %2$s clearfix">',
-		'after_widget' => '</aside></div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
+		'after_widget'  => '</aside></div>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'tortuga' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'tortuga' ),
+		'name'          => esc_html__( 'Header', 'tortuga' ),
+		'id'            => 'header',
+		'description'   => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'tortuga' ),
 		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
-	));
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="header-widget-title">',
+		'after_title'   => '</h4>',
+	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'tortuga' ),
-		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'tortuga' ),
+		'name'          => esc_html__( 'Magazine Homepage', 'tortuga' ),
+		'id'            => 'magazine-homepage',
+		'description'   => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'tortuga' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
-		'after_title' => '</h3></div>',
-	));
-
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="widget-header"><h3 class="widget-title">',
+		'after_title'   => '</h3></div>',
+	) );
 }
 add_action( 'widgets_init', 'tortuga_widgets_init' );
 
@@ -161,7 +188,6 @@ function tortuga_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 }
 add_action( 'wp_enqueue_scripts', 'tortuga_scripts' );
 
@@ -170,12 +196,19 @@ add_action( 'wp_enqueue_scripts', 'tortuga_scripts' );
  * Enqueue custom fonts.
  */
 function tortuga_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'tortuga-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'tortuga_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'tortuga_custom_fonts', 1 );
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function tortuga_block_editor_assets() {
+	wp_enqueue_style( 'tortuga-editor-styles', get_theme_file_uri( '/assets/css/gutenberg-styles.css' ), array(), '20181102', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'tortuga_block_editor_assets' );
 
 
 /**
@@ -190,7 +223,6 @@ function tortuga_add_image_sizes() {
 	add_image_size( 'tortuga-thumbnail-small', 120, 80, true );
 	add_image_size( 'tortuga-thumbnail-medium', 360, 200, true );
 	add_image_size( 'tortuga-thumbnail-large', 600, 330, true );
-
 }
 add_action( 'after_setup_theme', 'tortuga_add_image_sizes' );
 

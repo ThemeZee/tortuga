@@ -1,0 +1,248 @@
+/*
+ * Gutenberg Editor Style CSS
+ *
+ * Add styling for the Gutenberg Editor
+ *
+ * @package Tortuga
+ */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Editor
+2.0 - Typography
+3.0 - Blocks
+4.0 - Text Colors
+5.0 - Background Colors
+
+/*--------------------------------------------------------------
+# 1.0 - Editor
+--------------------------------------------------------------*/
+body.block-editor-page .edit-post-visual-editor .editor-post-title__block,
+body.block-editor-page .edit-post-visual-editor .editor-default-block-appender,
+body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
+    max-width: 860px;
+}
+
+.edit-post-visual-editor .editor-post-title__block .editor-post-title__input {
+	color: #dd5533;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 28px;
+	font-size: 1.75rem;
+	font-family: 'Titillium Web', Tahoma, Arial;
+	line-height: 1.4;
+}
+
+/*--------------------------------------------------------------
+# 2.0 - Typography
+--------------------------------------------------------------*/
+.edit-post-visual-editor .editor-block-list__block {
+	color: #303030;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	font-family: 'Open Sans', Tahoma, Arial;
+	line-height: 1.75;
+}
+
+.edit-post-visual-editor .editor-block-list__block p {
+	font-size: 17px;
+	font-size: 1.0625rem;
+	margin-bottom: 1.5em;
+}
+
+.edit-post-visual-editor .editor-block-list__block h1,
+.edit-post-visual-editor .editor-block-list__block h2,
+.edit-post-visual-editor .editor-block-list__block h3,
+.edit-post-visual-editor .editor-block-list__block h4,
+.edit-post-visual-editor .editor-block-list__block h5,
+.edit-post-visual-editor .editor-block-list__block h6 {
+	clear: both;
+	margin: 0.75em 0;
+	line-height: 1.4;
+}
+
+.edit-post-visual-editor .editor-block-list__block h1 {
+	font-size: 36px;
+	font-size: 2.25rem;
+}
+
+.edit-post-visual-editor .editor-block-list__block h2 {
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+
+.edit-post-visual-editor .editor-block-list__block h3 {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+.edit-post-visual-editor .editor-block-list__block h4 {
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+
+.edit-post-visual-editor .editor-block-list__block h5 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.edit-post-visual-editor .editor-block-list__block h6 {
+	font-size: 19px;
+	font-size: 1.1875rem;
+}
+
+/*--------------------------------------------------------------
+# 3.0 - Blocks
+--------------------------------------------------------------*/
+
+/* Separator */
+.wp-block-separator {
+	margin-bottom: 1.5em;
+	height: 2px;
+	border: none;
+	background-color: #ddd;
+}
+
+/* Quote */
+.wp-block-quote {
+	margin: 0 0 1.5em;
+	padding: 1em 1.25em;
+	border: 1px solid #ddd;
+	border-left: 3px solid #dd5533;
+	color: #777;
+	font-style: italic;
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+	padding-left: 1.25em;
+	border: 1px solid #ddd;
+	border-left: 3px solid #dd5533;
+}
+
+.wp-block-quote__citation,
+.wp-block-quote cite,
+.wp-block-quote footer {
+	display: block;
+	margin-top: 1em;
+	color: #404040;
+	font-size: 16px;
+	font-size: 1rem;
+	font-style: normal;
+	line-height: 1.75;
+}
+
+.wp-block-quote__citation:before,
+.wp-block-quote cite:before,
+.wp-block-quote footer:before {
+	content: "\2014\00a0";
+}
+
+.wp-block-quote.is-style-large {
+	border: none;
+	margin: 0 0 1.5em;
+	padding: 0;
+	font-size: 28px;
+	font-style: italic;
+}
+
+.wp-block-quote.is-style-large p {
+	margin-bottom: 0.5em;
+	font-size: inherit;
+	font-style: inherit;
+	line-height: inherit;
+}
+
+/* Pullquote */
+.wp-block-pullquote {
+	margin-bottom: 1.5em;
+	padding: 1.5em 0;
+    border-bottom: 3px solid #ddd;
+    border-top: 3px solid #ddd;
+}
+
+.wp-block-pullquote blockquote {
+	border-left: none;
+	margin: 0;
+	padding: 0;
+	font-size: 28px;
+}
+
+.wp-block-pullquote blockquote p {
+	margin-bottom: 0.5em;
+}
+
+.wp-block-pullquote.alignleft {
+	margin-right: 1.5em;
+}
+
+.wp-block-pullquote.alignright {
+	margin-left: 1.5em;
+}
+
+/* Cover */
+.edit-post-visual-editor .editor-block-list__block p.wp-block-cover-text {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 2em;
+	line-height: 1.25;
+}
+
+/* Table */
+.wp-block-table td,
+.wp-block-table th {
+	padding: 0;
+    border: 1px solid #ddd;
+}
+
+.wp-block-table__cell-content {
+	padding: 0.3em 0.6em;
+}
+
+/*--------------------------------------------------------------
+# 4.0 - Text Colors
+--------------------------------------------------------------*/
+.has-primary-color {
+	color: #dd5533;
+}
+
+.has-white-color {
+	color: #ffffff;
+}
+
+.has-light-gray-color {
+	color: #f0f0f0;
+}
+
+.has-dark-gray-color {
+	color: #777777;
+}
+
+.has-black-color {
+	color: #303030;
+}
+
+/*--------------------------------------------------------------
+# 5.0 - Background Colors
+--------------------------------------------------------------*/
+.has-primary-background-color {
+	background-color: #dd5533;
+}
+
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-light-gray-background-color {
+	background-color: #f0f0f0;
+}
+
+.has-dark-gray-background-color {
+	background-color: #777777;
+}
+
+.has-black-background-color {
+	background-color: #303030;
+}
