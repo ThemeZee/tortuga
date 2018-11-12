@@ -55,6 +55,10 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
     color: #dd5533;
 }
 
+.edit-post-visual-editor .editor-block-list__block .has-text-color a {
+    color: inherit;
+}
+
 .edit-post-visual-editor .editor-block-list__block pre {
 	overflow: auto;
 	padding: 1.5em;
