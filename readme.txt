@@ -26,6 +26,9 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.7.2 =
+* added support for responsive embed blocks
+
 = 1.7.1 =
 * adjusted footer credit link with clearer wording
 
