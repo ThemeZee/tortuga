@@ -231,6 +231,19 @@ add_action( 'after_setup_theme', 'tortuga_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function tortuga_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'          => esc_html__( 'Tortuga Single Post', 'tortuga' ),
+		'tortuga-thumbnail-large' => esc_html__( 'Tortuga Magazine Post', 'tortuga' ),
+		'tortuga-thumbnail-small' => esc_html__( 'Tortuga Thumbnail', 'tortuga' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'tortuga_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
