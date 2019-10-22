@@ -47,7 +47,8 @@ function tortuga_theme_info_page() {
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/tortuga/', 'tortuga' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=tortuga&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'tortuga' ); ?></a>
 				<a href="http://preview.themezee.com/?demo=tortuga&utm_source=theme-info&utm_campaign=tortuga" target="_blank"><?php esc_html_e( 'Theme Demo', 'tortuga' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/tortuga-documentation/', 'tortuga' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=tortuga&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'tortuga' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/tortuga/reviews/?filter=5', 'tortuga' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'tortuga' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=tortuga', 'tortuga' ) ); ?>" target="_blank"><?php esc_html_e( 'Theme Changelog', 'tortuga' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/tortuga/reviews/', 'tortuga' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'tortuga' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -150,7 +151,7 @@ function tortuga_theme_info_page() {
 				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'tortuga' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'tortuga' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=tortuga" title="ThemeZee">ThemeZee</a>',
-					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/tortuga/reviews/?filter=5', 'tortuga' ) . '" title="' . esc_attr__( 'Review Tortuga', 'tortuga' ) . '">' . esc_html__( 'rate it', 'tortuga' ) . '</a>'
+					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/tortuga/reviews/', 'tortuga' ) . '" title="' . esc_attr__( 'Review Tortuga', 'tortuga' ) . '">' . esc_html__( 'rate it', 'tortuga' ) . '</a>'
 				); ?>
 			</p>
 
