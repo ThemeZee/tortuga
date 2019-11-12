@@ -26,6 +26,9 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.8.3 - 2019-11-12 =
+* added font display swap to default theme fonts
+
 = 1.8.2 - 2019-10-23 =
 * added improved Theme Info section to Customizer
 
