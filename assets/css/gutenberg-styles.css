@@ -220,6 +220,24 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 	padding: 0.3em 0.6em;
 }
 
+/* Captions */
+.blocks-gallery-caption,
+.wp-block-embed figcaption,
+.wp-block-image figcaption {
+	margin-top: 0.3em;
+	margin-bottom: 1em;
+	color: #555;
+	font-size: 13px;
+	font-size: 0.8125rem;
+    text-align: center;
+}
+
+/* Latest Posts */
+.wp-block-latest-posts.wp-block-latest-posts__list {
+	margin: 0;
+	padding: 0;
+}
+
 /*--------------------------------------------------------------
 # 4.0 - Text Colors
 --------------------------------------------------------------*/

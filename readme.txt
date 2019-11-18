@@ -26,6 +26,10 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.8.4 - 2019-11-18 =
+* fixed styling of captions in Image and Gallery block
+* improved styling of Latest Posts and Table block
+
 = 1.8.3 - 2019-11-12 =
 * added font display swap to default theme fonts
 
