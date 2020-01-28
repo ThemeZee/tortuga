@@ -275,6 +275,11 @@ if ( ! function_exists( 'tortuga_meta_comments' ) ) :
 	 */
 	function tortuga_meta_comments() {
 
+		// Check if comments are open or we have at least one comment.
+		if ( ! ( comments_open() || get_comments_number() ) ) {
+			return;
+		}
+
 		// Start Output Buffering.
 		ob_start();
 
