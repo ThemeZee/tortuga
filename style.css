@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 1.8.4
+Version: 1.8.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tortuga
@@ -1414,7 +1414,9 @@ textarea {
 .type-post,
 .type-page,
 .type-attachment,
-.comments-area  {
+.comments-area,
+.site-main > article:not(.type-post):not(.type-page):not(.type-attachment),
+.post-wrapper > .post-column > article:not(.type-post):not(.type-page):not(.type-attachment) {
 	margin: 0 0 2em 0;
 	padding: 1.5em;
 	max-width: 100%;
@@ -1451,7 +1453,9 @@ textarea {
 }
 
 .type-post .wp-post-image,
-.type-page .wp-post-image {
+.type-page .wp-post-image,
+.site-main > article:not(.type-post):not(.type-page):not(.type-attachment) .wp-post-image,
+.post-wrapper > .post-column > article:not(.type-post):not(.type-page):not(.type-attachment) .wp-post-image {
 	margin: 0 0 0.5em;
 }
 
@@ -2300,7 +2304,9 @@ object {
 	.type-page,
 	.type-attachment,
 	.pagination,
-	.comments-area {
+	.comments-area,
+	.site-main > article:not(.type-post):not(.type-page):not(.type-attachment),
+	.post-wrapper > .post-column > article:not(.type-post):not(.type-page):not(.type-attachment) {
 		margin-bottom: 1.5em;
 	}
 
