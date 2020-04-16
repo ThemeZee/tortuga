@@ -1,0 +1,71 @@
+
+/*--------------------------------------------------------------
+## 18.1 - Sidebar Left Layout
+--------------------------------------------------------------*/
+.sidebar-left .content-area {
+	float: right;
+	padding-right: 0;
+	padding-left: 2em;
+}
+
+.sidebar-left .sidebar {
+	float: left;
+}
+
+@media only screen and (max-width: 80em) {
+	.sidebar-left .content-area {
+		padding-right: 0;
+		padding-left: 1.5em;
+	}
+
+}
+
+@media only screen and (max-width: 60em) {
+	.sidebar-left .content-area {
+		padding: 0;
+	}
+
+}
+
+.sidebar-left.post-layout-three-columns .content-archive {
+	float: none;
+	padding: 0;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# 19.0 - Media Query Fixes
+--------------------------------------------------------------*/
+
+/* Ensure navigation is visible on desktop view */
+@media only screen and (min-width: 60.001em) {
+	.main-navigation-menu {
+		display: block !important;
+	}
+}
+
+/*--------------------------------------------------------------
+21.0 Customizer Preview
+--------------------------------------------------------------*/
+.magazine-widgets-placeholder {
+	position: relative;
+	padding: 1em;
+}
+
+.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 1em 1em 1em 55px;
+	color: #0085ba;
+	border: 2px dashed #0085ba;
+}
+
+/* Add some space around the visual edit shortcut buttons. */
+.magazine-widgets-placeholder .customize-partial-edit-shortcut button {
+	left: 15px;
+	top: 13px;
+}

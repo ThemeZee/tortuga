@@ -1,0 +1,26 @@
+.footer-wrap {
+	background: #303030;
+}
+
+.site-footer {
+	color: rgba(255,255,255,0.6);
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+.site-footer .site-info {
+	float: left;
+	padding: 2.5em 0;
+}
+
+.site-footer a:link,
+.site-footer a:visited {
+	border-bottom: 1px dotted rgba(255,255,255,0.6);
+	color: #fff;
+}
+
+.site-footer a:hover,
+.site-footer a:focus,
+.site-footer a:active {
+	color: rgba(255,255,255,0.6);
+}

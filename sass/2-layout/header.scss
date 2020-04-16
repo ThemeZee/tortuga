@@ -1,0 +1,96 @@
+.site-header {
+	background: #303030;
+	color: #fff;
+}
+
+.header-main {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.site-branding {
+	float: left;
+	margin: 1em 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+.site-branding a:link,
+.site-branding a:visited,
+.site-branding a:hover {
+	padding: 0;
+	border: none;
+	text-decoration: none;
+}
+
+.site-title {
+	display: inline-block;
+	margin: 0.15em 0;
+	padding: 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 36px;
+	font-size: 2.25rem;
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 1.4;
+}
+
+.site-title a:link,
+.site-title a:visited {
+	color: #fff;
+	transition: all 0.2s ease;
+}
+
+.site-title a:hover,
+.site-title a:active {
+	color: rgba(255,255,255,0.6);
+}
+
+.site-branding .custom-logo {
+	float: left;
+	margin: 0.5em 1em 0 0;
+	padding: 0;
+	max-width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: top;
+}
+
+.site-description {
+	margin: 0 0 0.75em;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+/* Header Widgets */
+.header-widgets {
+	display: inline;
+}
+
+.header-widget {
+	float: right;
+	margin: 0.5em 0 0 1.5em;
+}
+
+.header-widget ul {
+	margin: 0;
+	padding: 0;
+}
+
+.header-widget-title {
+	margin: 0 0 0.5em;
+}
+
+/* Custom Header Image */
+.header-image {
+	text-align: center;
+}
+
+.header-image img {
+	max-width: 1920px;
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}

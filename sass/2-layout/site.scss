@@ -1,0 +1,50 @@
+.site {
+	margin: 0;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 2em;
+	max-width: 1320px;
+	width: 100%;
+}
+
+.site-content {
+	padding-top: 2em;
+}
+
+.content-area {
+	float: left;
+	box-sizing: border-box;
+	padding-right: 2em;
+	width: 73%;
+}
+
+.sidebar {
+	float: right;
+	width: 27%;
+}
+
+/* No Sidebar & Centered Layout Template */
+.no-sidebar .content-area,
+.site-content .centered-content-area {
+	float: none;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 900px;
+	width: 100%;
+}
+
+.post-layout-three-columns .content-archive {
+	max-width: 100%;
+}
+
+/* Fullwidth Template */
+.site-content .fullwidth-content-area {
+	float: none;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	width: 100%;
+}

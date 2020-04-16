@@ -1,0 +1,141 @@
+.comments-area {
+	padding: 1em 1.5em;
+}
+
+/* Comment Header */
+.comments-header,
+.comment-reply-title {
+	margin: 0 0 1em 0;
+}
+
+.comments-header .comments-title,
+.comment-reply-title span {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: #dd5533;
+	text-transform: uppercase;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	font-weight: normal;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-family: 'Titillium Web', Tahoma, Arial;
+}
+
+/* Comment List */
+.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.comment {
+	margin: 0 0 1.5em;
+	padding: 1.5em 0 0;
+	border-top: 1px dotted #aaa;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.comment-meta {
+	float: left;
+	padding: 0;
+	width: 100%;
+}
+
+.comment-meta .comment-author img {
+	float: left;
+	margin-right: 1em;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comment-meta .comment-metadata {
+	margin-top: 0.3em;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.comment-meta .comment-metadata a {
+	margin-right: 1em;
+}
+
+.comment-content {
+	clear: left;
+	padding: 0.2em 0 0;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment ol.children {
+	margin: 1.5em 0 0;
+	list-style: none;
+}
+
+.comment .comment-respond {
+	margin-top: 1.5em;
+}
+
+/* Comment Pagination */
+.comment-navigation {
+	margin: 0 0 1.5em;
+	padding: 0;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.comment-navigation .nav-previous {
+	float: left;
+}
+
+.comment-navigation .nav-next {
+	float: right;
+}
+
+.comment-navigation .nav-previous a:before {
+	margin-right: 3px;
+	content: "\00AB";
+}
+
+.comment-navigation .nav-next a:after {
+	margin-left: 4px;
+	content: "\00BB";
+}
+
+/* Comment Form */
+.comment-form {
+	padding: 0;
+}
+
+.comment-form label {
+	display: inline-block;
+	min-width: 150px;
+	font-weight: bold;
+}
+
+.comment-form textarea {
+	margin-top: 0.4em;
+}
+
+.comment-form .form-submit {
+	margin-bottom: 1em;
+}
+
+.comment-form input[type="checkbox"] + label {
+	display: inline;
+	padding-left: 0.5em;
+	font-weight: normal;
+}
+
+.comment-reply-title small a {
+	margin-left: 1em;
+	text-decoration: underline;
+	font-weight: normal;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
