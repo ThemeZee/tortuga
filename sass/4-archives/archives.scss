@@ -1,0 +1,83 @@
+/* Archives and Search Heading */
+.page-header {
+	margin: 0 0 2em 0;
+	padding: 1.5em;
+	border-top: 3px solid #dd5533;
+	background: #fff;
+	box-shadow: 0 2px 2px #aaa;
+}
+
+.blog-description,
+.archive-description p {
+	margin-bottom: 0;
+}
+
+/* Post Columns */
+.post-layout-columns .post-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -2em;
+}
+
+.post-layout-columns .post-wrapper .post-column {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	box-sizing: border-box;
+	padding-right: 2em;
+}
+
+.post-layout-columns .post-wrapper .post-column article {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+}
+
+.post-layout-columns .post-wrapper .post-column article .entry-title {
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+
+.post-layout-columns .post-wrapper .post-column article .entry-content {
+	flex-grow: 1;
+	font-size: 16px;
+	font-size: 1rem;
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+}
+
+.post-layout-columns .post-wrapper .post-column article .more-link {
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+/* 2 Columns */
+.post-layout-two-columns .post-wrapper .post-column {
+	width: 50%;
+}
+
+/* 3 Columns */
+.post-layout-three-columns .content-archive {
+	float: none;
+	padding: 0;
+	width: 100%;
+}
+
+.post-layout-three-columns .post-wrapper .post-column {
+	width: 33.3333333333333%;
+}
+
+/* Post Columns Fixes for IE 10 and IE 11*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.post-layout-columns .post-wrapper .post-column,
+	.post-layout-columns .post-wrapper .post-column article {
+		display: block;
+	}
+}

@@ -1,0 +1,27 @@
+/* Read more Link */
+.more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0.6em 1em;
+	background: #dd5533;
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	transition: all 0.2s ease;
+}
+
+.more-link:link,
+.more-link:visited {
+	color: #fff;
+}
+
+.more-link:hover,
+.more-link:active {
+	background: #303030;
+	text-decoration: none;
+}
+
+.more-link::after {
+	content: " \00BB";
+}

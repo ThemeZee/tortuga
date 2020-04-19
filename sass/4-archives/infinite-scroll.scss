@@ -1,0 +1,30 @@
+/* Infinite Scroll Pagination */
+.infinite-scroll .pagination {
+	display: none;
+}
+
+.infinite-scroll #infinite-handle,
+.infinite-scroll .infinite-loader {
+	width: 100%;
+	text-align: center;
+}
+
+.infinite-scroll .infinite-loader .spinner {
+	bottom: -1em;
+	left: auto;
+	margin: 0 auto;
+}
+
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
+	margin: 0 0 2em;
+	padding: 0.4em 1em;
+	background: #303030;
+	text-decoration: none;
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.infinite-scroll #infinite-handle span:hover {
+	background: #dd5533;
+}

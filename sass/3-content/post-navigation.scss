@@ -1,0 +1,44 @@
+/* Post Navigation */
+.post-navigation {
+	margin: 0;
+}
+
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+
+.post-navigation .nav-links .nav-next {
+	float: right;
+}
+
+.post-navigation .nav-links .nav-previous a::before {
+	margin-right: 3px;
+	content: "\00AB";
+}
+
+.post-navigation .nav-links .nav-next a::after {
+	margin-left: 4px;
+	content: "\00BB";
+}
+
+.post-navigation .nav-links a {
+	display: inline-block;
+	margin: 0 0 3px;
+	padding: 0.3em 0.8em;
+	background: #dd5533;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	font-size: 0.875rem;
+	transition: all 0.2s ease;
+}
+
+.post-navigation .nav-links a:link,
+.post-navigation .nav-links a:visited {
+	color: #fff;
+}
+
+.post-navigation .nav-links a:hover,
+.post-navigation .nav-links a:active {
+	background: #303030;
+}

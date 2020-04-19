@@ -1,0 +1,117 @@
+/* Entry Meta */
+.entry-meta {
+	margin: 0;
+	padding: 0;
+	color: #303030;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.entry-meta .meta-date,
+.entry-meta .meta-author,
+.entry-meta .meta-category,
+.entry-meta .meta-comments {
+	margin-right: 1.5em;
+}
+
+.entry-meta a:link,
+.entry-meta a:visited {
+	color: #303030;
+}
+
+.entry-meta a:hover,
+.entry-meta a:active {
+	color: #777;
+}
+
+.entry-meta span::before {
+	display: inline-block;
+	margin-right: 0.2em;
+	vertical-align: middle;
+	font: normal 16px 'Genericons';
+	-webkit-font-smoothing: antialiased;
+}
+
+.entry-meta .meta-date::before {
+	content: '\f307';
+}
+
+.entry-meta .meta-author::before {
+	content: '\f304';
+}
+
+.entry-meta .meta-category::before {
+	content: '\f301';
+}
+
+.entry-meta .meta-comments::before {
+	content: '\f300';
+}
+
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .type-post .entry-meta .meta-date,
+body.author-hidden .type-post .entry-meta .meta-author,
+body.categories-hidden .type-post .entry-meta .meta-category,
+body.comments-hidden .type-post .entry-meta .meta-comments,
+body.date-hidden .post-slider .entry-meta .meta-date,
+body.author-hidden .post-slider .entry-meta .meta-author {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .type-post .entry-meta {
+	display: none;
+}
+
+/* Entry Tags & Tagcloud Widget */
+.entry-tags {
+	margin: 0 0 1.5em;
+}
+
+.widget_tag_cloud .tagcloud,
+.entry-tags .meta-tags {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.widget_tag_cloud .tagcloud::before,
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::before,
+.entry-tags .meta-tags::after {
+	display: table;
+	content: "";
+}
+
+.widget_tag_cloud .tagcloud::after,
+.entry-tags .meta-tags::after {
+	clear: both;
+}
+
+.widget_tag_cloud .tagcloud a,
+.entry-tags .meta-tags a {
+	display: inline-block;
+	float: left;
+	margin: 0 2px 2px 0;
+	padding: 0.2em 0.5em;
+	background: #303030;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px !important;
+	font-size: 0.75rem !important;
+}
+
+.widget_tag_cloud .tagcloud a:link,
+.widget_tag_cloud .tagcloud a:visited,
+.entry-tags .meta-tags a:link,
+.entry-tags .meta-tags a:visited {
+	color: #fff;
+	transition: all 0.2s ease;
+}
+
+.widget_tag_cloud .tagcloud a:hover,
+.widget_tag_cloud .tagcloud a:active,
+.entry-tags .meta-tags a:hover,
+.entry-tags .meta-tags a:active {
+	background: #dd5533;
+	color: #fff;
+}
