@@ -165,3 +165,9 @@
 	}
 }
 
+/* Ensure navigation is visible on desktop view */
+@media only screen and (min-width: 60.001em) {
+	.main-navigation-menu {
+		display: block !important;
+	}
+}
