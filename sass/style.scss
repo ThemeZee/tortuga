@@ -190,26 +190,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # - Theme Options
 --------------------------------------------------------------*/
 @import "6-elements/theme-options";
-
-/*--------------------------------------------------------------
-# 20.0 - CSS Hacks for Safari
---------------------------------------------------------------*/
-
-/* Fix Flexbox issues for Safari 6.1-10.0 
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.post-layout-columns .post-wrapper .post-column {
-			margin-right: -1px;
-		}
-	}
-}
-*/
-/* Fix Flexbox issues for Safari 10.1+ 
-@media not all and (min-resolution:.001dpcm) {
-	@media {
-		.post-layout-columns .post-wrapper .post-column {
-			margin-right: -1px;
-		}
-	}
-}
-*/
