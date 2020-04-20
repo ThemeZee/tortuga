@@ -1708,10 +1708,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-## 11.1 - Default Widgets
---------------------------------------------------------------*/
-
 /* Theme Search Widget */
 .search-form {
 	position: relative;
@@ -1801,7 +1797,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 }
 
 /*--------------------------------------------------------------
-## 11.2 - Magazine Posts Widgets
+# - Magazine Widgets
 --------------------------------------------------------------*/
 .widget-magazine-posts {
 	margin-bottom: -1em;
@@ -1946,6 +1942,8 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 }
 
 .widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content {
+	float: left;
+	width: 100%;
 	margin: 0;
 	padding: 1em 1.5em 1.5em;
 	max-width: 100%;
@@ -1960,11 +1958,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	float: left;
 	box-sizing: border-box;
 	margin-bottom: -1.5em;
-	width: 100%;
-}
-
-.widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content {
-	float: left;
 	width: 100%;
 }
 
