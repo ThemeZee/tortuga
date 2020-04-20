@@ -2377,11 +2377,91 @@ object {
 }
 
 /*--------------------------------------------------------------
-# - Media Queries
+# - Media Queries for Typography
 --------------------------------------------------------------*/
+@media only screen and (max-width: 70em) {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.archive-title,
+	.page-title,
+	.entry-title {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.archive-title,
+	.page-title,
+	.entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.archive-title,
+	.page-title,
+	.entry-title,
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	.entry-content {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.site-branding .site-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.archive-title,
+	.page-title,
+	.entry-title,
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.site-branding .site-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.archive-title,
+	.page-title,
+	.entry-title,
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		margin: 0 0 0.5em;
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
 
 /*--------------------------------------------------------------
-## 17.1 - Desktop X-Large ( < 1200px )
+# - Media Queries for Layout
 --------------------------------------------------------------*/
 @media only screen and (max-width: 80em) {
 	.container {
@@ -2422,9 +2502,6 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.2 - Desktop Large ( < 1120px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
 	.content-area {
 		width: 70%;
@@ -2433,45 +2510,8 @@ object {
 	.sidebar {
 		width: 30%;
 	}
-
-	.post-layout-columns .post-wrapper .post-column article .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-
-	/* Magazine Post Widgets */
-	.widget-magazine-posts .large-post .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-
-	.widget-magazine-posts .medium-post .entry-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
-	.widget-magazine-posts .small-post .entry-title {
-		font-size: 15px;
-		font-size: 0.9375rem;
-	}
-
-	.widget-magazine-posts .magazine-horizontal-box .large-post .more-link {
-		display: none;
-	}
 }
 
-/*--------------------------------------------------------------
-## 17.2 - Desktop Medium ( < 1040px )
---------------------------------------------------------------*/
-@media only screen and (max-width: 65em) {
-	.widget-magazine-posts .magazine-horizontal-box .large-post .entry-content {
-		display: none;
-	}
-}
-
-/*--------------------------------------------------------------
-## 17.3 - Desktop Small ( < 960px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
 	.content-area,
 	.site-content .content-fullwidth {
@@ -2541,19 +2581,55 @@ object {
 		width: 50%;
 	}
 
-	.archive-title,
-	.page-title,
-	.entry-title {
-		font-size: 26px;
-		font-size: 1.625rem;
+	/* Footer */
+	.site-footer .site-info {
+		float: none;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.post-layout-columns .post-wrapper {
+		display: block;
+		margin-right: 0;
 	}
 
-	.post-layout-columns .post-wrapper .post-column article .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
+	.post-layout-columns .post-wrapper .post-column {
+		display: block;
+		float: none;
+		padding-right: 0;
 	}
 
-	/*** Mobile Main Navigation ***/
+	.post-layout-two-columns .post-wrapper .post-column,
+	.post-layout-three-columns .post-wrapper .post-column {
+		width: 100%;
+	}
+
+	/* Sidebar */
+	.sidebar {
+		margin-right: 0;
+	}
+
+	.sidebar .widget-wrap {
+		float: none;
+		padding-right: 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.entry-meta .meta-date,
+	.entry-meta .meta-author,
+	.entry-meta .meta-category,
+	.entry-meta .meta-comments {
+		display: block;
+	}
+}
+
+/*--------------------------------------------------------------
+# - Media Queries for Navigation
+--------------------------------------------------------------*/
+@media only screen and (max-width: 60em) {
 	/* Reset */
 	.main-navigation-menu li {
 		position: static;
@@ -2717,7 +2793,40 @@ object {
 	.mega-menu-item .mega-menu-six-columns > li {
 		width: 50%;
 	}
+}
 
+/*--------------------------------------------------------------
+# - Media Queries for Magazine widgets
+--------------------------------------------------------------*/
+@media only screen and (max-width: 70em) {
+	/* Magazine Post Widgets */
+	.widget-magazine-posts .large-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.widget-magazine-posts .medium-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.widget-magazine-posts .small-post .entry-title {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.widget-magazine-posts .magazine-horizontal-box .large-post .more-link {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 65em) {
+	.widget-magazine-posts .magazine-horizontal-box .large-post .entry-content {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 60em) {
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .magazine-horizontal-box .large-post .entry-content,
 	.widget-magazine-posts .magazine-horizontal-box .large-post .more-link {
@@ -2738,42 +2847,9 @@ object {
 		font-size: 16px;
 		font-size: 1rem;
 	}
-
-	/* Footer */
-	.site-footer .site-info {
-		float: none;
-		text-align: center;
-	}
 }
 
-/*--------------------------------------------------------------
-## 17.5 - Tablet Medium ( < 800px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
-	.archive-title,
-	.page-title,
-	.entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
-	}
-
-	.post-layout-columns .post-wrapper .post-column article .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-
-	/* Gallery */
-	.gallery-item {
-		padding: 0 0.75em 0.5em 0;
-	}
-
-	.gallery-columns-6 .gallery-item,
-	.gallery-columns-7 .gallery-item,
-	.gallery-columns-8 .gallery-item,
-	.gallery-columns-9 .gallery-item {
-		max-width: 25%;
-	}
-
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
@@ -2795,9 +2871,6 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.6 - Tablet Small ( < 720px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 45em) {
 	.widget-magazine-posts .medium-post .entry-title {
 		font-size: 15px;
@@ -2809,50 +2882,7 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.7 - Mobile Extra Large ( < 640px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
-	.post-layout-columns .post-wrapper {
-		display: block;
-		margin-right: 0;
-	}
-
-	.post-layout-columns .post-wrapper .post-column {
-		display: block;
-		float: none;
-		padding-right: 0;
-	}
-
-	.post-layout-two-columns .post-wrapper .post-column,
-	.post-layout-three-columns .post-wrapper .post-column {
-		width: 100%;
-	}
-
-	.archive-title,
-	.page-title,
-	.entry-title,
-	.post-layout-columns .post-wrapper .post-column article .entry-title {
-		font-size: 22px;
-		font-size: 1.375rem;
-	}
-
-	.entry-content {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-
-	/* Sidebar */
-	.sidebar {
-		margin-right: 0;
-	}
-
-	.sidebar .widget-wrap {
-		float: none;
-		padding-right: 0;
-		width: 100%;
-	}
-
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .magazine-grid-two-columns {
 		margin-right: 0;
@@ -2903,17 +2933,8 @@ object {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
-
-	/* Mega Menu Styling */
-	.mega-menu-item .mega-menu-four-columns > li,
-	.mega-menu-item .mega-menu-six-columns > li {
-		width: 100%;
-	}
 }
 
-/*--------------------------------------------------------------
-## 17.8 - Mobile Large ( < 560px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
 	.widget-magazine-posts .magazine-grid-three-columns {
 		margin-right: 0;
@@ -2932,38 +2953,7 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.9 - Mobile Medium ( < 480px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
-	.site-branding .site-title {
-		font-size: 32px;
-		font-size: 2rem;
-	}
-
-	.archive-title,
-	.page-title,
-	.entry-title,
-	.post-layout-columns .post-wrapper .post-column article .entry-title {
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-
-	.alignright, .alignleft {
-		float: none;
-		margin: 1em 0;
-	}
-
-	/* Gallery */
-	.gallery-columns-4 .gallery-item,
-	.gallery-columns-5 .gallery-item,
-	.gallery-columns-6 .gallery-item,
-	.gallery-columns-7 .gallery-item,
-	.gallery-columns-8 .gallery-item,
-	.gallery-columns-9 .gallery-item {
-		max-width: 50%;
-	}
-
 	/* Magazine Homepage: Category Post Widgets */
 	.widget-magazine-posts .medium-post .wp-post-image,
 	.widget-magazine-posts .small-post .wp-post-image {
@@ -2996,31 +2986,7 @@ object {
 	}
 }
 
-/*--------------------------------------------------------------
-## 17.10 - Mobile Small ( < 320px )
---------------------------------------------------------------*/
 @media only screen and (max-width: 20em) {
-	.site-branding .site-title {
-		font-size: 28px;
-		font-size: 1.75rem;
-	}
-
-	.archive-title,
-	.page-title,
-	.entry-title,
-	.post-layout-columns .post-wrapper .post-column article .entry-title {
-		margin: 0 0 0.5em;
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
-	.entry-meta .meta-date,
-	.entry-meta .meta-author,
-	.entry-meta .meta-category,
-	.entry-meta .meta-comments {
-		display: block;
-	}
-
 	.widget-magazine-posts .medium-post .entry-title,
 	.widget-magazine-posts .small-post .entry-title {
 		vertical-align: top;
@@ -3035,20 +3001,39 @@ object {
 }
 
 /*--------------------------------------------------------------
-## - Media Queries for Typography
+# - Media Queries for Media
 --------------------------------------------------------------*/
+@media only screen and (max-width: 50em) {
+	/* Gallery */
+	.gallery-item {
+		padding: 0 0.75em 0.5em 0;
+	}
 
-/*--------------------------------------------------------------
-## - Media Queries for Layout
---------------------------------------------------------------*/
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 25%;
+	}
+}
 
-/*--------------------------------------------------------------
-## - Media Queries for Navigation
---------------------------------------------------------------*/
+@media only screen and (max-width: 30em) {
+	.alignright,
+	.alignleft {
+		float: none;
+		margin: 1em 0;
+	}
 
-/*--------------------------------------------------------------
-## - Media Queries for Media
---------------------------------------------------------------*/
+	/* Gallery */
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 50%;
+	}
+}
 
 /*--------------------------------------------------------------
 # - Theme Options

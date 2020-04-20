@@ -1,0 +1,80 @@
+@media only screen and (max-width: 70em) {
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 60em) {
+	.archive-title,
+	.page-title,
+	.entry-title {
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+}
+
+@media only screen and (max-width: 50em) {
+	.archive-title,
+	.page-title,
+	.entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 40em) {
+	.archive-title,
+	.page-title,
+	.entry-title,
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	.entry-content {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+	.site-branding .site-title {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+
+	.archive-title,
+	.page-title,
+	.entry-title,
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (max-width: 20em) {
+	.site-branding .site-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+
+	.archive-title,
+	.page-title,
+	.entry-title,
+	.post-layout-columns .post-wrapper .post-column article .entry-title {
+		margin: 0 0 0.5em;
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
