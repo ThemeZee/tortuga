@@ -24,6 +24,7 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-post.ph
 require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-info.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-website.php' );
 
 /**
  * Registers Theme Options panel and sets up some WordPress core settings
@@ -43,99 +44,8 @@ function tortuga_customize_register_options( $wp_customize ) {
 	// Change default background section.
 	$wp_customize->get_control( 'background_color' )->section = 'background_image';
 	$wp_customize->get_section( 'background_image' )->title   = esc_html__( 'Background', 'tortuga' );
-
-	// Add postMessage support for site title and description.
-	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
-
-	// Add selective refresh for site title and description.
-	$wp_customize->selective_refresh->add_partial( 'blogname', array(
-		'selector'        => '.site-title a',
-		'render_callback' => 'tortuga_customize_partial_blogname',
-	) );
-	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-		'selector'        => '.site-description',
-		'render_callback' => 'tortuga_customize_partial_blogdescription',
-	) );
-
-	// Add Display Site Title Setting.
-	$wp_customize->add_setting( 'tortuga_theme_options[site_title]', array(
-		'default'           => true,
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'tortuga_sanitize_checkbox',
-	) );
-	$wp_customize->add_control( 'tortuga_theme_options[site_title]', array(
-		'label'    => esc_html__( 'Display Site Title', 'tortuga' ),
-		'section'  => 'title_tagline',
-		'settings' => 'tortuga_theme_options[site_title]',
-		'type'     => 'checkbox',
-		'priority' => 10,
-	) );
-
-	// Add Display Tagline Setting.
-	$wp_customize->add_setting( 'tortuga_theme_options[site_description]', array(
-		'default'           => false,
-		'type'              => 'option',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'tortuga_sanitize_checkbox',
-	) );
-	$wp_customize->add_control( 'tortuga_theme_options[site_description]', array(
-		'label'    => esc_html__( 'Display Tagline', 'tortuga' ),
-		'section'  => 'title_tagline',
-		'settings' => 'tortuga_theme_options[site_description]',
-		'type'     => 'checkbox',
-		'priority' => 11,
-	) );
-
-	// Add Header Image Link.
-	$wp_customize->add_setting( 'tortuga_theme_options[custom_header_link]', array(
-		'default'           => '',
-		'type'              => 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_url',
-	) );
-	$wp_customize->add_control( 'tortuga_control_custom_header_link', array(
-		'label'    => esc_html__( 'Header Image Link', 'tortuga' ),
-		'section'  => 'header_image',
-		'settings' => 'tortuga_theme_options[custom_header_link]',
-		'type'     => 'url',
-		'priority' => 10,
-	) );
-
-	// Add Custom Header Hide Checkbox.
-	$wp_customize->add_setting( 'tortuga_theme_options[custom_header_hide]', array(
-		'default'           => false,
-		'type'              => 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'tortuga_sanitize_checkbox',
-	) );
-	$wp_customize->add_control( 'tortuga_control_custom_header_hide', array(
-		'label'    => esc_html__( 'Hide header image on front page', 'tortuga' ),
-		'section'  => 'header_image',
-		'settings' => 'tortuga_theme_options[custom_header_hide]',
-		'type'     => 'checkbox',
-		'priority' => 15,
-	) );
-
-} // tortuga_customize_register_options()
+}
 add_action( 'customize_register', 'tortuga_customize_register_options' );
-
-
-/**
- * Render the site title for the selective refresh partial.
- */
-function tortuga_customize_partial_blogname() {
-	bloginfo( 'name' );
-}
-
-
-/**
- * Render the site tagline for the selective refresh partial.
- */
-function tortuga_customize_partial_blogdescription() {
-	bloginfo( 'description' );
-}
 
 
 /**
