@@ -26,6 +26,10 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 1.9 - 2020-04-21 =
+* added Retina Logo option
+* restructured Sass files and CSS sections
+
 = 1.8.6 - 2020-04-06 =
 * improved Block Editor styling for WordPress 5.4
 
