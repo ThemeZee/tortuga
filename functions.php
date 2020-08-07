@@ -188,7 +188,15 @@ function tortuga_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'tortuga-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20160719' );
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'tortuga-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20191114', true );
+		$tortuga_l10n = array(
+			'expand'   => esc_html__( 'Expand child menu', 'tortuga' ),
+			'collapse' => esc_html__( 'Collapse child menu', 'tortuga' ),
+			'icon'     => tortuga_get_svg( 'expand' ),
+		);
+		wp_localize_script( 'tortuga-navigation', 'tortugaScreenReaderText', $tortuga_l10n );
+	}
 
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -1,169 +1,186 @@
-
-/*--------------------------------------------------------------
-## 10.1 - Main Navigation
---------------------------------------------------------------*/
 .primary-navigation-wrap {
 	border-bottom: 5px solid #dd5533;
-	background: rgba(0,0,0,0.15);
-	box-shadow: inset 0 1px 0 rgba(0,0,0, 0.05);
+	background: rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
 	color: #fff;
 }
 
-.main-navigation-toggle {
-	display: none;
-}
-
-.main-navigation-menu {
+.primary-navigation {
 	position: relative;
-	float: left;
-	margin: 0;
-	padding: 0;
 	width: 100%;
-	list-style-position: outside;
-	list-style-type: none;
 }
 
-.main-navigation-menu li {
-	float: left;
-}
-
-.main-navigation-menu a {
-	display: block;
-	padding: 0.8em 1.2em 0.7em;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 16px;
-	font-size: 1rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
-	transition: all 0.2s ease;
-	color: #fff;
-}
-
-.main-navigation-menu > .menu-item-has-children > a:after {
-	display: inline-block;
-	margin: 0.4em 0 0 0.3em;
-	content: '\f431';
-	vertical-align: top;
-	text-decoration: inherit;
-	font-size: 16px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.main-navigation-menu a:link,
-.main-navigation-menu a:visited {
-	color: #fff;
-	text-decoration: none;
-}
-
-.main-navigation-menu a:hover,
-.main-navigation-menu a:active {
-	background: #dd5533;
-}
-
-.main-navigation-menu ul {
-	position: absolute;
-	z-index: 99;
-	display: none;
+.main-navigation ul {
 	margin: 0;
 	padding: 0;
+	color: #fff;
+	list-style: none;
+	@include font-size(16);
+	font-family: 'Titillium Web', Tahoma, Arial;
+	text-transform: uppercase;
+}
+
+.main-navigation > ul {
+	padding: 3px 0;
 	border-top: 5px solid #dd5533;
-	background: #303030;
-	list-style-position: outside;
-	list-style-type: none;
 }
 
-.main-navigation-menu ul li {
+/* Hide the menu on small screens when JavaScript is available. */
+.main-navigation ul,
+.main-navigation .menu-item-has-children > a > .icon,
+.main-navigation ul a > .icon {
+	display: none;
+}
+
+.main-navigation.toggled-on > ul.menu {
+	display: block;
+}
+
+/* Menu Items Styling */
+.main-navigation ul li {
 	position: relative;
-	float: none;
+	margin: 0;
 }
 
-.main-navigation-menu ul a {
-	padding: 1em;
-	min-width: 250px;
-	min-width: 16rem;
-	border-bottom: 1px dotted rgba(255,255,255,0.2);
-	font-size: 13px;
-	font-size: 0.8125rem;
-	transition: none;
+.main-navigation ul a {
+	display: block;
+	margin: 0;
+	padding: 1em 1.5em;
+	border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+	text-decoration: none;
 }
 
-.main-navigation-menu ul li:last-child a {
+.main-navigation ul li:last-child > a {
 	border-bottom: none;
 }
 
-.main-navigation-menu ul .menu-item-has-children > a:after {
-	display: inline-block;
-	margin: 0.4em 0 0 0.3em;
-	content: '\f431';
+.main-navigation ul a:link,
+.main-navigation ul a:visited {
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.main-navigation ul a:hover,
+.main-navigation ul a:active,
+.main-navigation ul a:focus {
+	background-color: #dd5533;
+}
+
+.main-navigation ul li.current-menu-item > a {
+	background-color: #dd5533;
+}
+
+/* Submenus */
+.main-navigation ul ul {
+	@include font-size(13);
+}
+
+.is-amp-page .main-navigation ul ul,
+.main-navigation ul ul.toggled-on {
+	display: block;
+}
+
+.main-navigation ul ul a {
+	padding-left: 3em;
+}
+
+.main-navigation ul ul ul a {
+	padding-left: 4.5em;
+}
+
+.main-navigation ul ul ul ul a {
+	padding-left: 6em;
+}
+
+/* Main Navigation Toggle */
+.primary-menu-toggle {
+	display: flex;
+	margin: 0 0 0 1.5rem;
+	padding: 0.8em 1.2em;
+	border: none;
+	background: #dd5533;
+	color: #fff;
+	text-decoration: none;
+	@include font-size(16);
+	font-family: 'Titillium Web', Tahoma, Arial;
+	text-transform: uppercase;
+	text-align: left;
+	transition: all 0.2s ease;
+	align-items: center;
+}
+
+.primary-menu-toggle:focus {
+	outline: thin dotted;
+	color: #fff;
+	background: #dd5533;
+}
+
+.primary-menu-toggle:hover,
+.primary-menu-toggle:active {
+	color: rgba(255, 255, 255, 0.5);
+	background: #dd5533;
+	cursor: pointer;
+}
+
+.primary-menu-toggle .icon {
+	margin: 0;
+	width: 24px;
+	height: 24px;
 	vertical-align: top;
-	text-decoration: inherit;
-	font-size: 14px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-transform: rotate(270deg);
-	transform: rotate(270deg);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	fill: #fff;
 }
 
-.main-navigation-menu li ul ul {
+.primary-menu-toggle[aria-expanded="true"] .icon-menu,
+.primary-menu-toggle[aria-expanded="false"] .icon-close {
+	display: none;
+}
+
+.primary-menu-toggle[aria-expanded="true"] .icon-close {
+	display: inline-block;
+}
+
+/* Submenu Dropdown Toggles */
+.main-navigation .dropdown-toggle {
+	position: absolute;
+	display: block;
 	top: 0;
-	left: 100%;
-	margin-top: -5px;
-	border-left: 1px dotted rgba(255,255,255,0.2);
+	right: 0;
+	padding: 0.9em 1.5em;
+	background: none;
+	border: none;
 }
 
-.main-navigation-menu li.menu-item-has-children:hover > ul,
-.main-navigation-menu li.page_item_has_children:hover > ul,
-.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
-	display: block;
-}
-
-.main-navigation-menu li.current-menu-item > a {
-	background: #dd5533;
-}
-
-/* Mega Menu Styling */
-.mega-menu-content .mega-menu-widget a:link,
-.mega-menu-content .mega-menu-widget a:visited {
+.main-navigation .dropdown-toggle:focus {
+	outline: thin dotted;
 	color: #fff;
+	background: none;
 }
 
-.mega-menu-content .mega-menu-widget a:hover,
-.mega-menu-content .mega-menu-widget a:active {
-	color: rgba(255,255,255,0.6);
+.main-navigation .dropdown-toggle:hover,
+.main-navigation .dropdown-toggle:active {
+	background-color: #dd5533;
 }
 
-.mega-menu-content .widget_meta ul li,
-.mega-menu-content .widget_pages ul li,
-.mega-menu-content .widget_categories ul li,
-.mega-menu-content .widget_archive ul li {
-	display: block;
-	border-top: 1px dotted rgba(255,255,255,0.2);
+.main-navigation .dropdown-toggle .icon {
+	margin: 0.2em 0 0;
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+	fill: #fff;
 }
 
-.mega-menu-content .widget_meta ul li a,
-.mega-menu-content .widget_pages ul li a,
-.mega-menu-content .widget_categories ul li a,
-.mega-menu-content .widget_archive ul li a {
-	display: block;
-	padding: 0.75em;
-	font-size: 14px;
-	font-size: 0.875rem;
+.main-navigation .dropdown-toggle.toggled-on .icon {
+	-ms-transform: rotate(-180deg); /* IE 9 */
+	-webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+	transform: rotate(-180deg);
 }
 
-.mega-menu-content .widget_meta ul li a:hover,
-.mega-menu-content .widget_pages ul li a:hover,
-.mega-menu-content .widget_categories ul li a:hover,
-.mega-menu-content .widget_archive ul li a:hover {
-	background: #dd5533;
-	color: #fff;
+.main-navigation ul ul .dropdown-toggle {
+	padding: 0.6em 1.2em;
 }
 
-.mega-menu-content .mega-menu-widget .entry-meta,
-.mega-menu-content .mega-menu-widget .entry-meta span:before {
-	color: #ddd;
+.main-navigation ul ul .dropdown-toggle .icon {
+	width: 18px;
+	height: 18px;
 }
