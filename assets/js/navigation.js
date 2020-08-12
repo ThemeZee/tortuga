@@ -117,6 +117,6 @@
 	initNavigation( '.primary-navigation-wrap' );
 
 	// Init Top Navigation.
-	//initNavigation( '.header-bar' );
+	initNavigation( '.header-bar' );
 
 })( jQuery );
