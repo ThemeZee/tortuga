@@ -811,11 +811,75 @@ textarea {
 	color: #fff;
 }
 
+.primary-navigation-container {
+	position: relative;
+}
+
 .primary-navigation {
 	position: relative;
 	width: 100%;
 }
 
+/* Hide the menu on small screens when JavaScript is available. */
+.main-navigation ul,
+.main-navigation .menu-item-has-children > a > .icon,
+.main-navigation ul a > .icon {
+	display: none;
+}
+
+.main-navigation.toggled-on > ul.menu {
+	display: block;
+}
+
+/* Main Navigation Toggle */
+.primary-menu-toggle {
+	display: flex;
+	margin: 0;
+	padding: 0.8em 1.2em;
+	border: none;
+	background: #dd5533;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: 'Titillium Web', Tahoma, Arial;
+	text-transform: uppercase;
+	text-align: left;
+	transition: all 0.2s ease;
+	align-items: center;
+}
+
+.primary-menu-toggle:focus {
+	outline: thin dotted;
+	color: #fff;
+	background: #dd5533;
+}
+
+.primary-menu-toggle:hover,
+.primary-menu-toggle:active {
+	color: rgba(255, 255, 255, 0.5);
+	background: #dd5533;
+	cursor: pointer;
+}
+
+.primary-menu-toggle .icon {
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	vertical-align: top;
+	fill: #fff;
+}
+
+.primary-menu-toggle[aria-expanded="true"] .icon-menu,
+.primary-menu-toggle[aria-expanded="false"] .icon-close {
+	display: none;
+}
+
+.primary-menu-toggle[aria-expanded="true"] .icon-close {
+	display: inline-block;
+}
+
+/* Menu Items Styling */
 .main-navigation ul {
 	margin: 0;
 	padding: 0;
@@ -832,18 +896,6 @@ textarea {
 	border-top: 5px solid #dd5533;
 }
 
-/* Hide the menu on small screens when JavaScript is available. */
-.main-navigation ul,
-.main-navigation .menu-item-has-children > a > .icon,
-.main-navigation ul a > .icon {
-	display: none;
-}
-
-.main-navigation.toggled-on > ul.menu {
-	display: block;
-}
-
-/* Menu Items Styling */
 .main-navigation ul li {
 	position: relative;
 	margin: 0;
@@ -899,54 +951,6 @@ textarea {
 
 .main-navigation ul ul ul ul a {
 	padding-left: 6em;
-}
-
-/* Main Navigation Toggle */
-.primary-menu-toggle {
-	display: flex;
-	margin: 0 0 0 1.5rem;
-	padding: 0.8em 1.2em;
-	border: none;
-	background: #dd5533;
-	color: #fff;
-	text-decoration: none;
-	font-size: 16px;
-	font-size: 1rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
-	text-transform: uppercase;
-	text-align: left;
-	transition: all 0.2s ease;
-	align-items: center;
-}
-
-.primary-menu-toggle:focus {
-	outline: thin dotted;
-	color: #fff;
-	background: #dd5533;
-}
-
-.primary-menu-toggle:hover,
-.primary-menu-toggle:active {
-	color: rgba(255, 255, 255, 0.5);
-	background: #dd5533;
-	cursor: pointer;
-}
-
-.primary-menu-toggle .icon {
-	margin: 0;
-	width: 24px;
-	height: 24px;
-	vertical-align: top;
-	fill: #fff;
-}
-
-.primary-menu-toggle[aria-expanded="true"] .icon-menu,
-.primary-menu-toggle[aria-expanded="false"] .icon-close {
-	display: none;
-}
-
-.primary-menu-toggle[aria-expanded="true"] .icon-close {
-	display: inline-block;
 }
 
 /* Submenu Dropdown Toggles */
