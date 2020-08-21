@@ -198,6 +198,9 @@ function tortuga_scripts() {
 		wp_localize_script( 'tortuga-navigation', 'tortugaScreenReaderText', $tortuga_l10n );
 	}
 
+	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
+	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.6' );
+
 	// Register Comment Reply Script for Threaded Comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
