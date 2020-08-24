@@ -7,9 +7,9 @@
 
 (function( $ ) {
 
-	function initNavigation( containerClass ) {
+	function initNavigation( containerClass, naviClass ) {
 		var container  = $( containerClass );
-		var navigation = container.find( 'nav[role=navigation]' );
+		var navigation = $( naviClass );
 
 		// Return early if navigation is missing.
 		if ( ! navigation.length ) {
@@ -114,9 +114,9 @@
 	}
 
 	// Init Main Navigation.
-	initNavigation( '.primary-navigation-wrap' );
+	initNavigation( '.primary-navigation-wrap', '.main-navigation' );
 
 	// Init Top Navigation.
-	initNavigation( '.header-bar' );
+	initNavigation( '.header-bar', '.top-navigation' );
 
 })( jQuery );
