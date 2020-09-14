@@ -13,7 +13,7 @@ get_header();
 $theme_options = tortuga_theme_options();
 
 // Display Slider.
-if ( true === $theme_options['slider_blog'] ) :
+if ( true === $theme_options['slider_blog'] && ! tortuga_is_amp() ) :
 
 	get_template_part( 'template-parts/post-slider' );
 

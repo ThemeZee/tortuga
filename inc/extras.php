@@ -62,6 +62,11 @@ function tortuga_body_classes( $classes ) {
 		$classes[] = 'comments-hidden';
 	}
 
+	// Check for AMP pages.
+	if ( tortuga_is_amp() ) {
+		$classes[] = 'is-amp-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'tortuga_body_classes' );

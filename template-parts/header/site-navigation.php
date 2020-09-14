@@ -2,7 +2,7 @@
 /**
  * Main Navigation
  *
- * @version 1.0
+ * @version 1.1
  * @package Tortuga
  */
 ?>
@@ -15,7 +15,7 @@
 
 			<?php do_action( 'tortuga_header_search' ); ?>
 
-			<button class="primary-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<button class="primary-menu-toggle menu-toggle" aria-controls="primary-menu" aria-expanded="false" <?php tortuga_amp_menu_toggle(); ?>>
 				<?php
 				echo tortuga_get_svg( 'menu' );
 				echo tortuga_get_svg( 'close' );
@@ -25,7 +25,7 @@
 
 			<div class="primary-navigation">
 
-				<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'tortuga' ); ?>">
+				<nav id="site-navigation" class="main-navigation" role="navigation" <?php tortuga_amp_menu_is_toggled(); ?> aria-label="<?php esc_attr_e( 'Primary Menu', 'tortuga' ); ?>">
 
 					<?php
 					wp_nav_menu(
