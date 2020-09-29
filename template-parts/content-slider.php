@@ -9,7 +9,7 @@
 
 <li id="slide-<?php the_ID(); ?>" class="zeeslide clearfix">
 
-	<?php tortuga_slider_image( 'tortuga-slider-image', array( 'class' => 'slide-image' ) ); ?>
+	<?php tortuga_slider_image( 'tortuga-slider-image', array( 'class' => 'slide-image', 'loading' => false ) ); ?>
 
 	<div class="slide-content clearfix">
 
