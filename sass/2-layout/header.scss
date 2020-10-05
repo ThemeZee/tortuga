@@ -29,12 +29,11 @@
 	padding: 0;
 	color: #fff;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: normal;
-	font-size: 36px;
-	font-size: 2.25rem;
-	font-family: 'Titillium Web', sans-serif;
-	line-height: 1.4;
+	@include font-size(36);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .site-title a:link,

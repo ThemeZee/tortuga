@@ -35,8 +35,9 @@
 	color: #fff;
 	text-decoration: none;
 	@include font-size(16);
-	font-family: 'Titillium Web', Tahoma, Arial;
-	text-transform: uppercase;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 	text-align: left;
 	transition: all 0.2s ease;
 	align-items: center;
@@ -79,8 +80,9 @@
 	color: #fff;
 	list-style: none;
 	@include font-size(16);
-	font-family: 'Titillium Web', Tahoma, Arial;
-	text-transform: uppercase;
+	@include font-family(--navi-font);
+	@include font-weight(--navi-font-weight);
+	@include text-transform(--navi-text-transform);
 }
 
 .main-navigation > ul {

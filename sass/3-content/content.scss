@@ -18,13 +18,13 @@
 	margin: 0;
 	padding: 0;
 	color: #dd5533;
-	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
-	font-size: 28px;
-	font-size: 1.75rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
+	@include font-size(28);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
 }
 
 .entry-title a:link,

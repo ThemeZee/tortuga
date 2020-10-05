@@ -59,6 +59,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # - CSS Variables
 --------------------------------------------------------------*/
+:root {
+	--text-font: "Open Sans", arial, helvetica, sans-serif;
+	--title-font: "Titillium Web", arial, helvetica, sans-serif;
+	--navi-font: "Titillium Web", arial, helvetica, sans-serif;
+	--widget-title-font: "Titillium Web", arial, helvetica, sans-serif;
+	--title-font-weight: normal;
+	--navi-font-weight: normal;
+	--widget-title-font-weight: normal;
+	--title-text-transform: uppercase;
+	--navi-text-transform: uppercase;
+	--widget-title-text-transform: uppercase;
+	--text-line-height: 1.75;
+	--title-line-height: 1.4;
+}
 
 /*--------------------------------------------------------------
 # - Normalize
@@ -281,8 +295,10 @@ textarea {
 	color: #303030;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-family: "Open Sans", arial, helvetica, sans-serif;
+	font-family: var(--text-font);
 	line-height: 1.75;
+	line-height: var(--text-line-height);
 }
 
 h1,
@@ -294,6 +310,7 @@ h6 {
 	clear: both;
 	margin: 0.75em 0;
 	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 h1 {
@@ -736,12 +753,16 @@ textarea {
 	padding: 0;
 	color: #fff;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: normal;
 	font-size: 36px;
 	font-size: 2.25rem;
-	font-family: 'Titillium Web', sans-serif;
+	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: var(--title-font);
+	font-weight: normal;
+	font-weight: var(--title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--title-text-transform);
 	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .site-title a:link,
@@ -843,8 +864,12 @@ textarea {
 	text-decoration: none;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
+	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
+	font-weight: normal;
+	font-weight: var(--navi-font-weight);
 	text-transform: uppercase;
+	text-transform: var(--navi-text-transform);
 	text-align: left;
 	transition: all 0.2s ease;
 	align-items: center;
@@ -888,8 +913,12 @@ textarea {
 	list-style: none;
 	font-size: 16px;
 	font-size: 1rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
+	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
+	font-weight: normal;
+	font-weight: var(--navi-font-weight);
 	text-transform: uppercase;
+	text-transform: var(--navi-text-transform);
 }
 
 .main-navigation > ul {
@@ -1175,13 +1204,18 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #dd5533;
-	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
 	font-size: 28px;
 	font-size: 1.75rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
+	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: var(--title-font);
+	font-weight: normal;
+	font-weight: var(--title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--title-text-transform);
+	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .entry-title a:link,
@@ -1720,11 +1754,16 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	margin: 0;
 	padding: 0;
 	color: #dd5533;
-	text-transform: uppercase;
-	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
+	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 .widget ul {
@@ -2035,13 +2074,18 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	margin: 0;
 	padding: 0;
 	color: #dd5533;
-	text-transform: uppercase;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-family: 'Titillium Web', Tahoma, Arial;
+	font-family: "Titillium Web", arial, helvetica, sans-serif;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
+	font-weight: var(--widget-title-font-weight);
+	text-transform: uppercase;
+	text-transform: var(--widget-title-text-transform);
+	line-height: 1.4;
+	line-height: var(--title-line-height);
 }
 
 /* Comment List */
