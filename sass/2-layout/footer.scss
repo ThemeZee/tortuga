@@ -1,9 +1,9 @@
 .footer-wrap {
-	background: #303030;
+	@include background(--footer-background-color);
 }
 
 .site-footer {
-	color: rgba(255,255,255,0.6);
+	@include color(--footer-text-color);
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -15,12 +15,13 @@
 
 .site-footer a:link,
 .site-footer a:visited {
-	border-bottom: 1px dotted rgba(255,255,255,0.6);
-	color: #fff;
+	border-bottom: 1px dotted;
+	@include border-color(--footer-text-color);
+	@include color(--footer-link-color);
 }
 
 .site-footer a:hover,
 .site-footer a:focus,
 .site-footer a:active {
-	color: rgba(255,255,255,0.6);
+	@include color(--footer-link-hover-color);
 }
