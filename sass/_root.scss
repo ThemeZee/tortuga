@@ -27,12 +27,17 @@
 	@include variable(--navi-hover-color, $themeColors);
 	@include variable(--navi-border-color, $themeColors);
 
-	// Titles
+	// Content
+	@include variable(--page-background-color, $themeColors);
+	@include variable(--page-border-color, $themeColors);
 	@include variable(--title-color, $themeColors);
 	@include variable(--title-hover-color, $themeColors);
+
+	// Widgets
+	@include variable(--widget-background-color, $themeColors);
+	@include variable(--widget-border-color, $themeColors);
 	@include variable(--widget-title-color, $themeColors);
 	@include variable(--widget-title-hover-color, $themeColors);
-	@include variable(--widget-title-border-color, $themeColors);
 
 	// Footer
 	@include variable(--footer-background-color, $themeColors);

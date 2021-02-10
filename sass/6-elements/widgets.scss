@@ -2,8 +2,9 @@
 	margin: 0 0 2em 0;
 	padding: 1em 1.5em 1.5em;
 	max-width: 100%;
-	border-top: 3px solid #dd5533;
-	background: #fff;
+	border-top: 3px solid;
+	@include border-color(--widget-border-color);
+	@include background(--widget-background-color);
 	box-shadow: 0 2px 2px #aaa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -17,7 +18,7 @@
 	display: block;
 	margin: 0;
 	padding: 0;
-	color: #dd5533;
+	@include color(--widget-title-color);
 	@include font-size(20);
 	@include font-family(--widget-title-font);
 	@include font-weight(--widget-title-font-weight);

@@ -8,19 +8,20 @@
 	display: inline-block;
 	margin: 0 3px 3px 0;
 	padding: 0.4em 1em;
-	background: #303030;
-	color: #fff;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 	text-align: center;
 	text-decoration: none;
 }
 
 .pagination a:link,
 .pagination a:visited {
-	color: #fff;
+	@include color(--button-hover-text-color);
 }
 
 .pagination a:hover,
 .pagination a:active,
 .pagination .current {
-	background: #dd5533;
+	@include background(--button-color);
+	@include color(--button-text-color);
 }

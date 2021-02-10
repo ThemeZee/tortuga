@@ -79,11 +79,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	--navi-color: #fff;
 	--navi-hover-color: #dd5533;
 	--navi-border-color: rgba(255, 255, 255, 0.2);
-	--title-color: #111133;
-	--title-hover-color: #4477aa;
-	--widget-title-color: #111133;
-	--widget-title-hover-color: #4477aa;
-	--widget-title-border-color: #111133;
+	--page-background-color: #fff;
+	--page-border-color: #dd5533;
+	--title-color: #dd5533;
+	--title-hover-color: #303030;
+	--widget-background-color: #fff;
+	--widget-border-color: #dd5533;
+	--widget-title-color: #dd5533;
+	--widget-title-hover-color: #303030;
 	--footer-background-color: #303030;
 	--footer-text-color: rgba(255, 255, 255, 0.6);
 	--footer-link-color: #fff;
@@ -1269,8 +1272,11 @@ textarea {
 	margin: 0 0 2em 0;
 	padding: 1.5em;
 	max-width: 100%;
-	border-top: 3px solid #dd5533;
-	background: #fff;
+	border-top: 3px solid;
+	border-color: #dd5533;
+	border-color: var(--page-border-color);
+	background-color: #fff;
+	background-color: var(--page-background-color);
 	box-shadow: 0 2px 2px #aaa;
 }
 
@@ -1280,6 +1286,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #dd5533;
+	color: var(--title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 28px;
@@ -1297,6 +1304,7 @@ textarea {
 .entry-title a:link,
 .entry-title a:visited {
 	color: #dd5533;
+	color: var(--title-color);
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -1304,6 +1312,7 @@ textarea {
 .entry-title a:hover,
 .entry-title a:active {
 	color: #303030;
+	color: var(--title-hover-color);
 }
 
 .type-post .wp-post-image,
@@ -1333,6 +1342,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #303030;
+	color: var(--text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1347,11 +1357,13 @@ textarea {
 .entry-meta a:link,
 .entry-meta a:visited {
 	color: #303030;
+	color: var(--text-color);
 }
 
 .entry-meta a:hover,
 .entry-meta a:active {
-	color: #777;
+	color: #999;
+	color: var(--light-text-color);
 }
 
 .entry-meta span::before {
@@ -1423,7 +1435,8 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.2em 0.5em;
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 12px !important;
@@ -1435,6 +1448,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 .entry-tags .meta-tags a:link,
 .entry-tags .meta-tags a:visited {
 	color: #fff;
+	color: var(--button-hover-text-color);
 	transition: all 0.2s ease;
 }
 
@@ -1442,8 +1456,10 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 }
 
 /* Read more Link */
@@ -1451,8 +1467,10 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	display: inline-block;
 	margin: 0;
 	padding: 0.6em 1em;
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1462,11 +1480,15 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 .more-link:link,
 .more-link:visited {
 	color: #fff;
+	color: var(--button-text-color);
 }
 
 .more-link:hover,
 .more-link:active {
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 
@@ -1501,8 +1523,10 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	display: inline-block;
 	margin: 0 0 3px;
 	padding: 0.3em 0.8em;
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
 	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1512,11 +1536,15 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 .post-navigation .nav-links a:link,
 .post-navigation .nav-links a:visited {
 	color: #fff;
+	color: var(--button-text-color);
 }
 
 .post-navigation .nav-links a:hover,
 .post-navigation .nav-links a:active {
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 /*--------------------------------------------------------------
@@ -1527,8 +1555,11 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 .page-header {
 	margin: 0 0 2em 0;
 	padding: 1.5em;
-	border-top: 3px solid #dd5533;
-	background: #fff;
+	border-top: 3px solid;
+	border-color: #dd5533;
+	border-color: var(--page-border-color);
+	background-color: #fff;
+	background-color: var(--page-background-color);
 	box-shadow: 0 2px 2px #aaa;
 }
 
@@ -1617,8 +1648,10 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	display: inline-block;
 	margin: 0 3px 3px 0;
 	padding: 0.4em 1em;
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
 	color: #fff;
+	color: var(--button-hover-text-color);
 	text-align: center;
 	text-decoration: none;
 }
@@ -1626,12 +1659,16 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 .pagination a:link,
 .pagination a:visited {
 	color: #fff;
+	color: var(--button-hover-text-color);
 }
 
 .pagination a:hover,
 .pagination a:active,
 .pagination .current {
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 /* Infinite Scroll Pagination */
@@ -1655,14 +1692,20 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	display: inline-block;
 	margin: 0 0 2em;
 	padding: 0.4em 1em;
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 	font-size: 17px;
 	font-size: 1.0625rem;
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 /*--------------------------------------------------------------
@@ -1814,8 +1857,11 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	margin: 0 0 2em 0;
 	padding: 1em 1.5em 1.5em;
 	max-width: 100%;
-	border-top: 3px solid #dd5533;
-	background: #fff;
+	border-top: 3px solid;
+	border-color: #dd5533;
+	border-color: var(--widget-border-color);
+	background-color: #fff;
+	background-color: var(--widget-background-color);
 	box-shadow: 0 2px 2px #aaa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -1830,6 +1876,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	margin: 0;
 	padding: 0;
 	color: #dd5533;
+	color: var(--widget-title-color);
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
@@ -2098,8 +2145,11 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	margin: 0;
 	padding: 1em 1.5em 1.5em;
 	max-width: 100%;
-	border-top: 3px solid #dd5533;
-	background: #fff;
+	border-top: 3px solid;
+	border-color: #dd5533;
+	border-color: var(--widget-border-color);
+	background-color: #fff;
+	background-color: var(--widget-background-color);
 	box-shadow: 0 2px 2px #aaa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
@@ -2150,6 +2200,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 	margin: 0;
 	padding: 0;
 	color: #dd5533;
+	color: var(--widget-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	font-size: 20px;
@@ -2835,8 +2886,11 @@ object {
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		border-top: 5px solid #dd5533;
-		background: #303030;
+		border-top: 5px solid;
+		border-color: #dd5533;
+		border-color: var(--navi-hover-color);
+		background-color: #303030;
+		background-color: var(--header-background-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -2854,6 +2908,7 @@ object {
 		margin-top: -5px;
 		top: 0;
 		border-left: 1px dotted rgba(255, 255, 255, 0.2);
+		border-left: 1px dotted var(--navi-border-color);
 	}
 
 	.main-navigation ul ul li:hover > ul,
@@ -2877,6 +2932,7 @@ object {
 		width: 14px;
 		height: 14px;
 		fill: #fff;
+		fill: var(--navi-color);
 		transition: fill 0.15s ease;
 	}
 

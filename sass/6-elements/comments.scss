@@ -13,7 +13,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	color: #dd5533;
+	@include color(--widget-title-color);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	@include font-size(20);

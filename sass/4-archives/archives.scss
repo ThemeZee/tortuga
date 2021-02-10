@@ -2,8 +2,9 @@
 .page-header {
 	margin: 0 0 2em 0;
 	padding: 1.5em;
-	border-top: 3px solid #dd5533;
-	background: #fff;
+	border-top: 3px solid;
+	@include border-color(--page-border-color);
+	@include background(--page-background-color);
 	box-shadow: 0 2px 2px #aaa;
 }
 

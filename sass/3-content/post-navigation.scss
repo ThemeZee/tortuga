@@ -25,8 +25,8 @@
 	display: inline-block;
 	margin: 0 0 3px;
 	padding: 0.3em 0.8em;
-	background: #dd5533;
-	color: #fff;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -35,10 +35,11 @@
 
 .post-navigation .nav-links a:link,
 .post-navigation .nav-links a:visited {
-	color: #fff;
+	@include color(--button-text-color);
 }
 
 .post-navigation .nav-links a:hover,
 .post-navigation .nav-links a:active {
-	background: #303030;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 }

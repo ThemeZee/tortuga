@@ -42,8 +42,9 @@
 		left: -999em;
 		top: 100%;
 		z-index: 99999;
-		border-top: 5px solid #dd5533;
-		background: #303030;
+		border-top: 5px solid;
+		@include border-color(--navi-hover-color);
+		@include background(--header-background-color);
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -61,6 +62,7 @@
 		margin-top: -5px;
 		top: 0;
 		border-left: 1px dotted rgba(255, 255, 255, 0.2);
+		border-left: 1px dotted var(--navi-border-color);
 	}
 
 	.main-navigation ul ul li:hover > ul,
@@ -83,7 +85,7 @@
 		top: 0.1rem;
 		width: 14px;
 		height: 14px;
-		fill: #fff;
+		@include fill(--navi-color);
 		transition: fill 0.15s ease;
 	}
 
