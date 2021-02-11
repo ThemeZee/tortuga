@@ -73,7 +73,7 @@ if ( ! function_exists( 'tortuga_setup' ) ) :
 		add_theme_support( 'woocommerce' );
 
 		// Add extra theme styling to the visual editor.
-		add_editor_style( array( 'assets/css/editor-style.css', get_template_directory_uri() . '/assets/css/custom-fonts.css' ) );
+		add_editor_style( array( 'assets/css/editor-style.css' ) );
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -212,13 +212,38 @@ add_action( 'wp_enqueue_scripts', 'tortuga_scripts' );
 
 
 /**
- * Enqueue custom fonts.
- */
-function tortuga_custom_fonts() {
-	wp_enqueue_style( 'tortuga-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
+* Enqueue theme fonts.
+*/
+function tortuga_theme_fonts() {
+	$fonts_url = tortuga_get_fonts_url();
+
+	// Load Fonts if necessary.
+	if ( $fonts_url ) {
+		require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
+		wp_enqueue_style( 'tortuga-theme-fonts', wptt_get_webfont_url( $fonts_url ), array(), '20201110' );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'tortuga_custom_fonts', 1 );
-add_action( 'enqueue_block_editor_assets', 'tortuga_custom_fonts', 1 );
+add_action( 'wp_enqueue_scripts', 'tortuga_theme_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'tortuga_theme_fonts', 1 );
+
+
+/**
+ * Retrieve webfont URL to load fonts locally.
+ */
+function tortuga_get_fonts_url() {
+	$font_families = array(
+		'Open Sans:400,400italic,700,700italic',
+		'Titillium Web:400,400italic,700,700italic',
+	);
+
+	$query_args = array(
+		'family'  => urlencode( implode( '|', $font_families ) ),
+		'subset'  => urlencode( 'latin,latin-ext' ),
+		'display' => urlencode( 'swap' ),
+	);
+
+	return apply_filters( 'tortuga_get_fonts_url', add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ) );
+}
 
 
 /**

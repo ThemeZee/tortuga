@@ -261,15 +261,23 @@ Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 WooThemes, http://www.woothemes.com
 
-5. Open Sans Font - https://www.google.com/fonts/specimen/Open+Sans
+5. svgxuse - https://github.com/Keyamoon/svgxuse
+License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
+Copyright: 2017 IcoMoon.io
+
+6. WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
+
+7. Open Sans Font - https://www.google.com/fonts/specimen/Open+Sans
 License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 Copyright: 2012 Steve Matteson
 
-6. Titillium Web Font - https://www.google.com/fonts/specimen/Titillium+Web
+8. Titillium Web Font - https://www.google.com/fonts/specimen/Titillium+Web
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
 Copyright: 2013 Accademia di Belle Arti di Urbino
 
-7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+9. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/martinique-sunset-boat-twilight-844982/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
