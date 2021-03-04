@@ -1,7 +1,7 @@
 .primary-navigation-wrap {
 	border-bottom: 5px solid;
 	@include border-color(--navi-hover-color);
-	background: rgba(0, 0, 0, 0.15);
+	@include background(--navi-background-color);
 	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
 	@include color(--navi-color);
 }
@@ -33,7 +33,7 @@
 	padding: 0.8em 1.2em;
 	border: none;
 	@include background(--navi-hover-color);
-	@include color(--navi-color);
+	@include color(--navi-hover-text-color);
 	text-decoration: none;
 	@include font-size(16);
 	@include font-family(--navi-font);
@@ -46,7 +46,7 @@
 
 .primary-menu-toggle:focus {
 	outline: thin dotted;
-	@include color(--navi-color);
+	@include color(--navi-hover-text-color);
 	@include background(--navi-hover-color);
 }
 
@@ -61,7 +61,7 @@
 	width: 24px;
 	height: 24px;
 	vertical-align: top;
-	@include fill(--navi-color);
+	@include fill(--navi-hover-text-color);
 }
 
 .primary-menu-toggle[aria-expanded="true"] .icon-menu,
@@ -120,10 +120,12 @@
 .main-navigation ul a:hover,
 .main-navigation ul a:active,
 .main-navigation ul a:focus {
+	@include color(--navi-hover-text-color);
 	@include background(--navi-hover-color);
 }
 
 .main-navigation ul li.current-menu-item > a {
+	@include color(--navi-hover-text-color);
 	@include background(--navi-hover-color);
 }
 
@@ -158,6 +160,7 @@
 	padding: 0.9em 1.5em;
 	background: none;
 	border: none;
+	@include color(--navi-color);
 }
 
 .main-navigation .dropdown-toggle:focus {
@@ -168,6 +171,7 @@
 
 .main-navigation .dropdown-toggle:hover,
 .main-navigation .dropdown-toggle:active {
+	@include color(--navi-hover-text-color);
 	@include background(--navi-hover-color);
 }
 
@@ -176,7 +180,7 @@
 	width: 20px;
 	height: 20px;
 	vertical-align: top;
-	@include fill(--navi-color);
+	fill: currentColor;
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {

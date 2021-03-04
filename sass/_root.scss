@@ -24,7 +24,9 @@
 
 	// Navigation
 	@include variable(--navi-color, $themeColors);
+	@include variable(--navi-background-color, $themeColors);
 	@include variable(--navi-hover-color, $themeColors);
+	@include variable(--navi-hover-text-color, $themeColors);
 	@include variable(--navi-border-color, $themeColors);
 
 	// Content

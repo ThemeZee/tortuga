@@ -26,6 +26,16 @@
 	@include line-height(--title-line-height);
 }
 
+.widget-title a:link,
+.widget-title a:visited {
+	@include color(--widget-title-color);
+}
+
+.widget-title a:hover,
+.widget-title a:active {
+	@include color(--widget-title-hover-color);
+}
+
 .widget ul {
 	margin: 0;
 	padding: 0;
