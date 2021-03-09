@@ -20,7 +20,7 @@
 				echo tortuga_get_svg( 'menu' );
 				echo tortuga_get_svg( 'close' );
 				?>
-				<span class="menu-toggle-text screen-reader-text"><?php esc_html_e( 'Menu', 'tortuga' ); ?></span>
+				<span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'tortuga' ); ?></span>
 			</button>
 
 			<div class="primary-navigation">

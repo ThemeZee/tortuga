@@ -1,3 +1,10 @@
+@media only screen and (min-width: 30em) {
+	.primary-menu-toggle .menu-toggle-text {
+		display: inline-block;
+		margin-left: 0.75em;
+	}
+}
+
 @media only screen and (min-width: 60em) {
 	.primary-menu-toggle,
 	.main-navigation .dropdown-toggle {

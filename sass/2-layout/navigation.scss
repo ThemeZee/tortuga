@@ -44,6 +44,10 @@
 	align-items: center;
 }
 
+.primary-menu-toggle .menu-toggle-text {
+	display: none;
+}
+
 .primary-menu-toggle:focus {
 	outline: thin dotted;
 	@include color(--navi-hover-text-color);
