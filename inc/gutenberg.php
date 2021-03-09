@@ -18,11 +18,11 @@ function tortuga_gutenberg_support() {
 
 	// Define block color palette.
 	$color_palette = apply_filters( 'tortuga_color_palette', array(
-		'primary_color'    => '#cc5555',
-		'secondary_color'  => '#5d7b94',
-		'tertiary_color'   => '#90aec7',
-		'accent_color'     => '#60945d',
-		'highlight_color'  => '#915d94',
+		'primary_color'    => '#dd5533',
+		'secondary_color'  => '#c43c1a',
+		'tertiary_color'   => '#aa2200',
+		'accent_color'     => '#3355dd',
+		'highlight_color'  => '#2bc41a',
 		'light_gray_color' => '#f0f0f0',
 		'gray_color'       => '#999999',
 		'dark_gray_color'  => '#303030',
