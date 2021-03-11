@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/tortuga/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Tortuga is a highly flexible and adventurous WordPress theme for your pirate magazine or any news related website. It supports three different post layouts, two sidebar schemes and a Magazine Homepage template based on widgets. Other highlights of Tortuga are the beautiful post slider and header widgets area. Arrr!
-Version: 2.2.1
+Version: 2.2.2
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -2983,6 +2983,7 @@ ul.related-posts-list {
 
 .tzwb-comments-list .tzwb-comment-date {
 	color: #303030;
+	color: var(--text-color);
 	font-size: 12px;
 	font-size: 0.75rem;
 }
@@ -3014,7 +3015,6 @@ ul.related-posts-list {
 	display: block;
 	margin: 0;
 	padding: 0.3em 0.8em;
-	color: #fff;
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -3022,19 +3022,27 @@ ul.related-posts-list {
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited {
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
 	color: #fff;
+	color: var(--button-hover-text-color);
 	transition: all 0.2s ease;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -3053,15 +3061,22 @@ ul.related-posts-list {
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.75em;
-	background: #dd5533;
+	background-color: #dd5533;
+	background-color: var(--button-color);
+	color: #fff;
+	color: var(--button-text-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a::before {
 	font-size: 24px;
+	color: currentColor;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	background: #303030;
+	background-color: #303030;
+	background-color: var(--button-hover-color);
+	color: #fff;
+	color: var(--button-hover-text-color);
 	text-decoration: none;
 }
 

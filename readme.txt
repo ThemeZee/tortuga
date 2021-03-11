@@ -26,6 +26,9 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 2.2.2 - 2021-03-11 =
+* added CSS variables for Widget Bundle and Related Posts plugin styling
+
 = 2.2.1 - 2021-03-09 =
 * updated CSS variables for colors
 * updated Block Editor color palette

@@ -50,7 +50,7 @@
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	color: #303030;
+	@include color(--text-color);
 	font-size: 12px;
 	font-size: 0.75rem;
 }
@@ -82,7 +82,6 @@
 	display: block;
 	margin: 0;
 	padding: 0.3em 0.8em;
-	color: #fff;
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -90,19 +89,21 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
 .tzwb-tabbed-content .tzwb-tabnavi li a:visited {
-	background: #303030;
-	color: #fff;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 	transition: all 0.2s ease;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:hover,
 .tzwb-tabbed-content .tzwb-tabnavi li a:active {
-	background: #dd5533;
+	@include background(--button-color);
+	@include color(--button-text-color);
 	text-decoration: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-	background: #dd5533;
+	@include background(--button-color);
+	@include color(--button-text-color);
 }
 
 .tzwb-tabbed-content .tzwb-tabcontent {
@@ -121,14 +122,17 @@
 
 .tzwb-social-icons .social-icons-menu li a {
 	padding: 0.75em;
-	background: #dd5533;
+	@include background(--button-color);
+	@include color(--button-text-color);
 }
 
 .tzwb-social-icons .social-icons-menu li a::before {
 	font-size: 24px;
+	color: currentColor;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
-	background: #303030;
+	@include background(--button-hover-color);
+	@include color(--button-hover-text-color);
 	text-decoration: none;
 }
