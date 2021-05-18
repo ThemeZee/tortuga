@@ -18,8 +18,8 @@ blockquote {
 	padding: 0.05em 1.25em 1em;
 	border: 1px solid;
 	@include border-color(--light-border-color);
-	border-left: 3px solid var(--link-color);
 	border-left: 3px solid #dd5533;
+	border-left: 3px solid var(--link-color);
 	@include color(--medium-text-color);
 	font-style: italic;
 	@include font-size(18);

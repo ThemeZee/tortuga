@@ -466,8 +466,8 @@ blockquote {
 	border: 1px solid;
 	border-color: #ddd;
 	border-color: var(--light-border-color);
-	border-left: 3px solid var(--link-color);
 	border-left: 3px solid #dd5533;
+	border-left: 3px solid var(--link-color);
 	color: #666;
 	color: var(--medium-text-color);
 	font-style: italic;
@@ -653,6 +653,45 @@ textarea:focus {
 
 textarea {
 	width: 100%;
+}
+
+/* Search Form */
+.search-form {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.search-form label {
+	flex-grow: 1;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form .search-field {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0.75rem;
+	min-width: 100px;
+	width: 100%;
+	-webkit-appearance: none;
+	line-height: 1;
+}
+
+.search-form .search-submit {
+	display: flex;
+	margin-left: -1px;
+	padding: 0.75rem 0.95rem;
+	align-items: center;
+}
+
+.search-form .search-submit .icon-search {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
 }
 
 /*--------------------------------------------------------------
@@ -2014,55 +2053,6 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
-}
-
-/* Theme Search Widget */
-.search-form {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-.search-form .screen-reader-text {
-	display: none;
-}
-
-.search-form .search-field {
-	display: inline-block;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0.5em 1.5em 0.5em 0.7em;
-	width: 100%;
-	-webkit-appearance: none;
-}
-
-.search-form .search-submit {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 0.65em 0.75em 0 0.2em;
-	border: none;
-	cursor: pointer;
-	transition: all 0.2s ease;
-}
-
-.search-form .search-submit .genericon-search {
-	display: inline-block;
-	padding: 0.05em 0 0.55em 0.45em;
-	color: #fff;
-	content: '\f400';
-	vertical-align: middle;
-	text-decoration: inherit;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 24px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Theme Calendar Widget */
