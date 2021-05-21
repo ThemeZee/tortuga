@@ -24,28 +24,12 @@
 	@include color(--light-text-color);
 }
 
-.entry-meta span::before {
-	display: inline-block;
-	margin-right: 0.2em;
-	vertical-align: middle;
-	font: normal 16px 'Genericons';
-	-webkit-font-smoothing: antialiased;
-}
-
-.entry-meta .meta-date::before {
-	content: '\f307';
-}
-
-.entry-meta .meta-author::before {
-	content: '\f304';
-}
-
-.entry-meta .meta-category::before {
-	content: '\f301';
-}
-
-.entry-meta .meta-comments::before {
-	content: '\f300';
+.entry-meta span .icon {
+	margin: 0.4em 0.4em 0 0;
+	width: 14px;
+	height: 14px;
+	vertical-align: top;
+	fill: currentColor;
 }
 
 /* Hide post meta if they are deactivated in settings */

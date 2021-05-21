@@ -51,11 +51,12 @@ if ( ! function_exists( 'tortuga_site_description' ) ) :
 
 		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
 
-		if ( $description || is_customize_preview() ) : ?>
+		if ( $description || is_customize_preview() ) :
+			?>
 
 			<p class="site-description"><?php echo $description; ?></p>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -96,7 +97,7 @@ if ( ! function_exists( 'tortuga_header_image' ) ) :
 
 			</div>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -210,7 +211,7 @@ if ( ! function_exists( 'tortuga_entry_meta' ) ) :
 	 */
 	function tortuga_entry_meta() {
 
-		$postmeta = tortuga_meta_date();
+		$postmeta  = tortuga_meta_date();
 		$postmeta .= tortuga_meta_author();
 		$postmeta .= tortuga_meta_category();
 		$postmeta .= tortuga_meta_comments();
@@ -234,7 +235,9 @@ if ( ! function_exists( 'tortuga_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		return '<span class="meta-date">' . $time_string . '</span>';
+		$posted_on = tortuga_get_svg( 'standard' ) . $time_string;
+
+		return '<span class="meta-date">' . $posted_on . '</span>';
 
 	}
 endif;
@@ -252,7 +255,9 @@ if ( ! function_exists( 'tortuga_meta_author' ) ) :
 			esc_html( get_the_author() )
 		);
 
-		return '<span class="meta-author"> ' . $author_string . '</span>';
+		$posted_by = tortuga_get_svg( 'user' ) . $author_string;
+
+		return '<span class="meta-author"> ' . $posted_by . '</span>';
 	}
 endif;
 
@@ -263,8 +268,14 @@ if ( ! function_exists( 'tortuga_meta_category' ) ) :
 	 */
 	function tortuga_meta_category() {
 
-		return '<span class="meta-category"> ' . get_the_category_list( ', ' ) . '</span>';
+		// Return early if post has no category.
+		if ( ! has_category() ) {
+			return;
+		}
 
+		$posted_in = tortuga_get_svg( 'category' ) . get_the_category_list( ', ' );
+
+		return '<span class="meta-category"> ' . $posted_in . '</span>';
 	}
 endif;
 
@@ -290,8 +301,7 @@ if ( ! function_exists( 'tortuga_meta_comments' ) ) :
 		// End Output Buffering.
 		ob_end_clean();
 
-		return '<span class="meta-comments"> ' . $comments . '</span>';
-
+		return '<span class="meta-comments"> ' . tortuga_get_svg( 'edit' ) . $comments . '</span>';
 	}
 endif;
 
