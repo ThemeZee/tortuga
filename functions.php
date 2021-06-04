@@ -151,9 +151,6 @@ function tortuga_scripts() {
 	// Register and Enqueue Safari Flexbox CSS fixes.
 	wp_enqueue_style( 'tortuga-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20200420' );
 
-	// Register Genericons.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.4.1' );
-
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
