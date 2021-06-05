@@ -6,6 +6,7 @@ body {
 blockquote {
 	border-left: none;
 	border-right: 3px solid #dd5533;
+	border-right: 3px solid var(--link-color);
 }
 
 ul,
@@ -17,6 +18,11 @@ li > ul,
 li > ol {
 	margin-left: 0;
 	margin-right: 1.5em;
+}
+
+.search-form .search-submit {
+	margin-left: 0;
+	margin-right: -1px;
 }
 
 .screen-reader-text:hover,
@@ -97,10 +103,6 @@ li > ol {
 	transform: rotate(180deg);
 }
 
-.social-icons-menu li {
-	float: right;
-}
-
 .entry-meta .meta-date,
 .entry-meta .meta-author,
 .entry-meta .meta-category,
@@ -109,9 +111,8 @@ li > ol {
 	margin-left: 1.5em;
 }
 
-.entry-meta span::before {
-	margin-right: 0;
-	margin-left: 0.2em;
+.entry-meta span .icon {
+	margin: 0.4em 0 0 0.4em;
 }
 
 .widget_tag_cloud .tagcloud a,
@@ -175,20 +176,6 @@ li > ol {
 .widget ul .children,
 .widget ul .sub-menu {
 	margin: 0.5em 1em 0.5em 0;
-}
-
-.search-form .search-field {
-	padding: 0.5em 0.7em 0.5em 1.5em;
-}
-
-.search-form .search-submit {
-	right: auto;
-	left: 0;
-	padding: 0.65em 0.2em 0 0.75em;
-}
-
-.search-form .search-submit .genericon-search {
-	padding: 0.05em 0.45em 0.55em 0;
 }
 
 .widget_calendar table tfoot tr #prev {
@@ -346,6 +333,153 @@ li > ol {
 	margin-left: 0.5em;
 }
 
+.related-posts-list li .wp-post-image {
+	float: right;
+	margin: 0 0 0 1em;
+}
+
+.related-posts-columns {
+	margin-right: 0;
+	margin-left: -1em;
+}
+
+.related-posts-columns .related-post-column {
+	padding-right: 0;
+	float: right;
+	padding-left: 2em;
+}
+
+.related-posts-two-columns .related-post-column:nth-child(2n + 1) {
+	clear: right;
+}
+
+.related-posts-three-columns .related-post-column:nth-child(3n + 1) {
+	clear: right;
+}
+
+.related-posts-four-columns .related-post-column:nth-child(4n + 1) {
+	clear: right;
+}
+
+@media only screen and (max-width: 50em) {
+
+	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
+		clear: right;
+	}
+}
+
+@media only screen and (max-width: 35em) {
+
+	.related-posts-three-columns .related-post-column {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width: 25em) {
+
+	.related-posts-two-columns .related-post-column,
+	.related-posts-four-columns .related-post-column {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.tzwb-posts-list li {
+	clear: right;
+}
+
+.tzwb-posts-list .wp-post-image {
+	float: right;
+	margin: 0.3em 0 1em 0.8em;
+}
+
+.tzwb-comments-list li {
+	clear: right;
+}
+
+.tzwb-comments-list .avatar {
+	float: right;
+	margin: 0.3em 0 0.8em 0.8em;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi {
+	float: right;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li {
+	float: right;
+	margin: 0 0 3px 3px;
+}
+
+.tzwb-social-icons .social-icons-menu li {
+	margin: 0 0 2px 2px;
+}
+
+.post-slider .zeeslide .slide-image-wrap {
+	float: right;
+}
+
+.post-slider .zeeslide .slide-content {
+	float: left;
+}
+
+.post-slider .zeeslide .slide-content .read-more {
+	left: auto;
+	right: 65%;
+}
+
+.post-slider .zeeslide .slide-content .read-more .more-link {
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+
+.post-slider-controls {
+	clear: right;
+}
+
+.post-slider-controls .zeeflex-direction-nav {
+	right: auto;
+	left: 0;
+}
+
+.post-slider-controls .zeeflex-direction-nav a {
+	margin: -40px -80px 0 0;
+	text-align: right;
+}
+
+.post-slider-controls .zeeflex-direction-nav .zeeflex-next {
+	left: auto;
+	right: 42px;
+}
+
+@media only screen and (max-width: 55em) {
+
+	.post-slider .zeeslide .slide-content .read-more {
+		left: auto;
+		right: auto;
+	}
+
+	.post-slider .zeeslide .slide-content .read-more .more-link {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 25em) {
+
+	.post-slider-controls .zeeflex-direction-nav {
+		right: auto;
+		left: auto;
+		right: 0;
+	}
+
+	.post-slider-controls .zeeflex-direction-nav a {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
 @media only screen and (max-width: 80em) {
 
 	.content-area {
@@ -405,6 +539,14 @@ li > ol {
 	}
 }
 
+@media only screen and (min-width: 30em) {
+
+	.primary-menu-toggle .menu-toggle-text {
+		margin-left: 0;
+		margin-right: 0.75em;
+	}
+}
+
 @media only screen and (min-width: 60em) {
 
 	.primary-navigation {
@@ -429,6 +571,7 @@ li > ol {
 		left: auto;
 		right: -999em;
 		border-right: 1px dotted rgba(255, 255, 255, 0.2);
+		border-right: 1px dotted var(--navi-border-color);
 	}
 
 	.main-navigation ul ul li:hover > ul,
