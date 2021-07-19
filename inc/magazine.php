@@ -35,12 +35,7 @@ function tortuga_magazine_widgets() {
 
 		</div><!-- #magazine-homepage-widgets -->
 
-	<?php
-	elseif ( is_customize_preview() ) :
-
-		// Display Magazine Widget Placeholder in Customizer.
-		tortuga_customize_magazine_placeholder();
-
+		<?php
 	elseif ( is_page_template( 'template-magazine.php' ) && current_user_can( 'edit_theme_options' ) ) :
 
 		echo '<p class="empty-widget-area">';
