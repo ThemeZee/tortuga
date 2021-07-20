@@ -22,9 +22,13 @@
 <body <?php body_class(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 
+	<?php do_action( 'tortuga_before_site' ); ?>
+
 	<div id="page" class="hfeed site">
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tortuga' ); ?></a>
+
+		<?php do_action( 'tortuga_before_header' ); ?>
 
 		<?php do_action( 'tortuga_header_bar' ); ?>
 
@@ -56,6 +60,8 @@
 			<?php get_template_part( 'template-parts/header/site', 'navigation' ); ?>
 
 		</header><!-- #masthead -->
+
+		<?php do_action( 'tortuga_after_header' ); ?>
 
 		<?php tortuga_breadcrumbs(); ?>
 

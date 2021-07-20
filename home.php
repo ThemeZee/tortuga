@@ -27,6 +27,8 @@ endif;
 			// Display Magazine Homepage Widgets.
 			tortuga_magazine_widgets();
 
+			do_action( 'tortuga_before_blog' );
+
 			if ( have_posts() ) :
 
 				// Display Blog Title.
