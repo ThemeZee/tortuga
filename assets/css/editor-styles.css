@@ -1,7 +1,7 @@
 /*
  * Editor Styles
  *
- * @package Dynamico
+ * @package Tortuga
  */
 
 /*--------------------------------------------------------------
@@ -73,6 +73,8 @@
 
 .wp-block {
 	max-width: 880px;
+	margin-top: 0;
+	margin-bottom: 1.5em;
 }
 
 .wp-block[data-align="wide"] {
@@ -84,22 +86,22 @@
 }
 
 /* Fullwidth Template */
-.chronus-fullwidth-page-layout .wp-block {
+.tortuga-fullwidth-page-layout .wp-block {
 	max-width: 1280px;
 }
 
-.chronus-fullwidth-page-layout .wp-block[data-align="wide"],
-.chronus-fullwidth-page-layout .wp-block[data-align="full"] {
+.tortuga-fullwidth-page-layout .wp-block[data-align="wide"],
+.tortuga-fullwidth-page-layout .wp-block[data-align="full"] {
 	max-width: 1440px;
 }
 
 /* Wide Theme Layout */
-.chronus-wide-theme-layout .wp-block[data-align="full"],
-.chronus-wide-theme-layout.chronus-fullwidth-page-layout .wp-block[data-align="full"] {
+.tortuga-wide-theme-layout .wp-block[data-align="full"],
+.tortuga-wide-theme-layout.tortuga-fullwidth-page-layout .wp-block[data-align="full"] {
 	max-width: none;
 }
 
-.chronus-wide-theme-layout.chronus-fullwidth-page-layout .wp-block[data-align="wide"] {
+.tortuga-wide-theme-layout.tortuga-fullwidth-page-layout .wp-block[data-align="wide"] {
 	max-width: 1440px;
 }
 
@@ -107,8 +109,8 @@
 body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	color: #dd5533;
 	color: var(--title-color);
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 28px;
+	font-size: 1.75rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
 	font-weight: normal;
@@ -117,40 +119,45 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	text-transform: var(--title-text-transform);
 	line-height: 1.4;
 	line-height: var(--title-line-height);
-	border-color: #dd5533;
-	border-color: var(--title-color);
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 960px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
-		font-size: 22px;
-		font-size: 1.375rem;
+		font-size: 26px;
+		font-size: 1.625rem;
 	}
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (max-width: 800px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (max-width: 640px) {
 	body.block-editor-page .editor-post-title__block .editor-post-title__input {
-		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	body.block-editor-page .editor-post-title__block .editor-post-title__input {
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 }
 
 /* Hidden Page Title */
-body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-post-visual-editor__post-title-wrapper {
+body.tortuga-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-post-visual-editor__post-title-wrapper {
 	background-color: #fff;
 	background-image: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd), linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd);
 	background-size: 20px 20px;
 	background-position: 0 0, 10px 10px;
 }
 
-body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-post-visual-editor__post-title-wrapper .editor-post-title__block .editor-post-title__input {
+body.tortuga-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-post-visual-editor__post-title-wrapper .editor-post-title__block .editor-post-title__input {
 	border-bottom: none;
 	padding-bottom: 1rem;
 }
@@ -160,7 +167,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 --------------------------------------------------------------*/
 
 /* Typography */
-.editor-styles-wrapper {
+.edit-post-visual-editor__content-area .editor-styles-wrapper {
 	color: #303030;
 	color: var(--text-color);
 	font-size: 16px;
@@ -175,8 +182,8 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	font-size: inherit;
 	line-height: 1.75;
 	line-height: var(--text-line-height);
-	margin-top: 1rem;
-	margin-bottom: 1.5rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .editor-styles-wrapper .mce-content-body {
@@ -184,8 +191,8 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	line-height: var(--text-line-height);
 }
 
-@media only screen and (min-width: 960px) {
-	.editor-styles-wrapper {
+@media only screen and (min-width: 640px) {
+	.edit-post-visual-editor__content-area .editor-styles-wrapper {
 		font-size: 17px;
 		font-size: 1.0625rem;
 	}
@@ -197,18 +204,18 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 }
 
 .editor-styles-wrapper hr {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	background-color: #ddd;
-	background-color: var(--light-border-color);
+	background-color: #dd5533;
+	background-color: var(--link-color);
 }
 
 .editor-styles-wrapper pre {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding: 1rem 1.25rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 1.5em;
 	border: 1px solid;
 	color: #303030;
 	color: var(--text-color);
@@ -251,14 +258,6 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	clear: both;
 	margin-top: 1em;
 	margin-bottom: 0.75em;
-	color: #dd5533;
-	color: var(--title-color);
-	font-family: "Titillium Web", arial, helvetica, sans-serif;
-	font-family: var(--title-font);
-	font-weight: normal;
-	font-weight: var(--title-font-weight);
-	text-transform: uppercase;
-	text-transform: var(--title-text-transform);
 	line-height: 1.4;
 	line-height: var(--title-line-height);
 }
@@ -274,47 +273,50 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 }
 
 .editor-styles-wrapper h1 {
+	font-size: 36px;
+	font-size: 2.25rem;
+}
+
+.editor-styles-wrapper h2 {
 	font-size: 28px;
 	font-size: 1.75rem;
 }
 
-.editor-styles-wrapper h2 {
+.editor-styles-wrapper h3 {
 	font-size: 24px;
 	font-size: 1.5rem;
 }
 
-.editor-styles-wrapper h3 {
+.editor-styles-wrapper h4 {
 	font-size: 22px;
 	font-size: 1.375rem;
 }
 
-.editor-styles-wrapper h4 {
+.editor-styles-wrapper h5 {
 	font-size: 20px;
 	font-size: 1.25rem;
 }
 
-.editor-styles-wrapper h5 {
+.editor-styles-wrapper h6 {
 	font-size: 19px;
 	font-size: 1.1875rem;
-}
-
-.editor-styles-wrapper h6 {
-	font-size: 18px;
-	font-size: 1.125rem;
 }
 
 /* Blockquotes */
 .editor-styles-wrapper blockquote,
 .wp-block-quote {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding-left: 1.5rem;
-	border-left: 5px solid;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 1em 1.25em;
+	border: 1px solid;
 	border-color: #ddd;
 	border-color: var(--light-border-color);
-	color: #999;
-	color: var(--light-text-color);
-	font-family: Georgia, "Times New Roman", Times, serif;
+	border-left: 3px solid #dd5533;
+	border-left: 3px solid var(--link-color);
+	color: #666;
+	color: var(--medium-text-color);
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .editor-styles-wrapper blockquote p {
@@ -333,6 +335,7 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 	font-family: var(--text-font);
 	font-size: 16px;
 	font-size: 1rem;
+	font-style: normal;
 }
 
 .wp-block-quote cite::before,
@@ -351,9 +354,9 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 /* Lists */
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
-	padding: 0 0 0 1.5rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	padding: 0 0 0 1.25em;
 }
 
 .editor-styles-wrapper ul {
@@ -373,8 +376,8 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 
 /* Tables */
 .editor-styles-wrapper table {
-	margin-top: 1.75rem;
-	margin-bottom: 1.75rem;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	width: 100%;
 	border: none;
 	table-layout: fixed;
@@ -410,10 +413,9 @@ body.chronus-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 .wp-block-table figcaption {
 	margin-top: 0.5rem;
 	margin-bottom: 1.5rem;
-	font-size: 16px;
-	font-size: 1rem;
-	color: #666;
-	color: var(--medium-text-color);
+	font-size: 13px;
+	font-size: 0.8125rem;
+	text-align: center;
 }
 
 .wp-block-image figcaption {
@@ -462,8 +464,8 @@ p.has-background {
 .wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots) {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 6rem;
-	height: 5px;
+	max-width: 4rem;
+	height: 3px;
 }
 
 /* Table Block */
@@ -508,19 +510,24 @@ p.has-background {
 }
 
 /* Button Block */
+.wp-block-button {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
 .wp-block-button.aligncenter {
 	text-align: center;
 }
 
 .wp-block-button__link {
 	margin: 0;
-	padding: 0.6rem 1rem;
+	padding: 0.6em 1em;
 	border: none;
 	border-radius: 0;
 	color: inherit;
+	font-size: inherit;
 	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	transition: all 0.2s ease;
 }
 
 .wp-block-button__link:link,
@@ -581,18 +588,16 @@ p.has-background {
 .wp-block-quote.has-text-align-center:not(.is-style-large),
 .wp-block-quote.has-text-align-right:not(.is-style-large) {
 	padding-left: 0;
-	border-left: 0;
+	border-left: 1px solid var(--light-border-color);
 }
 
 .wp-block-quote.has-text-align-right:not(.is-style-large) {
-	padding-right: 1.5rem;
-	border-right: 5px solid;
-	border-color: #ddd;
-	border-color: var(--light-border-color);
+	padding-right: 1.25em;
+	border-right: 3px solid #dd5533;
+	border-right: 3px solid var(--link-color);
 }
 
 .wp-block-quote.is-style-large {
-	margin: 1.75rem 0;
 	padding: 0;
 	border: none;
 	font-size: 28px;
@@ -613,10 +618,11 @@ p.has-background {
 
 /* Pullquote Block */
 .wp-block-pullquote {
-	margin: 1.75rem 0;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	padding: 0;
-	border-bottom: 5px solid;
-	border-top: 5px solid;
+	border-bottom: 3px solid;
+	border-top: 3px solid;
 	border-color: #ddd;
 	border-color: var(--light-border-color);
 }
@@ -631,6 +637,15 @@ p.has-background {
 .wp-block-pullquote p {
 	font-size: inherit;
 	line-height: inherit;
+}
+
+.wp-block-pullquote blockquote > p:last-of-type {
+	margin-bottom: 0;
+}
+
+.wp-block-pullquote.alignleft p,
+.wp-block-pullquote.alignright p {
+	font-size: 0.75em;
 }
 
 .wp-block-pullquote blockquote cite {
@@ -649,7 +664,6 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote p {
-	margin: 1.75rem 0 1rem;
 	font-size: inherit;
 }
 
@@ -695,7 +709,7 @@ p.has-background {
 
 /* Group Block */
 .wp-block-group.has-background {
-	padding: 1.5rem;
+	padding: 1.5em;
 }
 
 .wp-block-group.has-background > .wp-block-group__inner-container > *:first-child {
@@ -708,7 +722,8 @@ p.has-background {
 
 /* Latest Posts */
 .wp-block-latest-posts.wp-block-latest-posts__list {
-	margin: 0;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	padding: 0;
 }
 
@@ -718,8 +733,8 @@ p.has-background {
 
 .wp-block-latest-posts__post-date,
 .wp-block-latest-posts__post-author {
-	color: #999;
-	color: var(--light-text-color);
+	color: #666;
+	color: var(--medium-text-color);
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -727,44 +742,6 @@ p.has-background {
 /* Search Block */
 .wp-block-search .wp-block-search__label {
 	width: auto;
-}
-
-@media only screen and (min-width: 640px) {
-	.wp-block-group.has-background {
-		padding: 1.75rem;
-	}
-}
-
-/* Columns Block */
-@media only screen and (min-width: 782px) {
-	.wp-block-column:not(:first-child) {
-		margin-left: 1.75rem;
-	}
-}
-
-@media only screen and (min-width: 960px) {
-	.wp-block-group.has-background {
-		padding: 2rem;
-	}
-
-	.wp-block-column:not(:first-child) {
-		margin-left: 2rem;
-	}
-}
-
-@media only screen and (min-width: 1280px) {
-	.wp-block-group.has-background {
-		padding: 2.5rem;
-	}
-
-	.wp-block-column:not(:first-child) {
-		margin-left: 2.5rem;
-	}
-}
-
-/* Group Block */
-.wp-block-group.has-background > .wp-block-group__inner-container > .wp-block:last-of-type {
-	margin-bottom: 0;
 }
 
 /* Editor Block Styles */

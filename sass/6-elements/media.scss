@@ -17,11 +17,28 @@ object {
 /*--------------------------------------------------------------
 ## 16.1 - Captions
 --------------------------------------------------------------*/
-.wp-caption {
-	margin-bottom: 1.5em;
+figcaption,
+.wp-caption,
+.wp-block-embed figcaption,
+.wp-block-image figcaption,
+.wp-block-audio figcaption,
+.wp-block-table figcaption {
+	@include font-size(13);
+}
+
+.wp-block-embed figcaption,
+.wp-block-image figcaption,
+.wp-block-audio figcaption,
+.wp-block-table figcaption,
+.wp-block-gallery > figcaption {
+	margin: 0.5rem 0 1.5rem;
 	max-width: 100%;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	width: auto !important;
+	text-align: center;
+}
+
+.wp-block-table figcaption {
+	margin-bottom: 0;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -29,12 +46,8 @@ object {
 	margin: 0 auto;
 }
 
-.wp-caption-text {
-	text-align: center;
-}
-
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: 0.5em 0;
 }
 
 /*--------------------------------------------------------------

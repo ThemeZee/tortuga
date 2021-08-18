@@ -36,8 +36,8 @@ p.has-background {
 .wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots) {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 6rem;
-	height: 5px;
+	max-width: 4rem;
+	height: 3px;
 }
 
 /* Table Block */
@@ -83,18 +83,23 @@ p.has-background {
 }
 
 /* Button Block */
+.wp-block-button {
+	@include font-size(17);
+}
+
 .wp-block-button.aligncenter {
 	text-align: center;
 }
 
 .wp-block-button__link {
 	margin: 0;
-	padding: 0.6rem 1rem;
+	padding: 0.6em 1em;
 	border: none;
 	border-radius: 0;
 	color: inherit;
+	font-size: inherit;
 	text-decoration: none;
-	@include font-size(17);
+	transition: all 0.2s ease;
 }
 
 .wp-block-button__link:link,
@@ -152,17 +157,16 @@ p.has-background {
 .wp-block-quote.has-text-align-center:not(.is-style-large),
 .wp-block-quote.has-text-align-right:not(.is-style-large) {
 	padding-left: 0;
-	border-left: 0;
+	border-left: 1px solid var(--light-border-color);
 }
 
 .wp-block-quote.has-text-align-right:not(.is-style-large) {
-	padding-right: 1.5rem;
-	border-right: 5px solid;
-	@include border-color(--light-border-color);
+	padding-right: 1.25em;
+	border-right: 3px solid #dd5533;
+	border-right: 3px solid var(--link-color);
 }
 
 .wp-block-quote.is-style-large {
-	margin: 1.75rem 0;
 	padding: 0;
 	border: none;
 	@include font-size(28);
@@ -181,10 +185,11 @@ p.has-background {
 
 /* Pullquote Block */
 .wp-block-pullquote {
-	margin: 1.75rem 0;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	padding: 0;
-	border-bottom: 5px solid;
-	border-top: 5px solid;
+	border-bottom: 3px solid;
+	border-top: 3px solid;
 	@include border-color(--light-border-color);
 }
 
@@ -197,6 +202,15 @@ p.has-background {
 .wp-block-pullquote p {
 	font-size: inherit;
 	line-height: inherit;
+}
+
+.wp-block-pullquote blockquote > p:last-of-type {
+	margin-bottom: 0;
+}
+
+.wp-block-pullquote.alignleft p,
+.wp-block-pullquote.alignright p {
+	font-size: 0.75em;
 }
 
 .wp-block-pullquote blockquote cite {
@@ -214,7 +228,6 @@ p.has-background {
 }
 
 .wp-block-pullquote.is-style-solid-color blockquote p {
-	margin: 1.75rem 0 1rem;
 	font-size: inherit;
 }
 

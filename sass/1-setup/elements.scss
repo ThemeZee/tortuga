@@ -14,14 +14,14 @@ body {
 }
 
 blockquote {
-	margin: 0 0 1.5em;
+	margin: 1.5em 0;
 	padding: 0.05em 1.25em 1em;
 	border: 1px solid;
 	@include border-color(--light-border-color);
 	border-left: 3px solid #dd5533;
 	border-left: 3px solid var(--link-color);
 	@include color(--medium-text-color);
-	font-style: italic;
+	font-style: normal;
 	@include font-size(18);
 }
 
@@ -50,15 +50,16 @@ blockquote > :last-child {
 }
 
 hr {
+	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	height: 1px;
 	border: 0;
-	@include background(--light-border-color);
+	@include background(--link-color);
 }
 
 ul,
 ol {
-	margin: 0 0 1.5em;
+	margin: 1.5em 0;
 	padding: 0 0 0 1.25em;
 }
 
@@ -90,7 +91,8 @@ img {
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	width: 100%;
 	border: none;
 	table-layout: fixed;
@@ -101,6 +103,16 @@ td {
 	padding: 0.3em 0.6em;
 	border: 1px solid;
 	@include border-color(--light-border-color);
+}
+
+th {
+	font-weight: normal;
+	text-align: initial;
+	background: rgba(0, 0, 0, 0.05);
+}
+
+tfoot td {
+	background: rgba(0, 0, 0, 0.05);
 }
 
 a {
