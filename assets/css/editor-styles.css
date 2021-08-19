@@ -746,11 +746,11 @@ p.has-background {
 
 /* Editor Block Styles */
 .editor-styles-wrapper .wp-block-heading.is-style-widget-title {
-	padding: 0.5rem 0.75rem;
-	color: var(--widget-title-text-color);
-	background-color: var(--widget-title-background-color);
-	font-size: 15px;
-	font-size: 0.9375rem;
+	margin-top: 0;
+	color: #dd5533;
+	color: var(--widget-title-color);
+	font-size: 20px;
+	font-size: 1.25rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
 	font-weight: normal;
