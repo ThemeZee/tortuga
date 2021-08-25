@@ -61,10 +61,10 @@
 
 		</header><!-- #masthead -->
 
-		<?php do_action( 'tortuga_after_header' ); ?>
-
 		<?php tortuga_breadcrumbs(); ?>
 
 		<?php tortuga_header_image(); ?>
+
+		<?php do_action( 'tortuga_after_header' ); ?>
 
 		<div id="content" class="site-content container clearfix">
