@@ -157,7 +157,7 @@ function tortuga_scripts() {
 
 	// Register and enqueue navigation.min.js.
 	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! tortuga_is_amp() ) {
-		wp_enqueue_script( 'tortuga-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array( 'jquery' ), '20200822', true );
+		wp_enqueue_script( 'tortuga-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array(), '20220224', true );
 		$tortuga_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'tortuga' ),
 			'collapse' => esc_html__( 'Collapse child menu', 'tortuga' ),
