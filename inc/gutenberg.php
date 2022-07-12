@@ -13,6 +13,12 @@
  */
 function tortuga_gutenberg_support() {
 
+	// Add theme support for dimension controls.
+	add_theme_support( 'custom-spacing' );
+
+	// Add theme support for custom line heights.
+	add_theme_support( 'custom-line-height' );
+
 	// Define block color palette.
 	$color_palette = apply_filters( 'tortuga_color_palette', array(
 		'primary_color'    => '#dd5533',
