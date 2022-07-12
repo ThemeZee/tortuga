@@ -51,6 +51,10 @@
 	text-decoration: underline;
 }
 
+.entry-content > *:first-child {
+	margin-top: 1.5em;
+}
+
 .sticky {
 	border-width: 5px;
 }
