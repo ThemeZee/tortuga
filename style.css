@@ -1909,6 +1909,25 @@ p.has-background {
 	margin-bottom: 0;
 }
 
+/* Columns Block */
+div.wp-block-columns {
+	gap: 1.5em;
+}
+
+/* Column Block */
+.wp-block-column.has-background {
+	padding: 1.5em;
+	box-sizing: border-box;
+}
+
+.wp-block-column.has-background > *:first-child {
+	margin-top: 0;
+}
+
+.wp-block-column.has-background > *:last-child {
+	margin-bottom: 0;
+}
+
 /* Latest Posts */
 .wp-block-latest-posts.wp-block-latest-posts__list {
 	margin-top: 1.5em;
