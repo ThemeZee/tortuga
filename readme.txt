@@ -26,6 +26,9 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 
 == Changelog ==
 
+= 2.3.7 - 2022-08-23 =
+* updated footer credit link
+
 = 2.3.6 - 2022-07-12 =
 * added block support for custom spacing and line heights
 * improved styling of columns block
