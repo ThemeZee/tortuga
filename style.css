@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
 Theme Name: Tortuga
 Theme URI: https://themezee.com/themes/tortuga/
@@ -176,7 +178,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 dfn {
@@ -230,7 +232,7 @@ kbd,
 pre,
 samp {
 	font-size: 1em;
-	font-family: monospace, monospace;
+	font-family: monospace;
 }
 
 button,
@@ -258,6 +260,7 @@ input[type="reset"],
 input[type="submit"] {
 	cursor: pointer;
 	-webkit-appearance: button;
+	appearance: button;
 }
 
 button[disabled],
@@ -289,6 +292,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
 	box-sizing: content-box;
 	-webkit-appearance: textfield;
+	appearance: textfield;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -312,7 +316,7 @@ textarea {
 }
 
 optgroup {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 table {
@@ -486,7 +490,7 @@ blockquote small {
 
 blockquote cite::before,
 blockquote small::before {
-	content: "\2014\00a0";
+	content: "— ";
 }
 
 blockquote em,
@@ -529,7 +533,7 @@ li > ol {
 }
 
 dt {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 dd {
@@ -558,7 +562,7 @@ td {
 }
 
 th {
-	font-weight: normal;
+	font-weight: 400;
 	text-align: initial;
 	background: rgba(0, 0, 0, 0.05);
 }
@@ -697,7 +701,7 @@ textarea {
 .search-form .search-submit .icon-search {
 	width: 20px;
 	height: 20px;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /*--------------------------------------------------------------
@@ -729,7 +733,7 @@ textarea {
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	color: #21759b;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: normal;
@@ -759,19 +763,19 @@ textarea {
 /*--------------------------------------------------------------
 # - Clearings
 --------------------------------------------------------------*/
-.clearfix:before,
-.clearfix:after,
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after,
-.comment-navigation:before,
-.comment-navigation:after {
+.clearfix::before,
+.clearfix::after,
+.post-navigation .nav-links::before,
+.post-navigation .nav-links::after,
+.comment-navigation::before,
+.comment-navigation::after {
 	display: table;
 	content: "";
 }
 
-.clearfix:after,
-.post-navigation .nav-links:after,
-.comment-navigation:after {
+.clearfix::after,
+.post-navigation .nav-links::after,
+.comment-navigation::after {
 	clear: both;
 }
 
@@ -870,7 +874,7 @@ textarea {
 	font-size: 2.25rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--title-text-transform);
@@ -987,7 +991,7 @@ textarea {
 	font-size: 1rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--navi-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--navi-text-transform);
@@ -1044,7 +1048,7 @@ textarea {
 	font-size: 1rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--navi-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--navi-text-transform);
@@ -1157,7 +1161,7 @@ textarea {
 	width: 20px;
 	height: 20px;
 	vertical-align: top;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 .main-navigation .dropdown-toggle.toggled-on .icon {
@@ -1208,7 +1212,7 @@ textarea {
 	font-size: 1.75rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--title-text-transform);
@@ -1253,7 +1257,7 @@ textarea {
 .page-links {
 	margin: 0 0 1.5em;
 	word-spacing: 0.75em;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Entry Meta */
@@ -1290,7 +1294,7 @@ textarea {
 	width: 14px;
 	height: 14px;
 	vertical-align: top;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -1396,7 +1400,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 }
 
 .more-link::after {
-	content: " \00BB";
+	content: " »";
 }
 
 /* Post Navigation */
@@ -1414,12 +1418,12 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 
 .post-navigation .nav-links .nav-previous a::before {
 	margin-right: 3px;
-	content: "\00AB";
+	content: "«";
 }
 
 .post-navigation .nav-links .nav-next a::after {
 	margin-left: 4px;
-	content: "\00BB";
+	content: "»";
 }
 
 .post-navigation .nav-links a {
@@ -1530,7 +1534,7 @@ body.date-hidden.author-hidden.categories-hidden.comments-hidden .content-area .
 }
 
 .post-layout-three-columns .post-wrapper .post-column {
-	width: 33.3333333333333%;
+	width: 33.3333333333%;
 }
 
 /* Post Columns Fixes for IE 10 and IE 11*/
@@ -1636,7 +1640,7 @@ p.has-background {
 .has-drop-cap:not(:focus)::first-letter {
 	font-size: 4.5rem;
 	line-height: 0.7;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Code Block */
@@ -2123,7 +2127,7 @@ div.wp-block-columns {
 	font-size: 1.25rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--widget-title-text-transform);
@@ -2183,7 +2187,7 @@ div.wp-block-columns {
 }
 
 .widget_calendar table tbody tr td a {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .widget_calendar table tfoot tr td {
@@ -2412,7 +2416,7 @@ div.wp-block-columns {
 	font-size: 1.25rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--widget-title-text-transform);
@@ -2494,14 +2498,14 @@ div.wp-block-columns {
 	float: right;
 }
 
-.comment-navigation .nav-previous a:before {
+.comment-navigation .nav-previous a::before {
 	margin-right: 3px;
-	content: "\00AB";
+	content: "«";
 }
 
-.comment-navigation .nav-next a:after {
+.comment-navigation .nav-next a::after {
 	margin-left: 4px;
-	content: "\00BB";
+	content: "»";
 }
 
 /* Comment Form */
@@ -2512,7 +2516,7 @@ div.wp-block-columns {
 .comment-form label {
 	display: inline-block;
 	min-width: 150px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .comment-form textarea {
@@ -2526,13 +2530,13 @@ div.wp-block-columns {
 .comment-form input[type="checkbox"] + label {
 	display: inline;
 	padding-left: 0.5em;
-	font-weight: normal;
+	font-weight: 400;
 }
 
 .comment-reply-title small a {
 	margin-left: 1em;
 	text-decoration: underline;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2718,7 +2722,7 @@ figcaption,
 
 .breadcrumbs .trail-browse {
 	margin-right: 0.5em;
-	font-weight: normal;
+	font-weight: 400;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -2729,35 +2733,35 @@ figcaption,
 
 .breadcrumbs .trail-items li::after {
 	padding: 0 0.5em;
-	content: "\00bb"; /* Raquo */
+	content: "»"; /* Raquo */
 }
 
 .trail-separator-slash .trail-items li::after {
-	content: "\002F";
+	content: "/";
 }
 
 .trail-separator-dash .trail-items li::after {
-	content: "\2013";
+	content: "–";
 }
 
 .trail-separator-bull .trail-items li::after {
-	content: "\2022";
+	content: "•";
 }
 
 .trail-separator-arrow-bracket .trail-items li::after {
-	content: "\003e";
+	content: ">";
 }
 
 .trail-separator-raquo .trail-items li::after {
-	content: "\00bb";
+	content: "»";
 }
 
 .trail-separator-single-arrow .trail-items li::after {
-	content: "\2192";
+	content: "→";
 }
 
 .trail-separator-double-arrow .trail-items li::after {
-	content: "\21D2";
+	content: "⇒";
 }
 
 .breadcrumbs .trail-items li:last-of-type::after {
@@ -2871,22 +2875,22 @@ ul.related-posts-list {
 }
 
 .related-posts-three-columns .related-post-column {
-	width: 33.3333333333333%;
+	width: 33.3333333333%;
 }
 
 .related-posts-four-columns .related-post-column {
 	width: 25%;
 }
 
-.related-posts-two-columns .related-post-column:nth-child(2n + 1) {
+.related-posts-two-columns .related-post-column:nth-child(2n+1) {
 	clear: left;
 }
 
-.related-posts-three-columns .related-post-column:nth-child(3n + 1) {
+.related-posts-three-columns .related-post-column:nth-child(3n+1) {
 	clear: left;
 }
 
-.related-posts-four-columns .related-post-column:nth-child(4n + 1) {
+.related-posts-four-columns .related-post-column:nth-child(4n+1) {
 	clear: left;
 }
 
@@ -2927,6 +2931,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 80em) {
+
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
 		font-size: 22px;
@@ -2935,6 +2940,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 70em) {
+
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
 		font-size: 20px;
@@ -2943,12 +2949,13 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 50em) {
+
 	/* Columns */
 	.related-posts-four-columns .related-post-column {
 		width: 50%;
 	}
 
-	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
+	.related-posts-four-columns .related-post-column:nth-child(2n+1) {
 		clear: left;
 	}
 
@@ -2996,6 +3003,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 35em) {
+
 	/* Columns */
 	.related-posts-three-columns {
 		margin: 0;
@@ -3009,6 +3017,7 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 25em) {
+
 	/* Columns */
 	.related-posts-two-columns,
 	.related-posts-four-columns {
@@ -3198,7 +3207,7 @@ ul.related-posts-list {
 	width: 20px;
 	height: 20px;
 	vertical-align: middle;
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /*
@@ -3255,7 +3264,7 @@ ul.related-posts-list {
 	visibility: hidden;
 	clear: both;
 	height: 0;
-	content: "\0020";
+	content: " ";
 	line-height: 0;
 }
 
@@ -3372,21 +3381,21 @@ html[xmlns] .zeeflexslider .zeeslides {
 
 .post-slider-controls .zeeflex-direction-nav a::before {
 	display: inline-block;
-	color: currentColor;
+	color: currentcolor;
 	vertical-align: text-bottom;
 	text-decoration: inherit;
 }
 
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-next::before {
-	content: '\003e';
+	content: ">";
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .post-slider-controls .zeeflex-direction-nav a.zeeflex-prev::before {
-	content: '\003c';
+	content: "<";
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .post-slider-controls .zeeflex-direction-nav .zeeflex-next {
@@ -3620,7 +3629,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 		width: 100%;
 	}
 
-	.sidebar .widget-wrap:nth-child(2n + 1) {
+	.sidebar .widget-wrap:nth-child(2n+1) {
 		clear: left;
 	}
 
@@ -3799,7 +3808,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 		top: 0.1rem;
 		width: 14px;
 		height: 14px;
-		fill: currentColor;
+		fill: currentcolor;
 		transition: fill 0.15s ease;
 	}
 
@@ -3823,6 +3832,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 # - Media Queries for Magazine widgets
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
@@ -3851,6 +3861,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 60em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .magazine-horizontal-box .large-post .entry-content,
 	.widget-magazine-posts .magazine-horizontal-box .large-post .more-link {
@@ -3874,6 +3885,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 50em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 20px;
@@ -3907,6 +3919,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 40em) {
+
 	/* Magazine Post Widgets */
 	.widget-magazine-posts .magazine-grid-two-columns {
 		margin-right: 0;
@@ -3978,6 +3991,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 @media only screen and (max-width: 30em) {
+
 	/* Magazine Homepage: Category Post Widgets */
 	.widget-magazine-posts .medium-post .wp-post-image,
 	.widget-magazine-posts .small-post .wp-post-image {
@@ -4028,6 +4042,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 # - Media Queries for Media
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
+
 	/* Gallery */
 	.gallery-item {
 		padding: 0 0.75em 0.5em 0;

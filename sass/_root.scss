@@ -5,7 +5,6 @@
 	@include variable(--secondary-color, $themeColors);
 	@include variable(--tertiary-color, $themeColors);
 	@include variable(--accent-color, $themeColors);
-	@include variable(--contrast-color, $themeColors);
 	@include variable(--highlight-color, $themeColors);
 	@include variable(--light-gray-color, $themeColors);
 	@include variable(--gray-color, $themeColors);

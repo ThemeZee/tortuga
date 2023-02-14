@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  * Editor Styles
  *
@@ -113,7 +115,7 @@ body.block-editor-page .editor-post-title__block .editor-post-title__input {
 	font-size: 1.75rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--title-text-transform);
@@ -342,7 +344,7 @@ body.tortuga-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 .wp-block-quote__citation::before,
 .wp-block-pullquote__citation::before,
 .wp-block-pullquote cite::before {
-	content: "\2014\00a0";
+	content: "— ";
 }
 
 .wp-block-pullquote:not(.is-style-solid-color) .wp-block-pullquote__citation {
@@ -392,7 +394,7 @@ body.tortuga-page-title-hidden.block-editor-page .edit-post-visual-editor .edit-
 }
 
 .editor-styles-wrapper th {
-	font-weight: normal;
+	font-weight: 400;
 	text-align: initial;
 	background: rgba(0, 0, 0, 0.05);
 }
@@ -447,7 +449,7 @@ p.has-background {
 .has-drop-cap:not(:focus)::first-letter {
 	font-size: 4.5rem;
 	line-height: 0.7;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /* Code Block */
@@ -777,7 +779,7 @@ div.wp-block-columns {
 	font-size: 1.25rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--widget-title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--widget-title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--widget-title-text-transform);
@@ -997,7 +999,7 @@ div.wp-block-columns {
 	font-size: 1.5rem;
 	font-family: "Titillium Web", arial, helvetica, sans-serif;
 	font-family: var(--title-font);
-	font-weight: normal;
+	font-weight: 400;
 	font-weight: var(--title-font-weight);
 	text-transform: uppercase;
 	text-transform: var(--title-text-transform);
@@ -1042,7 +1044,7 @@ div.wp-block-columns {
 	margin: 0 1rem;
 	color: #999;
 	color: var(--light-text-color);
-	content: "\2013";
+	content: "–";
 }
 
 .edit-post-visual-editor .tz-magazine-block .tz-entry-meta > .tz-meta-field:last-child::after {
@@ -1102,7 +1104,7 @@ div.wp-block-columns {
 }
 
 .edit-post-visual-editor .tz-magazine-block .tz-more-link::after {
-	content: " \00BB";
+	content: " »";
 }
 
 @media only screen and (min-width: 960px) {
