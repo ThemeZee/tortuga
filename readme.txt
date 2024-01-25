@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/tortuga/
 Contributors: themezee
 Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, block-styles, rtl-language-support, grid-layout, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 5.2
-Tested up to: 6.1
+Tested up to: 6.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ For more information about Tortuga please go to https://themezee.com/themes/tort
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 2.3.9 - 2024-01-25 =
+* code cleanup to follow WordPress PHP coding standards
 
 = 2.3.8 - 2022-10-19 =
 * improved accessibility of search form

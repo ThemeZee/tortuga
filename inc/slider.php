@@ -69,7 +69,8 @@ if ( ! function_exists( 'tortuga_slider_image' ) ) :
 				</figure>
 			</a>
 
-		<?php endif;
+			<?php
+		endif;
 	}
 endif;
 
@@ -80,7 +81,7 @@ if ( ! function_exists( 'tortuga_slider_meta' ) ) :
 	 */
 	function tortuga_slider_meta() {
 
-		$postmeta = tortuga_meta_date();
+		$postmeta  = tortuga_meta_date();
 		$postmeta .= tortuga_meta_author();
 
 		echo '<div class="entry-meta clearfix">' . $postmeta . '</div>';

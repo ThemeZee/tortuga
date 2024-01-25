@@ -37,7 +37,7 @@ if ( ! function_exists( 'tortuga_site_title' ) ) :
 
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -82,8 +82,10 @@ if ( ! function_exists( 'tortuga_header_image' ) ) :
 
 			<div id="headimg" class="header-image">
 
-			<?php // Check if custom header image is linked.
-			if ( '' !== $theme_options['custom_header_link'] ) : ?>
+			<?php
+			// Check if custom header image is linked.
+			if ( '' !== $theme_options['custom_header_link'] ) :
+				?>
 
 				<a href="<?php echo esc_url( $theme_options['custom_header_link'] ); ?>">
 					<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
@@ -113,23 +115,28 @@ if ( ! function_exists( 'tortuga_blog_title' ) ) :
 		$theme_options = tortuga_theme_options();
 
 		// Set blog title and descripton.
-		$blog_title = $theme_options['blog_title'];
+		$blog_title       = $theme_options['blog_title'];
 		$blog_description = $theme_options['blog_description'];
 
 		// Display Blog Title.
-		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) : ?>
+		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) :
+			?>
 
 			<header class="page-header blog-header clearfix">
 
-				<?php // Display Blog Title.
-				if ( '' !== $blog_title || is_customize_preview() ) : ?>
+				<?php
+				// Display Blog Title.
+				if ( '' !== $blog_title || is_customize_preview() ) :
+					?>
 
 					<h2 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h2>
 
-				<?php endif;
+					<?php
+				endif;
 
 				// Display Blog Description.
-				if ( '' !== $blog_description || is_customize_preview() ) : ?>
+				if ( '' !== $blog_description || is_customize_preview() ) :
+					?>
 
 					<p class="blog-description"><?php echo wp_kses_post( $blog_description ); ?></p>
 
@@ -137,7 +144,8 @@ if ( ! function_exists( 'tortuga_blog_title' ) ) :
 
 			</header>
 
-		<?php endif;
+			<?php
+		endif;
 	}
 endif;
 
@@ -152,13 +160,14 @@ if ( ! function_exists( 'tortuga_post_image' ) ) :
 	function tortuga_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 		// Display Post Thumbnail.
-		if ( has_post_thumbnail() ) : ?>
+		if ( has_post_thumbnail() ) :
+			?>
 
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( $size, $attr ); ?>
 			</a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -174,13 +183,14 @@ if ( ! function_exists( 'tortuga_post_image_archives' ) ) :
 		$theme_options = tortuga_theme_options();
 
 		// Display Post Thumbnail if activated.
-		if ( true === $theme_options['post_image_archives'] && has_post_thumbnail() ) : ?>
+		if ( true === $theme_options['post_image_archives'] && has_post_thumbnail() ) :
+			?>
 
 			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail(); ?>
 			</a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -228,7 +238,8 @@ if ( ! function_exists( 'tortuga_meta_date' ) ) :
 	 */
 	function tortuga_meta_date() {
 
-		$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
+		$time_string = sprintf(
+			'<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
@@ -249,7 +260,8 @@ if ( ! function_exists( 'tortuga_meta_author' ) ) :
 	 */
 	function tortuga_meta_author() {
 
-		$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+		$author_string = sprintf(
+			'<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'tortuga' ), get_the_author() ) ),
 			esc_html( get_the_author() )
@@ -316,7 +328,8 @@ if ( ! function_exists( 'tortuga_entry_tags' ) ) :
 		$tag_list = get_the_tag_list( '', '' );
 
 		// Display tags.
-		if ( $tag_list ) : ?>
+		if ( $tag_list ) :
+			?>
 
 			<div class="entry-tags clearfix">
 				<span class="meta-tags">
@@ -324,7 +337,7 @@ if ( ! function_exists( 'tortuga_entry_tags' ) ) :
 				</span>
 			</div><!-- .entry-tags -->
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -340,11 +353,11 @@ if ( ! function_exists( 'tortuga_more_link' ) ) :
 		$read_more = tortuga_get_option( 'read_more_text' );
 
 		if ( '' !== $read_more || is_customize_preview() ) :
-		?>
+			?>
 
-			<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php echo esc_html( $read_more ); ?></a>
+			<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link"><?php echo esc_html( $read_more ); ?></a>
 
-		<?php
+			<?php
 		endif;
 	}
 endif;
@@ -361,10 +374,12 @@ if ( ! function_exists( 'tortuga_post_navigation' ) ) :
 
 		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
-			the_post_navigation( array(
-				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'tortuga' ) . '</span>%title',
-				'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'tortuga' ) . '</span>%title',
-			) );
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'tortuga' ) . '</span>%title',
+					'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'tortuga' ) . '</span>%title',
+				)
+			);
 
 		}
 	}
@@ -379,10 +394,12 @@ if ( ! function_exists( 'tortuga_breadcrumbs' ) ) :
 
 		if ( function_exists( 'themezee_breadcrumbs' ) ) {
 
-			themezee_breadcrumbs( array(
-				'before' => '<div class="breadcrumbs-container container clearfix">',
-				'after' => '</div>',
-			) );
+			themezee_breadcrumbs(
+				array(
+					'before' => '<div class="breadcrumbs-container container clearfix">',
+					'after'  => '</div>',
+				)
+			);
 
 		}
 	}
@@ -397,11 +414,13 @@ if ( ! function_exists( 'tortuga_related_posts' ) ) :
 
 		if ( function_exists( 'themezee_related_posts' ) ) {
 
-			themezee_related_posts( array(
-				'class' => 'related-posts type-page clearfix',
-				'before_title' => '<h2 class="page-title related-posts-title">',
-				'after_title' => '</h2>',
-			) );
+			themezee_related_posts(
+				array(
+					'class'        => 'related-posts type-page clearfix',
+					'before_title' => '<h2 class="page-title related-posts-title">',
+					'after_title'  => '</h2>',
+				)
+			);
 
 		}
 	}
@@ -414,11 +433,13 @@ if ( ! function_exists( 'tortuga_pagination' ) ) :
 	 */
 	function tortuga_pagination() {
 
-		the_posts_pagination( array(
-			'mid_size'  => 2,
-			'prev_text' => '&laquo;<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'tortuga' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'tortuga' ) . '</span>&raquo;',
-		) );
+		the_posts_pagination(
+			array(
+				'mid_size'  => 2,
+				'prev_text' => '&laquo;<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'tortuga' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'tortuga' ) . '</span>&raquo;',
+			)
+		);
 
 	}
 endif;
@@ -433,7 +454,8 @@ function tortuga_footer_text() {
 	<span class="credit-link">
 		<?php
 		// translators: Theme Name and Link to ThemeZee.
-		printf( esc_html__( 'WordPress Theme: %1$s by %2$s.', 'tortuga' ),
+		printf(
+			esc_html__( 'WordPress Theme: %1$s by %2$s.', 'tortuga' ),
 			esc_html__( 'Tortuga', 'tortuga' ),
 			'ThemeZee'
 		);

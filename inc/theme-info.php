@@ -148,11 +148,14 @@ function tortuga_theme_info_page() {
 		<div id="theme-author">
 
 			<p>
-				<?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'tortuga' ),
+				<?php
+				printf(
+					esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'tortuga' ),
 					$theme->display( 'Name' ),
 					'<a target="_blank" href="' . __( 'https://themezee.com/', 'tortuga' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=tortuga" title="ThemeZee">ThemeZee</a>',
 					'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/tortuga/reviews/', 'tortuga' ) . '" title="' . esc_attr__( 'Review Tortuga', 'tortuga' ) . '">' . esc_html__( 'rate it', 'tortuga' ) . '</a>'
-				); ?>
+				);
+				?>
 			</p>
 
 		</div>
