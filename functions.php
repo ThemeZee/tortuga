@@ -172,10 +172,6 @@ function tortuga_scripts() {
 	// Register and Enqueue Safari Flexbox CSS fixes.
 	wp_enqueue_style( 'tortuga-safari-flexbox-fixes', get_template_directory_uri() . '/assets/css/safari-flexbox-fixes.css', array(), '20200420' );
 
-	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
-	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
-	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
-
 	// Register and enqueue navigation.min.js.
 	if ( ( has_nav_menu( 'primary' ) || has_nav_menu( 'secondary' ) ) && ! tortuga_is_amp() ) {
 		wp_enqueue_script( 'tortuga-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array(), '20220224', true );
